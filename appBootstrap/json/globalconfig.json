@@ -1,0 +1,18 @@
+{
+  "credentials": [
+    {
+      "username": "admin",
+      "password": "Password1!"
+    },
+    {
+      "username": "test",
+      "password": "#pa$$$$w0rd!"
+    }
+  ],
+  "apiUrls" : {
+
+  },
+  "data" : {
+
+  }
+}

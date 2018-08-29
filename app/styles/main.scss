@@ -1,0 +1,362 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import 'bootstrap-sass-official/assets/stylesheets/_bootstrap.scss';
+// endbower
+
+@import '_variables.scss';
+@import '_spacing.scss';
+@import '_screen-lock.scss';
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+th, td {
+    padding: 10px !important;
+}
+
+.ui-notification.error {
+  color: #fff;
+  background-color: #f45454;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  border-color: #e4a5a5;
+}
+
+.btn-primary {
+  background-color: $greenlight;
+  border-color: $greenlight;
+
+  &:hover, &:focus, &active, &:active:hover, &:active:focus {
+    background-color: $green;
+    border-color: $green;
+  }
+
+  &.disabled:hover, &:disabled:hover {
+    cursor: not-allowed;
+    background-color: $greenlight;
+    border-color: $greenlight;
+  }
+}
+
+.cst-table {
+  background-color: #fff;
+  color: #555;
+  border-radius: 9px;
+}
+
+.close {
+  opacity: 999 !important;
+}
+
+.text-black {
+  color: black;
+}
+
+a {
+  color: #555;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+body {
+  padding: 0;
+  background-color: #101010;
+  color: #ddd;
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+}
+
+.m-l-25 {
+ margin-left: 25px;
+}
+
+.p-t-25 {
+ padding-top: 25px;
+}
+
+.m-r-25 {
+  margin-right: 25px;
+}
+
+/* Custom page footer */
+.footer {
+  bottom: 0px;
+  width: 100%;
+  padding-top: 15px;
+  color: #5c5c5c;
+  background-color: #222;
+  font-weight: normal;
+  font-size: smaller;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.panel-primary > .panel-heading {
+    color: #fff;
+    background-color: #1bc567;
+    border-color: #1bc567;
+}
+
+.panel-primary {
+  border-color: #1bc567;
+}
+
+.pos-fixed {
+  position: fixed;
+}
+
+.cust-btn {
+  background-color: #282828;
+  color: #ddd !important;
+  border-color: #282828;
+}
+
+.cust-btn:hover:active:focus {
+  background-color: #282828;
+  color: #fff !important;
+  border-color: #282828;
+}
+
+.logo-color {
+  color: $green;
+}
+.brand-color {
+  color: $green;
+}
+
+.opacity-60 {
+  opacity: 0.6;
+}
+
+.hr-green {
+  border-top: 1px solid $green;
+}
+
+.border-green{
+  border: 2px solid $greenlight;
+}
+
+.bg-white {
+  background-color: white;
+  border-radius: 9px;
+}
+
+.text-red {
+  color: red;
+}
+
+.logo-brand {
+  float: left;
+  padding: 9px 15px 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  height: 50px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #222222;
+  border-width: 0px;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+
+/* iframe styling */
+iframe {
+  border: 1px solid #000000;
+  width: 100%;
+  min-height: 100%;
+}
+
+.bg-grey {
+  background-color: $grayLighter;
+}
+
+.drop-down {
+  width: auto;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555555;
+  background-image: none;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out 0.05s, box-shadow ease-in-out 0.05s;
+}
+
+@media screen and (max-width: $screen-xs-max){
+  .pull-right-xs {
+    float: right !important;
+  }
+}
+
+@media screen and (min-width: $device-max-xs) and (max-width : $device-min-lg) {
+  .text-center-md {
+    text-align: center;
+  }
+}
+
+.container {
+    width: auto;
+}
+
+ /*bootstrap class override for login page only*/
+.form-control{
+    border-radius: 0px;
+    margin: 12px 3px;
+    height: 40px;
+}
+.loginbox{
+    margin-top: 5%;
+    border-top: 6px solid #1bc567;
+    background-color:#222;
+    padding: 25px;
+    box-shadow: 0 10px 10px -2px rgba(0,0,0,0.12),0 -2px 10px -2px rgba(0,0,0,0.12);
+}
+.singtext{
+    font-size: 28px;
+    color: #1bc567;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.submitButton{
+    background-color: #1bc567;
+    color: #fff;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    padding: 10px 0px;
+    width: 100%;
+    margin-left: 2px;
+    font-size: 16px;
+    border-radius: 0px;
+    outline: none;
+}
+.submitButton:hover,.submitButton:focus{
+    color: #fff;
+    outline: none;
+}
+.logo{
+    margin: auto;
+    text-align: center;
+    padding-top: 20%;
+    color: $greenlight;
+}
+.align-middle {
+  vertical-align: middle !important;
+}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: #181818;
+    color: #fff;
+}
+
+/* reports css start */
+
+.circle {
+  margin-top: 5px;
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  opacity: 0.8;
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+  line-height: 50px;
+  overflow: hidden;
+}
+
+.circle::before,
+.circle::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.circle,
+.circle::before,
+.circle::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.circle:hover {
+  color: #fff;
+   a {
+    color: white;
+  }
+}
+.circle::after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-transform: scale(.5);
+  transform: scale(.5);
+}
+.circle:hover::after {
+  border-radius: 50%;
+  -webkit-transform: scale(.9);
+  transform: scale(.9);
+  color: white;
+}
+
+.circle h2 {
+  font-size: 35px;
+}
+
+.circle p {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.circle1:hover::after {
+  background: $greenlight;
+}
+
+.circle2:hover::after {
+  background: #dc3545;
+}
+
+.circle3:hover::after {
+  background: #ffc107;
+}
+
+.circle1 {
+  border: 2px solid $green;
+  a {
+    text-decoration: none;
+    color: $greenlight;
+  }
+}
+
+.circle2 {
+  border: 2px solid #dc3545;
+  a {
+    text-decoration: none;
+    color: #dc3545;
+  }
+}
+
+.circle3 {
+  border: 2px solid #ffc107;
+  a {
+    text-decoration: none;
+    color: #ffc107;
+  }
+}
+
+/* reports css end */
