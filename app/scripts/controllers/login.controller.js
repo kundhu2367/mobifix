@@ -27,7 +27,7 @@
             if (angular.isDefined(lodash.findKey(credentials, {'username': vm.username, 'password': vm.password}))) {
                 //$location.path('/dashboard');
                 localStorage.setItem("currentUser", vm.username+":"+vm.password);
-                $state.go('accounts');
+                $state.go('home');
             }
 
         }

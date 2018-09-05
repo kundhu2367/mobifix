@@ -54,7 +54,7 @@ angular
   .constant('HOME_STATE_NAME', 'home')
 
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, BASE_STATE_NAME,
-    LOGIN_STATE_NAME, DASHBOARD_STATE_NAME, ACCOUNTS_STATE_NAME, ACCOUNT_ID_STATE_NAME, BLACKLIST_STATE_NAME) {
+    LOGIN_STATE_NAME, DASHBOARD_STATE_NAME, HOME_STATE_NAME) {
 
     // This is a server file code
     // app.get("*", function(req, res) {
@@ -62,10 +62,10 @@ angular
     // }
 
     $locationProvider.hashPrefix('');
-    $locationProvider.html5Mode({
-      enabled: true,
-      requireBase: false
-    });
+    // $locationProvider.html5Mode({
+    //   enabled: true,
+    //   requireBase: false
+    // });
 
     $urlRouterProvider.when('/', '/home');
     $urlRouterProvider.otherwise('/login');
