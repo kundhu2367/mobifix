@@ -3,4 +3,5 @@
 /.sass-cache
 /bower_components
 .idea/
- app/scripts/globalConfig.js
+/app/scripts/globalConfig.js
+/dist
