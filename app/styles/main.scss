@@ -7,6 +7,54 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import '_spacing.scss';
 @import '_screen-lock.scss';
 
+.modal-content {
+  border-radius: 30px;
+}
+
+.modal {
+  overflow-x: hidden; 
+}
+
+a:hover, a:focus {
+    color: $gold;
+    text-decoration: underline;
+}
+
+.max-width-100 {
+  max-width: 100%;
+}
+
+.color-brand {
+  color: $gold;
+}
+
+.navbar-collapse {
+  max-height: 100% !important;
+}
+
+.bg-grey {
+  background-color: $grayDarker;
+}
+
+.text-container-cust {
+  border-radius: 5px;
+  background-color: white
+}
+
+@media screen and (min-width: 300px)and (max-width:767px) {
+  .loginicon {
+    float: right;
+    margin-top: -37px;
+    font-size: 25px;
+    margin-right: 28px;
+  }
+  .loginicon:hover {
+    color: White;
+    text-decoration: none;
+  }
+}
+
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -27,19 +75,14 @@ th, td {
 }
 
 .btn-primary {
-  background-color: $greenlight;
-  border-color: $greenlight;
+  background-color: $gold;
+  border-color: $gold;
+}
 
-  &:hover, &:focus, &active, &:active:hover, &:active:focus {
-    background-color: $green;
-    border-color: $green;
-  }
-
-  &.disabled:hover, &:disabled:hover {
-    cursor: not-allowed;
-    background-color: $greenlight;
-    border-color: $greenlight;
-  }
+.btn-primary:hover, .btn-primary:active:focus, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+    color: $gold;
+    background-color: white;
+    border-color: $gold;
 }
 
 .cst-table {
@@ -86,15 +129,8 @@ body {
 
 /* Custom page footer */
 .footer {
-  bottom: 0px;
-  width: 100%;
-  padding-top: 15px;
-  color: #5c5c5c;
   background-color: #222;
-  font-weight: normal;
   font-size: smaller;
-  margin-top: 50px;
-  text-align: center;
 }
 
 .panel-primary > .panel-heading {
@@ -117,18 +153,6 @@ body {
   border-color: #282828;
 }
 
-.cust-btn:hover:active:focus {
-  background-color: #282828;
-  color: #fff !important;
-  border-color: #282828;
-}
-
-.logo-color {
-  color: $green;
-}
-.brand-color {
-  color: $green;
-}
 
 .opacity-60 {
   opacity: 0.6;
@@ -175,9 +199,6 @@ iframe {
   min-height: 100%;
 }
 
-.bg-grey {
-  background-color: $grayLighter;
-}
 
 .drop-down {
   width: auto;
@@ -204,9 +225,6 @@ iframe {
   }
 }
 
-.container {
-    width: auto;
-}
 
  /*bootstrap class override for login page only*/
 .form-control{
@@ -242,12 +260,6 @@ iframe {
 .submitButton:hover,.submitButton:focus{
     color: #fff;
     outline: none;
-}
-.logo{
-    margin: auto;
-    text-align: center;
-    padding-top: 20%;
-    color: $greenlight;
 }
 .align-middle {
   vertical-align: middle !important;

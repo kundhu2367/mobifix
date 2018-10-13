@@ -1,48 +1,200 @@
 <div class="navigation">
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
+    <div role="navigation">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid background">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand p-t-10 p-l-0"><img src="../assets/images/logo.jpg" class="logo hidden-xs "></a>
+                        <a class="navbar-brand p-xs-t-0"><img src="../assets/images/MobFix_Logo_extra shine.jpg" class="logo visible-xs"></a>
+                    </div>
+                    
 
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+                    <a class="searchicon searchicons glyphicon-search visible-xs" class="tt-menu tt-open visible-xs" data-toggle="collapse" data-target=".search-input">
+                        <span id="express-form-typeahead"></span>
+                    </a>
+                    <a ng-click="dashboard.openLoginModal()" class="loginicon"><span class="searchicon glyphicon-off visible-xs"></span></a>
+                    <div class="container collapse search-input searchtext">
+                        <form class="row" id="Form1">
+                            <input class="col-xs-12 searchtext1" type="search" placeholder="Search..">
+                        </form>
+                    </div>
 
-        <button class="logo-brand" ui-sref="accounts"><img src="logo.png"><span class="logo">Mobifix</span></button>
-      </div>
-
-      <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a ui-sref="accounts">Accounts</a></li>
-            </ul>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a ui-sref="login" class="m-r-15"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </a></li>
-        </ul>
-      </div>
+                    
+                    <div class="collapse navbar-collapse p-sm-t-15" id="myNavbar">
+                        <ul class="nav navbar-nav navbar-left ">
+                            <li><a ui-sref="home" ui-sref-active="active">Home</a></li>
+                            <li class="dropdown">
+                                <a ui-sref="bookOnline" ui-sref-active="active">Book Now </a>
+                            </li>
+                            <li class="dropdown">
+                                <a ui-sref="repair" ui-sref-active="active">Repair </a>
+                            </li>
+                            <li class="dropdown">
+                                <a ui-sref="blog" ui-sref-active="active">Blog </a>
+                            </li>
+                            <li class="dropdown">
+                                <a ui-sref="about" ui-sref-active="active">About </a>
+                            </li>
+                            <li><a ui-sref="contactUs" ui-sref-active="active">Contact Us</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right hidden-xs">
+                            <li>
+                                <div class="span3 widget-span widget-type-raw_html " data-widget-type="raw_html" data-x="4" data-w="3">
+                                    <div class="cell-wrapper layout-widget-wrapper">
+                                        <span id="" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html">
+                                        <form method="GET" action="" role="search" class="navbar-form navbar-left ng-pristine ng-valid" id="express-form" novalidate="">
+                                          <input required="" name="q" placeholder="Search" class="form-control tt-input" id="express-form-typeahead" autocomplete="off" spellcheck="false" dir="auto" type="text">
+                                          <button class="search-btn" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                                        </form>
+                                        </span>
+                                    </div>
+                                </div>
+                                <br />
+                                <!--end layout-widget-wrapper -->
+                            </li>
+                            <li class="HeaderLogin hidden-xs" ng-click="dashboard.openLoginModal()"><a  id="myBtn"> Login </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </div>
-  </div>
 </div>
 
-<div class="container-fluid m-t-35 p-t-35">
-<div ui-view=""></div>
+<div class="container m-t-50 p-t-35 ">
+    <div ui-view=""></div>
 </div>
 
-<div class="footer pos-fixed">
-  <div class="container-fluid">
-    <p class="pull-left col-lg-6">
-      Copyright © Mobifix, Inc. All Rights Reserved |
-      <a href="#">Legal &amp; Privacy Notices</a>
-    </p>
-    <p class="pull-right col-lg-6">
-      24x7 Customer Support: <strong>+91 - 999-999-9999</strong> | International: <strong>+1 567-453-3556</strong>
-    </p>
-  </div>
+<div class="footer">
+    <!-- footer -->
+
+    <div class="container">
+
+        <div class="footer-bottom">
+            <div class="row">
+                <div class=" col-sm-3 col-md-3 col-xs-12 footermobfixconent">
+                    <a href="/" ui-sref-active="active1" class="footerlogoLg"> <img src="../assets/images/Logo_Gold.png" class="footerlogo col-xs-offset-2 co1-xs- col-xs-offset-2" /></a>
+
+                    <h5 class="okfooterh">Send ut perspiciatis unde omnis iste natus error sit voluptatem atus error sit volupt unde omnis isteiatis un.</h5>
+                    <h5 class="okfooter">Phone :<span class="footerboldh5"> +61 414 064 064</span></h5>
+                    <h5 class="okfooter">Email : <a href="#" class="footerboldh5">info@mobifix.com.au </a></h5>
+
+                </div>
+
+                <div class="col-sm-3 col-md-3 col-xs-6 footermobfixcompany">
+                    <h3 class="companyh3">Company</h3>
+                    <ul class="footerul">
+                        <li>
+                            <a class="" href="/" ui-sref="about" ui-sref-active="active1"> > About Us</a>
+                        </li>
+                        <li>
+                            <a class="" href="faq.html"> > FAQ</a>
+                        </li>
+                        <li>
+                            <a class="" href="/" ui-sref="contactUs" ui-sref-active="active1"> > Contact Us</a>
+                        </li>
+                        <li>
+                            <a class="" href="#">> Terms</a>
+                        </li>
+                        <li>
+                            <a class="" href="#"> > Privacy</a>
+                        </li>
+                        <li>
+                            <a class="" href="#"> > Testimonials</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class=" col-sm-3 col-md-3 col-xs-6 footermobfixcommunity">
+                    <h3 class="companyh3">Community</h3>
+                    <ul class="footerul footerul1">
+                        <li>
+                            <a href="/" ui-sref="blog" ui-sref-active="active1"> > Blog</a>
+                        </li>
+                        <li>
+                            <a href="#"> > Forum</a>
+                        </li>
+                        <li>
+                            <a href="#"> > Support</a>
+                        </li>
+                        <li>
+                            <a href="#"> > Newsletter</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class=" col-sm-3 col-md-3 col-xs-12 footerBlogrow">
+                    <h3 class="footerbold"><span class="footerh3">from the </span>BLOG</h3>
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3 col-xs-3">
+                            <img src="../assets/images/Blog.jpg" alt="Responsive" class="BlogImage">
+                        </div>
+                        <div class="col-md-9 col-sm-9 col-xs-9">
+                            <h5 class="Blogsp"> Login using this by performing actions</h5>
+                            <h5 class="Blogsh5">29 Aug, 2018</h5>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3">
+                            <img src="../assets/images/Blog.jpg" alt="Responsive" class="BlogImage">
+                        </div>
+                        <div class="col-md-9 col-sm-9 col-xs-9">
+                            <h5 class="Blogsp"> Login using this by performing actions</h5>
+                            <h5 class="Blogsh5">29 Aug, 2018</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid bg-grey">
+        <div class="container text-left">
+            <div class="row">
+                <div class="col-sm-8 col-md-8 col-xs-12 copyright">
+                    <p>© 2018 All Rights Reserved by
+                        <a href="#" target="=_blank">mobifix.com.au </a>
+                    </p>
+                </div>
+                <div class=" col-xs-offset-2 col-xs-7 col-sm-4 col-md-4 ">
+                    <ul class="footer-social-icons">
+
+                        <li>
+                            <a href="#">
+                                <img src="../assets/images/facebook_gold.png" alt="" class="footerfb" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/images/googleplus_black.png" alt="" class="footergplus" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/images/twitter_gold.png" alt="" class="footertwitter" />
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <img src="../assets/images/instragram_black.png" alt="" class="footerwivfi" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/images/rssfeed_gold.png" alt="" class="footerwivfi" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="scrollToTop"></a>
 </div>

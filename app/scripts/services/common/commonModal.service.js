@@ -32,11 +32,18 @@
         }
 
         var modalSettings = {
-            addApiKeyModal: {
+            loginModal: {
                 size: 'md',
-                windowClass: 'add-apikey-modal',
-                templateUrl: 'views/addApiKey.html',
-                controller: 'addApiKeyCtrl',
+                windowClass: 'login-modal',
+                templateUrl: 'views/login.html',
+                controller: 'loginCtrl',
+                controllerAs: 'vm'
+            },
+            registerModal: {
+                size: 'md',
+                windowClass: 'register-modal',
+                templateUrl: 'views/register.html',
+                controller: 'registerCtrl',
                 controllerAs: 'vm'
             }
         };

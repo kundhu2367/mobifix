@@ -20,6 +20,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       // bower:js
+      'bower_components/jquery/dist/jquery.js',
       'bower_components/angular/angular.js',
       'bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap.js',
       'bower_components/angular-animate/angular-animate.js',
@@ -29,6 +30,8 @@ module.exports = function(config) {
       'bower_components/angular-resource/angular-resource.js',
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-sanitize/angular-sanitize.js',
+      'bower_components/slick-carousel/slick/slick.min.js',
+      'bower_components/angular-slick-carousel/dist/angular-slick.js',
       'bower_components/angular-touch/angular-touch.js',
       'bower_components/angular-ui-router/release/angular-ui-router.js',
       'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
@@ -37,6 +40,8 @@ module.exports = function(config) {
       'bower_components/query-string/query-string.js',
       'bower_components/angular-base64/angular-base64.js',
       'bower_components/angular-ui-notification/dist/angular-ui-notification.js',
+      'bower_components/ui-router-extras/release/ct-ui-router-extras.js',
+      'bower_components/bootstrap/dist/js/bootstrap.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
