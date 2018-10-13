@@ -9,33 +9,33 @@
  * Main module of the application.
  */
 angular
-  .module('mobifixApp', [
-    'ngAnimate',
-    'ngAria',
-    'ngCookies',
-    'ngMessages',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch',
-    'ui.router',
-    'ui.bootstrap',
-    'angular-loading-bar',
-    'base64',
-    'ui-notification'
-  ])
+    .module('mobifixApp', [
+        'ngAnimate',
+        'ngAria',
+        'ngCookies',
+        'ngMessages',
+        'ngResource',
+        'ngRoute',
+        'ngSanitize',
+        'ngTouch',
+        'ui.router',
+        'ui.bootstrap',
+        'angular-loading-bar',
+        'base64',
+        'ui-notification'
+    ])
 
-  .config(function ($httpProvider) {
+.config(function($httpProvider) {
     $httpProvider.useLegacyPromiseExtensions = false;
     $httpProvider.interceptors.push('authInterceptor');
-  })
+})
 
-  .config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
+.config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
     cfpLoadingBarProvider.spinnerTemplate = '<div class="screen-lock"><div class="spinner"><i class="fa fa-spinner fa-pulse"></i></div></div>';
     cfpLoadingBarProvider.includeBar = false;
-  }])
+}])
 
-  .config(['NotificationProvider', function(NotificationProvider) {
+.config(['NotificationProvider', function(NotificationProvider) {
     NotificationProvider.setOptions({
         delay: null,
         startTop: 20,
@@ -46,15 +46,21 @@ angular
         positionY: 'top',
         templateUrl: "custom_template.html"
     });
-  }])
+}])
 
-  .constant('BASE_STATE_NAME', 'base')
-  .constant('LOGIN_STATE_NAME', 'login')
-  .constant('DASHBOARD_STATE_NAME', 'dashboard')
-  .constant('HOME_STATE_NAME', 'home')
+.constant('DASHBOARD_STATE_NAME', 'dashboard')
+    .constant('HOME_STATE_NAME', 'home')
+    .constant('ABOUT_STATE_NAME', 'about')
+    .constant('BLOG_STATE_NAME', 'blog')
+    .constant('BOOKONLINE_STATE_NAME', 'bookOnline')
+    .constant('CONTACTUS_STATE_NAME', 'contactUs')
+    .constant('REPAIR_STATE_NAME', 'repair')
+    .constant('STATUS_STATE_NAME', 'status')
+    .constant('PRODUCTDETAILSFORM_STATE_NAME', 'productdetailsform')
 
-  .config(function ($stateProvider, $urlRouterProvider, $locationProvider, BASE_STATE_NAME,
-    LOGIN_STATE_NAME, DASHBOARD_STATE_NAME, HOME_STATE_NAME) {
+.config(function($stateProvider, $urlRouterProvider, $locationProvider, ABOUT_STATE_NAME,
+    DASHBOARD_STATE_NAME, HOME_STATE_NAME, BLOG_STATE_NAME, BOOKONLINE_STATE_NAME, CONTACTUS_STATE_NAME, REPAIR_STATE_NAME,
+    STATUS_STATE_NAME, PRODUCTDETAILSFORM_STATE_NAME, ) {
 
     // This is a server file code
     // app.get("*", function(req, res) {
@@ -67,63 +73,163 @@ angular
     //   requireBase: false
     // });
 
-    $urlRouterProvider.when('/', '/home');
-    $urlRouterProvider.otherwise('/login');
+    // $urlRouterProvider.when('/', '/');
+    $urlRouterProvider.otherwise('/');
 
-    var baseStateConfig = {
-      abstract: true,
-      url: "",
-      templateUrl: "views/base.html"
-    };
-    var loginStateConfig = {
-      url: "/login",
-      parent: BASE_STATE_NAME,
-      templateUrl: "views/login.html",
-      controller: 'loginCtrl',
-      controllerAs: 'login',
-      data: {
-        requireLogin: false
-      }
-    };
     var dashboardStateConfig = {
-      url: "/",
-      parent: BASE_STATE_NAME,
-      templateUrl: "views/dashboard.html",
-      controller: 'dashboardCtrl',
-      controllerAs: 'dashboard',
-      data: {
-        requireLogin: true
-      }
+        templateUrl: "views/dashboard.html",
+        controller: 'dashboardCtrl',
+        controllerAs: 'dashboard',
+        data: {
+            requireLogin: false
+        }
     };
     var homeStateConfig = {
-      url: "home",
-      parent: DASHBOARD_STATE_NAME,
-      templateUrl: "views/home.html",
-      controller: 'homeCtrl',
-      controllerAs: 'home',
-      data: {
-        requireLogin: true
-      }
+        url: "/",
+        parent: DASHBOARD_STATE_NAME,
+        templateUrl: "views/home.html",
+        controller: 'homeCtrl',
+        controllerAs: 'home',
+        data: {
+            requireLogin: false
+        }
+    };
+    var aboutStateConfig = {
+        url: "/about",
+        parent: DASHBOARD_STATE_NAME,
+        templateUrl: "views/about.html",
+        controller: 'aboutCtrl',
+        controllerAs: 'about',
+        data: {
+            requireLogin: false
+        }
     };
 
+    var blogStateConfig = {
+        url: "/blog",
+        parent: DASHBOARD_STATE_NAME,
+        templateUrl: "views/blog.html",
+        controller: 'blogCtrl',
+        controllerAs: 'blog',
+        data: {
+            requireLogin: false
+        }
+    };
+
+
+    var bookOnlineStateConfig = {
+        url: "/bookOnline",
+        parent: DASHBOARD_STATE_NAME,
+        templateUrl: "views/bookOnline.html",
+        controller: 'bookOnlineCtrl',
+        controllerAs: 'bookOnline',
+        data: {
+            requireLogin: false
+        }
+    };
+
+    var contactUsStateConfig = {
+        url: "/contactUs",
+        parent: DASHBOARD_STATE_NAME,
+        templateUrl: "views/contactUs.html",
+        controller: 'contactUsCtrl',
+        controllerAs: 'contactUs',
+        data: {
+            requireLogin: false
+        }
+    };
+
+    var productDetailsFormStateConfig = {
+        url: "/productdetailsform",
+        parent: DASHBOARD_STATE_NAME,
+        templateUrl: "views/productDetailsForm.html",
+        controller: 'productDetailsFormCtrl',
+        controllerAs: 'productDetailsForm',
+        data: {
+            requireLogin: false
+        }
+    };
+
+    // var registerStateConfig = {
+    //     url: "/register",
+    //     parent: DASHBOARD_STATE_NAME,
+    //     templateUrl: "views/register.html",
+    //     controller: 'registerCtrl',
+    //     controllerAs: 'register',
+    //     data: {
+    //         requireLogin: false
+    //     }
+    // };
+
+
+    var repairStateConfig = {
+        url: "/repair",
+        parent: DASHBOARD_STATE_NAME,
+        templateUrl: "views/repair.html",
+        controller: 'repairCtrl',
+        controllerAs: 'repair',
+        data: {
+            requireLogin: false
+        }
+    };
+
+    var resetpasswordStateConfig = {
+        url: "/resetpassword",
+        parent: DASHBOARD_STATE_NAME,
+        templateUrl: "views/resetpassword.html",
+        controller: 'resetpasswordCtrl',
+        controllerAs: 'resetpassword',
+        data: {
+            requireLogin: false
+        }
+    };
+
+    var statusStateConfig = {
+        url: "/status",
+        parent: DASHBOARD_STATE_NAME,
+        templateUrl: "views/status.html",
+        controller: 'statusCtrl',
+        controllerAs: 'status',
+        data: {
+            requireLogin: false
+        }
+    };
+
+
+    // var vendorRegisterStateConfig = {
+    //     url: "status",
+    //     parent: DASHBOARD_STATE_NAME,
+    //     templateUrl: "views/vendorRegister.html",
+    //     controller: 'vendorRegisterCtrl',
+    //     controllerAs: 'status',
+    //     data: {
+    //         requireLogin: false
+    //     }
+    // };
+
+
     $stateProvider
-    .state(BASE_STATE_NAME, baseStateConfig)
-    .state(LOGIN_STATE_NAME, loginStateConfig)
-    .state(DASHBOARD_STATE_NAME, dashboardStateConfig)
-    .state(HOME_STATE_NAME, homeStateConfig)
-  })
+        .state(DASHBOARD_STATE_NAME, dashboardStateConfig)
+        .state(HOME_STATE_NAME, homeStateConfig)
+        .state(ABOUT_STATE_NAME, aboutStateConfig)
+        .state(BLOG_STATE_NAME, blogStateConfig)
+        .state(BOOKONLINE_STATE_NAME, bookOnlineStateConfig)
+        .state(CONTACTUS_STATE_NAME, contactUsStateConfig)
+        .state(REPAIR_STATE_NAME, repairStateConfig)
+        .state(STATUS_STATE_NAME, statusStateConfig)
+        .state(PRODUCTDETAILSFORM_STATE_NAME, productDetailsFormStateConfig)
+})
 
-  .run(function ($rootScope, $state, Notification) {
+.run(function($rootScope, $state, Notification) {
 
-    $rootScope.$on('$stateChangeStart', function (event, toState, toParams) {
-      var requireLogin = toState.data.requireLogin;
-      $rootScope.currentUser = localStorage.getItem("currentUser");
-      Notification.clearAll();
-      if (requireLogin && (typeof $rootScope.currentUser === 'undefined' || $rootScope.currentUser === null)) {
-        event.preventDefault();
-        $state.go('login');
-      }
+    $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {
+        var requireLogin = toState.data.requireLogin;
+        // $rootScope.currentUser = localStorage.getItem("currentUser");
+        Notification.clearAll();
+        // if (requireLogin && (typeof $rootScope.currentUser === 'undefined' || $rootScope.currentUser === null)) {
+        //   event.preventDefault();
+        //   $state.go('login');
+        // }
     });
 
-  });
-
+});

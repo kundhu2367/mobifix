@@ -1,32 +1,39 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Mobifix</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css" />
     <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
     <link rel="stylesheet" href="bower_components/angular-ui-notification/dist/angular-ui-notification.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+
+    <link rel="stylesheet" href="styles/mobfix.css">
     <!-- endbuild -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <base href="./">
-  </head>
-  <body ng-app="mobifixApp">
+</head>
+
+<body ng-app="mobifixApp">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    
+
     <div class="">
-      <div ui-view></div>
+        <div ui-view></div>
     </div>
     <script type="text/ng-template" id="custom_template.html">
         <div class="ui-notification custom-template">
@@ -41,18 +48,21 @@
     </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <script>
+        ! function(A, n, g, u, l, a, r) {
+            A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
+                    (A[l].q = A[l].q || []).push(arguments)
+                }, A[l].l = +new Date, a = n.createElement(g),
+                r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+        }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
+        ga('create', 'UA-XXXXX-X');
+        ga('send', 'pageview');
     </script>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
@@ -62,6 +72,8 @@
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/slick-carousel/slick/slick.min.js"></script>
+    <script src="bower_components/angular-slick-carousel/dist/angular-slick.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
@@ -70,19 +82,39 @@
     <script src="bower_components/query-string/query-string.js"></script>
     <script src="bower_components/angular-base64/angular-base64.js"></script>
     <script src="bower_components/angular-ui-notification/dist/angular-ui-notification.js"></script>
+    <script src="bower_components/ui-router-extras/release/ct-ui-router-extras.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/globalConfig.js"></script>
-        <script src="scripts/controllers/home.controller.js"></script>
-        <script src="scripts/controllers/login.controller.js"></script>
-        <script src="scripts/controllers/dashboard.controller.js"></script>
-        <script src="scripts/services/httpDataService.service.js"></script>
-        <script src="scripts/services/common/httpRequestWrapper.service.js"></script>
-        <script src="scripts/services/common/commonModal.service.js"></script>
-        <script src="scripts/services/common/authInterceptor.factory.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/globalConfig.js"></script>
+    <script src="scripts/controllers/home.controller.js"></script>
+    <script src="scripts/controllers/about.controller.js"></script>
+    <script src="scripts/controllers/blog.controller.js"></script>
+    <script src="scripts/controllers/bookOnline.controller.js"></script>
+    <script src="scripts/controllers/contactUs.controller.js"></script>
+    <script src="scripts/controllers/productDetailsForm.controller.js"></script>
+    <script src="scripts/controllers/repair.controller.js"></script>
+    <script src="scripts/controllers/resetPassword.controller.js"></script>
+    <script src="scripts/controllers/status.controller.js"></script>
+    <script src="scripts/controllers/vendorRegister.controller.js"></script>
+    <script src="scripts/controllers/login.controller.js"></script>
+    <script src="scripts/controllers/register.controller.js"></script>
+    <script src="scripts/controllers/dashboard.controller.js"></script>
+    <script src="scripts/services/httpDataService.service.js"></script>
+    <script src="scripts/services/common/httpRequestWrapper.service.js"></script>
+    <script src="scripts/services/common/commonModal.service.js"></script>
+    <script src="scripts/services/common/authInterceptor.factory.js"></script>
+    <!-- endbuild -->
+    <script>
+        $(document).on('click','.navbar-collapse.in',function(e) {
+            if( $(e.target).is('a') && ( $(e.target).attr('class') != 'dropdown-toggle' ) ) {
+                $(this).collapse('hide');
+            }
+        });
+    </script>
 </body>
+
 </html>

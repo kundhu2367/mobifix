@@ -1,28 +1,66 @@
-<div class="container p-t-50" >
-    <div class="col-lg-4 col-md-3 col-sm-2"></div>
-    <div class="col-lg-4 col-md-6 col-sm-8">
-
-        <div class="row loginbox">
-	        <div class="container p-l-0">
-	            <p class="logo-brand"><img src="logo.png" ><span class="logo h2">Mobifix</span></p>
-	        </div>
-            <div class="col-lg-12">
-                <h4 class="singtext" >Sign in </h4>
+<div>
+    <div class="">
+        <div class="rcornerslogin">
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xs-6">
+                <img src="../assets/images/login.png" class="img-rounded" alt="">
             </div>
-            <form name="form" role="form" ng-submit="login.submit()" ng-enter="login.submit()">
-              <div class="form-group">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <input class="form-control" type="text" name="username" id="username" ng-model="login.username" placeholder="username" required />
-                </div>
-                <div class="col-lg-12  col-md-12 col-sm-12">
-                    <input class="form-control" type="password" name="password" id="password" ng-model="login.password" placeholder="password" required />
-                </div>
-                <div class="col-lg-12  col-md-12 col-sm-12 form-actions">
-                    <button type="submit" class="btn  submitButton">Submit </button>
-                </div>
-              </div>
-            </form>
+
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xs-6 MembersLogin">
+                <h3 class="title">Members Login</h3>
+
+
+                <form class="box formbox" action="">
+                    <div class="inner-addon left-addon inputbox">
+                        <i class="glyphicon glyphicon-user col"></i>
+                        <input type="text" class="form-control" id="userName" name="userName" placeholder="User name" />
+                    </div><br>
+
+                    <div class="inner-addon left-addon">
+                        <i class="glyphicon glyphicon-envelope col"></i>
+                        <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+                    </div><br>
+
+                    <p style="text-align:center;"> <label class="checkbox-inlinelogin">
+                <input type="checkbox" id="cb" name="cb" value="">
+                  Remember Me ?
+              </label></p><br>
+
+                    <div class="wrapperlogin">
+                        <button type="submit" class="btn buttonlogin" value="Submit">LOGIN</button>
+                    </div><br>
+
+                    <div class="Loginlog">
+                        <h5 class="loginh5">Don't have an account ? <a href="register.html" class="link"> REGISTER <span class="linkspan">HERE</span></a></h5>
+                    </div>
+
+                    <div class="Loginfg">
+                        <h5 class="loginh5">Forget Password <a href="restpassword.html" class="link"> Reset</a></h5>
+                    </div>
+
+
+                    <div class="hr"></div>
+
+
+                    <!-- Footer Elements -->
+                    <div class="container social-icons">
+
+                        <!-- Social buttons -->
+                        <ul class="list-unstyled list-inline ">
+                            <li class="facebook loginf">
+                                <a href="#">
+                                    <i class="fa fa-facebook"> </i>
+                                </a>
+                                <p class="loginpadding">Login With Facebook</p>
+                            </li>
+                        </ul>
+                        <!-- Social buttons -->
+
+                    </div>
+                    <!-- Footer Elements -->
+
+                </form>
+
+            </div>
         </div>
     </div>
-    <div class="col-lg-4 col-md-3 col-sm-2"></div>
 </div>
