@@ -10,6 +10,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 .modal-content {
   border-radius: 30px;
 }
+
 .modal {
   overflow-x: hidden; 
 }
@@ -39,6 +40,20 @@ a:hover, a:focus {
   border-radius: 5px;
   background-color: white
 }
+
+@media screen and (min-width: 300px)and (max-width:767px) {
+  .loginicon {
+    float: right;
+    margin-top: -37px;
+    font-size: 25px;
+    margin-right: 28px;
+  }
+  .loginicon:hover {
+    color: White;
+    text-decoration: none;
+  }
+}
+
 
 .browsehappy {
   margin: 0.2em 0;
