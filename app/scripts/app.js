@@ -48,7 +48,7 @@ angular
     });
 }])
 
-.constant('DASHBOARD_STATE_NAME', 'dashboard')
+    .constant('DASHBOARD_STATE_NAME', 'dashboard')
     .constant('HOME_STATE_NAME', 'home')
     .constant('ABOUT_STATE_NAME', 'about')
     .constant('BLOG_STATE_NAME', 'blog')
@@ -57,10 +57,13 @@ angular
     .constant('REPAIR_STATE_NAME', 'repair')
     .constant('STATUS_STATE_NAME', 'status')
     .constant('PRODUCTDETAILSFORM_STATE_NAME', 'productdetailsform')
+    .constant('RESETPASSWORD_STATE_NAME', 'resetPassword')
+    .constant('LOGIN_STATE_NAME', 'login')
+
 
 .config(function($stateProvider, $urlRouterProvider, $locationProvider, ABOUT_STATE_NAME,
     DASHBOARD_STATE_NAME, HOME_STATE_NAME, BLOG_STATE_NAME, BOOKONLINE_STATE_NAME, CONTACTUS_STATE_NAME, REPAIR_STATE_NAME,
-    STATUS_STATE_NAME, PRODUCTDETAILSFORM_STATE_NAME, ) {
+    STATUS_STATE_NAME, PRODUCTDETAILSFORM_STATE_NAME ) {
 
     // This is a server file code
     // app.get("*", function(req, res) {
@@ -150,16 +153,7 @@ angular
         }
     };
 
-    // var registerStateConfig = {
-    //     url: "/register",
-    //     parent: DASHBOARD_STATE_NAME,
-    //     templateUrl: "views/register.html",
-    //     controller: 'registerCtrl',
-    //     controllerAs: 'register',
-    //     data: {
-    //         requireLogin: false
-    //     }
-    // };
+
 
 
     var repairStateConfig = {
@@ -173,16 +167,7 @@ angular
         }
     };
 
-    var resetpasswordStateConfig = {
-        url: "/resetpassword",
-        parent: DASHBOARD_STATE_NAME,
-        templateUrl: "views/resetpassword.html",
-        controller: 'resetpasswordCtrl',
-        controllerAs: 'resetpassword',
-        data: {
-            requireLogin: false
-        }
-    };
+
 
     var statusStateConfig = {
         url: "/status",
@@ -196,18 +181,6 @@ angular
     };
 
 
-    // var vendorRegisterStateConfig = {
-    //     url: "status",
-    //     parent: DASHBOARD_STATE_NAME,
-    //     templateUrl: "views/vendorRegister.html",
-    //     controller: 'vendorRegisterCtrl',
-    //     controllerAs: 'status',
-    //     data: {
-    //         requireLogin: false
-    //     }
-    // };
-
-
     $stateProvider
         .state(DASHBOARD_STATE_NAME, dashboardStateConfig)
         .state(HOME_STATE_NAME, homeStateConfig)
@@ -218,6 +191,7 @@ angular
         .state(REPAIR_STATE_NAME, repairStateConfig)
         .state(STATUS_STATE_NAME, statusStateConfig)
         .state(PRODUCTDETAILSFORM_STATE_NAME, productDetailsFormStateConfig)
+   
 })
 
 .run(function($rootScope, $state, Notification) {

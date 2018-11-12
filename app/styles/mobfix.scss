@@ -1366,18 +1366,19 @@ input[type="search"] {
     padding-left: 30px;
 }
 
-.box .inner-addon input {
+/*.box .inner-addon input {
     border: none;
     border-bottom: 2px solid whitesmoke;
-}
+}*/
 
 .buttonlogin {
-    border-radius: 6px;
+       border-radius: 20px;
     background-color: #cfb65e;
     margin: auto;
     color: white;
     margin-top: -65px;
     font-weight: bold;
+    padding: 5px 30px;
 }
 
 .buttonlogin:hover {
@@ -1387,8 +1388,8 @@ input[type="search"] {
 .wrapperlogin {
     text-align: center;
     padding: 20px;
+    margin: 25px 0;
 }
-
 .Loginfg {
     margin-top: -17px;
     text-align: center;
@@ -1397,10 +1398,9 @@ input[type="search"] {
 }
 
 .Loginlog {
-    margin-top: -58px;
+    margin-top: -75px;
     text-align: center;
     padding: 6px;
-    margin-left: -6px;
 }
 .linkspan{margin-left:6px;}
 .link {
@@ -1428,7 +1428,7 @@ input[type="search"] {
 }
 
 .hr {
-    border-bottom: 1px solid #333;
+    border-bottom: 2px solid #eaeaea;
 }
 
 .social-icons {
@@ -1445,10 +1445,9 @@ input[type="search"] {
 }
 
 .img-rounded {
-    border-radius: 6px;
-    margin-top: -1px;
+    border-radius: 30px 0 0 30px;
     margin-left: -15px;
-    height: 411px;
+    height: 375px;
     width: 221px;
 }
 
@@ -1553,14 +1552,6 @@ input[type="search"] {
 
 /* add padding  */
 
-.left-addon input {
-    padding-left: 30px;
-}
-
-.box .inner-addon input {
-    border: none;
-    border-bottom: 2px solid whitesmoke;
-}
 
 .signinh5 {
     color: Black;
@@ -1586,6 +1577,7 @@ input[type="search"] {
 .SignInwrapper {
     text-align: center;
     padding: 20px;
+    margin: 25px 0;
 }
 
 .logsignin {
@@ -1610,12 +1602,13 @@ input[type="search"] {
     border: 2px solid #cfb65e;
     padding: 20px;
     width: 520px;
-    height: 497px;
+    height: 445px;
+    background: #fff;
+    margin: -22px -16px;
 }
 
-.hr {
-    border-bottom: 1px solid #333;
-}
+
+
 
 .checkbox-inlinesignin {
     position: relative;
@@ -1630,11 +1623,11 @@ input[type="search"] {
 }
 
 .img-roundedSignIn {
-    border-radius: 6px;
     margin-top: -22px;
     margin-left: -37px;
-    height: 497px;
+    height: 445px;
     width: 248px;
+    border-radius: 30px 0 0 30px;
 }
 
 .MembersSignIn {
@@ -1781,7 +1774,7 @@ input[type="search"] {
 }
 
 .img-roundedRS {
-    border-radius: 6px;
+    border-radius: 30px 0 0 30px;
     margin-top: -22px;
     margin-left: -37px;
     height: 252px;
@@ -1954,14 +1947,25 @@ input[type="search"] {
     color: black;
     background-color: #fff;
     background-image: none;
-    border: 1px solid #cfb65e;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
-    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    //border: 1px solid #cfb65e;
+    //border-radius: 4px;
+    //-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    //box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    //-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    //-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    //transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
+
+
+.input-borderless{
+    
+    text-shadow: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-bottom: 2px solid #eaeaea !important;
+    border-radius: 0 !important; 
+}
+
 
 .btnsuccess {
     color: #fff;
@@ -2661,7 +2665,7 @@ input[type="search"] {
     height: 412px;
 }
 
-.modal-content{height: 412px;}
+.modal-content{height: 100%;}
 .PDFBtm2 {
     margin-top: -25px;
     margin-bottom: 10px;
@@ -2781,7 +2785,23 @@ input[type="search"] {
 .ABURow {
     margin-left: -49px;
 }
+#resetPasswordModal{
+    height: 300px;
+    margin: -4.9% -2%;
+}
 
+.reset-pwd-txt{
+   font-size: 10px;
+    color: grey; 
+}
+
+#loginModal{
+ height: 375px;   
+}
+
+#registerModal{
+height: 445px;
+}
 @media screen and (min-width: 300px)and (max-width:767px) {
     .container2 {
         position: relative;

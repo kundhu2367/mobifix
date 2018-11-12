@@ -27,7 +27,24 @@
             commonModal.openModal('loginModal', resolveAttributes, modalCallBack, modalDismissCallBack);
         }
 
+         function openVendorLoginModal() {
+
+            var commonResolves = commonModal.commonResolves({});
+            var resolveAttributes = {
+                resolve: angular.extend(commonResolves.accountData)
+            };
+            var modalCallBack = function () {
+            
+            };
+            var modalDismissCallBack = function () {
+            };
+            commonModal.openModal('vendorLoginModal', resolveAttributes, modalCallBack, modalDismissCallBack);
+        }
+  
+
         vm.openLoginModal = openLoginModal;
+        vm.openVendorLoginModal = openVendorLoginModal;
+
 
     }
     angular.module('mobifixApp')
