@@ -45,6 +45,27 @@
                 templateUrl: 'views/register.html',
                 controller: 'registerCtrl',
                 controllerAs: 'vm'
+            },
+            vendorLoginModal: {
+                size: 'md',
+                windowClass: 'vendorlogin-modal',
+                templateUrl: 'views/vendorLogin.html',
+                controller: 'vendorLoginCtrl',
+                controllerAs: 'vm'
+            },
+            vendorRegisterModal: {
+                size: 'md',
+                windowClass: 'vendorregister-modal',
+                templateUrl: 'views/vendorRegister.html',
+                controller: 'vendorRegisterCtrl',
+                controllerAs: 'vm'
+            },
+             resetPasswordModal: {
+                size: 'md',
+                windowClass: 'resetpassword-modal',
+                templateUrl: 'views/resetPassword.html',
+                controller: 'resetPasswordCtrl',
+                controllerAs: 'vm'
             }
         };
 

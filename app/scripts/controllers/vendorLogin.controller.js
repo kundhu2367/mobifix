@@ -1,19 +1,19 @@
 /**
  * @ngdoc function
- * @name mobifixApp.controller:loginCtrl
+ * @name mobifixApp.controller:vendorloginCtrl
  * @description
- * # loginCtrl
+ * # vendorloginCtrl
  * Controller of the mobifixApp
  */
+ 
 (function(angular, lodash) {
     'use strict';
 
-    function loginControllerConstructor($location, $state, $rootScope, credentials, httpDataService, commonModal) {
+    function vendorLoginControllerConstructor($location, $state, $rootScope, credentials, httpDataService, commonModal) {
 
         var vm = this;
-         vm.$state = $state;
 
-           function openRegisterModal() {
+        function openVendorRegisterModal() {
            $('#loginModal').hide();
 
             var commonResolves = commonModal.commonResolves({});
@@ -26,9 +26,9 @@
             };
             var modalDismissCallBack = function () {
             };
-            commonModal.openModal('registerModal', resolveAttributes, modalCallBack, modalDismissCallBack);
+            commonModal.openModal('vendorregisterModal', resolveAttributes, modalCallBack, modalDismissCallBack);
         }
-          function openResetPasswordModal() {
+          function openVendorResetPasswordModal() {
             $('#registerModal').hide();
             $('#loginModal').hide();
             var commonResolves = commonModal.commonResolves({});
@@ -40,14 +40,13 @@
             };
             var modalDismissCallBack = function () {
             };
-            commonModal.openModal('resetPasswordModal', resolveAttributes, modalCallBack, modalDismissCallBack);
+            commonModal.openModal('vendorresetPasswordModal', resolveAttributes, modalCallBack, modalDismissCallBack);
         }
 
-        vm.openRegisterModal = openRegisterModal;
-        vm.openResetPasswordModal = openResetPasswordModal;
-
+        vm.openVendorRegisterModal = openVendorRegisterModal;
+        vm.openVendorResetPasswordModal = openVendorResetPasswordModal;
 
     }
     angular.module('mobifixApp')
-        .controller('loginCtrl', loginControllerConstructor);
+        .controller('vendorLoginCtrl', vendorLoginControllerConstructor);
 })(window.angular, window._);
