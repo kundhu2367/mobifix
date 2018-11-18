@@ -22,7 +22,10 @@ angular
         'ui.bootstrap',
         'angular-loading-bar',
         'base64',
-        'ui-notification'
+        'ui-notification',
+         'ngTable'
+        
+    
     ])
 
 .config(function($httpProvider) {
@@ -59,11 +62,12 @@ angular
     .constant('PRODUCTDETAILSFORM_STATE_NAME', 'productdetailsform')
     .constant('RESETPASSWORD_STATE_NAME', 'resetPassword')
     .constant('LOGIN_STATE_NAME', 'login')
+    .constant('ALLUSERS_STATE_NAME', 'allUsers')
 
 
 .config(function($stateProvider, $urlRouterProvider, $locationProvider, ABOUT_STATE_NAME,
     DASHBOARD_STATE_NAME, HOME_STATE_NAME, BLOG_STATE_NAME, BOOKONLINE_STATE_NAME, CONTACTUS_STATE_NAME, REPAIR_STATE_NAME,
-    STATUS_STATE_NAME, PRODUCTDETAILSFORM_STATE_NAME ) {
+    STATUS_STATE_NAME, PRODUCTDETAILSFORM_STATE_NAME,ALLUSERS_STATE_NAME ) {
 
     // This is a server file code
     // app.get("*", function(req, res) {
@@ -103,6 +107,18 @@ angular
         templateUrl: "views/about.html",
         controller: 'aboutCtrl',
         controllerAs: 'about',
+        data: {
+            requireLogin: false
+        }
+    };
+
+
+        var allUsersStateConfig = {
+        url: "/allUsers",
+        parent: DASHBOARD_STATE_NAME,
+        templateUrl: "views/allUsers.html",
+        controller: 'allUsersCtrl',
+        controllerAs: 'vm',
         data: {
             requireLogin: false
         }
@@ -191,7 +207,10 @@ angular
         .state(REPAIR_STATE_NAME, repairStateConfig)
         .state(STATUS_STATE_NAME, statusStateConfig)
         .state(PRODUCTDETAILSFORM_STATE_NAME, productDetailsFormStateConfig)
-   
+        .state(ALLUSERS_STATE_NAME, allUsersStateConfig)
+
+
+        
 })
 
 .run(function($rootScope, $state, Notification) {
