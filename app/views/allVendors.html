@@ -1,0 +1,16 @@
+<!--{{allUsersData}}-->
+<div class="panel-body" style="height:350px;overflow-y:scroll">
+  <table class="table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt" style="width:100%;height:500px">
+    <tr>
+      <th>SNO</th>
+      <th>LoginId</th>
+      <th>User Status</th>
+    </tr>
+    <tr ng-repeat="usersData in allUsersData">
+      <td>{{usersData.Id}}</td>
+      <td>{{usersData.LoginId}}</td>
+      <td>{{usersData.UserStatus}}</td>
+    </tr>
+
+  </table>
+  <div />
