@@ -3,13 +3,17 @@
 <table  class="table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt"style="width:100%;height:500px">
   <tr>
     <th>SNO</th>
-    <th>LoginId</th> 
-    <th>User Status</th>
+    <th>FullName</th>
+    <th>LoginID</th>
+    <th>UserStatus</th>
+    <th>ContactNumber</th>
   </tr>
   <tr ng-repeat="usersData in allUsersData">
-    <td>{{usersData.Id}}</td>
+    <td>{{usersData.customeradminid}}</td>
+    <td>{{usersData.fullname}}</td>
     <td>{{usersData.LoginId}}</td>
     <td>{{usersData.UserStatus}}</td>
+    <td>{{usersData.ContactNumber}}</td>
   </tr>
  
 </table>
