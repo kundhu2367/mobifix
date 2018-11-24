@@ -54,6 +54,7 @@
         vm.showProfile = false;
         vm.openLoginModal = openLoginModal;
         vm.openVendorLoginModal = openVendorLoginModal;
+        vm.signOff = signOff;
 
 
     }
