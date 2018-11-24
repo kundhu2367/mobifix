@@ -5,9 +5,9 @@
     return {
       // Add authorization token to headers
       request: function (config) {
-        if (!config.authRequired) {
+        // if (!config.authRequired) {
           return config;
-        }
+        // }
         // config.headers.Authorization = 'Bearer p7O2MiSslrIZW2HifNKXTWhGZKzy4Qg+9BEwazC38bE=';
         // var userData = localStorage.getItem("currentUser");
         // userData = $base64.encode(userData);

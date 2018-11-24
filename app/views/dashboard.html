@@ -17,12 +17,13 @@
                     <a class="searchicon searchicons glyphicon-search visible-xs" class="tt-menu tt-open visible-xs" data-toggle="collapse" data-target=".search-input">
                         <span id="express-form-typeahead"></span>
                     </a>
-                    <a ng-click="dashboard.openLoginModal()" class="loginicon"><span class="searchicon glyphicon-off visible-xs"></span></a>
+                    
                     <div class="container collapse search-input searchtext">
                         <form class="row" id="Form1">
                             <input class="col-xs-12 searchtext1" type="search" placeholder="Search..">
                         </form>
                     </div>
+                    <a ng-click="dashboard.openLoginModal()" class="loginicon"><span class="searchicon glyphicon-off visible-xs"></span></a>
 
                     
                     <div class="collapse navbar-collapse p-sm-t-15" id="myNavbar">
@@ -42,9 +43,9 @@
                             </li>
                             <li><a ui-sref="contactUs" ui-sref-active="active">Contact Us</a></li>
                         </ul>
-                        <ul class="nav navbar-nav navbar-right hidden-xs">
+                        <ul ng-if="!dashboard.showProfile" class="nav navbar-nav navbar-right hidden-xs">
                             <li>
-                                <div class="span3 widget-span widget-type-raw_html " data-widget-type="raw_html" data-x="4" data-w="3">
+                                <!-- <div class="span3 widget-span widget-type-raw_html " data-widget-type="raw_html" data-x="4" data-w="3"> -->
                                     <div class="cell-wrapper layout-widget-wrapper">
                                         <span id="" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html">
                                         <form method="GET" action="" role="search" class="navbar-form navbar-left ng-pristine ng-valid" id="express-form" novalidate="">
@@ -53,13 +54,24 @@
                                         </form>
                                         </span>
                                     </div>
-                                </div>
+                                <!-- </div> -->
                                 <br />
                                 <!--end layout-widget-wrapper -->
                             </li>
                              <li class="HeaderLogin hidden-xs m-r-25" ng-click="dashboard.openVendorLoginModal()"><a  id="myBtn"> Vendor Login </a></li>
                             <li class="HeaderLogin hidden-xs" ng-click="dashboard.openLoginModal()"><a  id="myBtn"> Login </a></li>
 
+                        </ul>
+                        <ul ng-if="dashboard.showProfile" class="nav navbar-nav navbar-right hidden-xs">
+      
+                          <li class="dropdown"></span><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user">Santosh Peddi<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#/userProfile">Profile</a></li>
+                              <li><a href="#">Orders</a></li>
+                              <li><a href="#">Sign Out</a></li>
+                            </ul>
+                          </li>
+                      
                         </ul>
                     </div>
                 </div>
