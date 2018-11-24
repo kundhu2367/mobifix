@@ -43,6 +43,22 @@
             commonModal.openModal('resetPasswordModal', resolveAttributes, modalCallBack, modalDismissCallBack);
         }
 
+        function login() {
+            vm.loginCred = {
+                username : vm.username,
+                password : vm.password
+            }
+
+            httpDataService.login(vm.loginCred).then(function(resposeObj){
+                if(resposeObj.status == 200){
+                    $rootScope.$broadcast("loginbroadcast", {status:200}); //catch in dashboard controller
+                } else {
+                    // Error Scenarios
+                }
+            });
+        }
+
+        vm.login = login;
         vm.openRegisterModal = openRegisterModal;
         vm.openResetPasswordModal = openResetPasswordModal;
 

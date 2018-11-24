@@ -9,15 +9,15 @@
                 <h3 class="title">Members Login</h3>
 
 
-                <form class="box formbox" action="">
+                <form class="box formbox">
                     <div class="inner-addon left-addon inputbox">
                         <i class="glyphicon glyphicon-user col"></i>
-                        <input type="text" class="form-control input-borderless" id="userName" name="userName" placeholder="Username" />
+                        <input type="text" class="form-control input-borderless" id="userName" ng-model="vm.username" name="userName" placeholder="Username" required/>
                     </div>
 
                     <div class="inner-addon left-addon">
                         <i class="glyphicon glyphicon-lock col"></i>
-                        <input id="password" type="text" class="form-control input-borderless" name="passowrd" placeholder="Password">
+                        <input id="password" type="password" class="form-control input-borderless" ng-model="vm.password" name="password" placeholder="Password" required>
                     </div>
 
                     <p style="text-align:center;"> <label class="checkbox-inlinelogin">
@@ -28,7 +28,7 @@
        
 
                     <div class="wrapperlogin">
-                        <button type="submit" class="btn buttonlogin" value="Submit">LOGIN</button>
+                        <button class="btn buttonlogin" ng-click="vm.login()">LOGIN</button>
                     </div>
 
                     <div class="Loginlog">

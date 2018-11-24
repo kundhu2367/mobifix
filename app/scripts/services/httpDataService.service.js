@@ -31,7 +31,10 @@
 
     function login (userData) {
       var url = apiUrls.login;
-      return httpRequestWrapper.post(url, userData, null, null, false);
+      // var successResponse = {status:200};
+      // var errorResponse = {status:400};
+      // return successResponse;
+      return httpRequestWrapper.get(url, null, null, true);
     }
 
     function logout (userData) {

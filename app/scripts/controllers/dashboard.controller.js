@@ -8,7 +8,7 @@
 (function(angular) {
     'use strict';
 
-    function dashboardControllerConstructor($state, commonModal) {
+    function dashboardControllerConstructor($state, $rootScope, commonModal) {
     	
         var vm = this;
         vm.$state = $state;
@@ -40,8 +40,13 @@
             };
             commonModal.openModal('vendorLoginModal', resolveAttributes, modalCallBack, modalDismissCallBack);
         }
-  
 
+        $rootScope.$on("loginbroadcast", function(evt,data){
+            console.log( data)
+            vm.showProfile = true;
+        });
+  
+        vm.showProfile = false;
         vm.openLoginModal = openLoginModal;
         vm.openVendorLoginModal = openVendorLoginModal;
 

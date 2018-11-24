@@ -10,8 +10,9 @@
      function allUsersControllerConstructor($sce, httpDataService, commonModal,$scope, $http) {
        //var self = this;
     //self.tableParams = new NgTableParams({}, { dataset: allUsersData});
-     	httpDataService.getallusers.then(function(response) {
-     	 vm.allUsersData = response.data;
+     	 $http.get("http://localhost:50709/api/user/GetAllUsers")
+  		.then(function(response) {
+     	 $scope.allUsersData = response.data;
          
   });
          var vm = this;

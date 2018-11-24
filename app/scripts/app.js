@@ -59,14 +59,14 @@ angular
     .constant('PRODUCTDETAILSFORM_STATE_NAME', 'productdetailsform')
     .constant('RESETPASSWORD_STATE_NAME', 'resetPassword')
     .constant('LOGIN_STATE_NAME', 'login')
-  .constant('ALLUSERS_STATE_NAME', 'allUsers')
-
-  .constant('ALLVENDORS_STATE_NAME', 'allVendors')
-  
+    .constant('ALLUSERS_STATE_NAME', 'allUsers')
+    .constant('ALLVENDORS_STATE_NAME', 'allVendors')
+    .constant('USERPROFILE_STATE_NAME', 'userProfile')
+    .constant('VENDORPROFILE_STATE_NAME', 'vendorProfile')
 
 .config(function($stateProvider, $urlRouterProvider, $locationProvider, ABOUT_STATE_NAME,
     DASHBOARD_STATE_NAME, HOME_STATE_NAME, BLOG_STATE_NAME, BOOKONLINE_STATE_NAME, CONTACTUS_STATE_NAME, REPAIR_STATE_NAME,
-  STATUS_STATE_NAME, PRODUCTDETAILSFORM_STATE_NAME, ALLUSERS_STATE_NAME, ALLVENDORS_STATE_NAME) {
+  STATUS_STATE_NAME, PRODUCTDETAILSFORM_STATE_NAME, ALLUSERS_STATE_NAME, ALLVENDORS_STATE_NAME, USERPROFILE_STATE_NAME, VENDORPROFILE_STATE_NAME) {
 
     // This is a server file code
     // app.get("*", function(req, res) {
@@ -198,11 +198,34 @@ angular
     parent: DASHBOARD_STATE_NAME,
     templateUrl: "views/allVendors.html",
     controller: 'allVendorsCtrl',
-    controllerAs: 'vendors',
+    controllerAs: 'vm',
     data: {
       requireLogin: false
     }
   };
+    var userProfileStateConfig = {
+    url: "/userProfile",
+    parent: DASHBOARD_STATE_NAME,
+    templateUrl: "views/userProfile.html",
+    controller: 'userProfileCtrl',
+    controllerAs: 'vm',
+    data: {
+      requireLogin: true
+    }
+  };
+    var vendorProfileStateConfig = {
+    url: "/vendorProfile",
+    parent: DASHBOARD_STATE_NAME,
+    templateUrl: "views/vendorProfile.html",
+    controller: 'vendorProfileCtrl',
+    controllerAs: 'vm',
+    data: {
+      requireLogin: true
+    }
+  };
+
+
+
 
 
     $stateProvider
@@ -215,8 +238,10 @@ angular
         .state(REPAIR_STATE_NAME, repairStateConfig)
         .state(STATUS_STATE_NAME, statusStateConfig)
         .state(PRODUCTDETAILSFORM_STATE_NAME, productDetailsFormStateConfig)
-      .state(ALLUSERS_STATE_NAME, allUsersStateConfig)
-      .state(ALLVENDORS_STATE_NAME, allVendorsStateConfig)
+        .state(ALLUSERS_STATE_NAME, allUsersStateConfig)
+        .state(ALLVENDORS_STATE_NAME, allVendorsStateConfig)
+        .state(USERPROFILE_STATE_NAME, userProfileStateConfig)
+        .state(VENDORPROFILE_STATE_NAME, vendorProfileStateConfig)
    
 })
 
