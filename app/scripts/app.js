@@ -250,11 +250,11 @@ angular
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {
         var requireLogin = toState.data.requireLogin;
         // $rootScope.currentUser = localStorage.getItem("currentUser");
-        Notification.clearAll();
-        // if (requireLogin && (typeof $rootScope.currentUser === 'undefined' || $rootScope.currentUser === null)) {
-        //   event.preventDefault();
-        //   $state.go('login');
-        // }
+        // Notification.clearAll();
+        if (requireLogin && (typeof $rootScope.userData === 'undefined' || $rootScope.userData === null)) {
+          event.preventDefault();
+          $state.go('home');
+        }
     });
 
 });

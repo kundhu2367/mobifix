@@ -41,6 +41,11 @@
             commonModal.openModal('vendorLoginModal', resolveAttributes, modalCallBack, modalDismissCallBack);
         }
 
+        function signOff() {
+            $rootScope.userData = null;
+            vm.showProfile = false;
+        }
+
         $rootScope.$on("loginbroadcast", function(evt,data){
             console.log( data)
             vm.showProfile = true;

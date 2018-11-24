@@ -8,13 +8,13 @@
 (function(angular, lodash) {
     'use strict';
 
-    function loginControllerConstructor($location, $state, $rootScope, credentials, httpDataService, commonModal) {
+    function loginControllerConstructor($location, $state, $rootScope, $uibModalInstance, credentials, httpDataService, commonModal) {
 
         var vm = this;
          vm.$state = $state;
 
            function openRegisterModal() {
-           $('#loginModal').hide();
+            $uibModalInstance.close()
 
             var commonResolves = commonModal.commonResolves({});
             var resolveAttributes = {
@@ -29,8 +29,8 @@
             commonModal.openModal('registerModal', resolveAttributes, modalCallBack, modalDismissCallBack);
         }
           function openResetPasswordModal() {
-            $('#registerModal').hide();
-            $('#loginModal').hide();
+            $uibModalInstance.close()
+
             var commonResolves = commonModal.commonResolves({});
             var resolveAttributes = {
                 resolve: angular.extend(commonResolves.accountData)
@@ -52,6 +52,8 @@
             httpDataService.login(vm.loginCred).then(function(resposeObj){
                 if(resposeObj.status == 200){
                     $rootScope.$broadcast("loginbroadcast", {status:200}); //catch in dashboard controller
+                    $rootScope.userData = resposeObj.data;
+                    $uibModalInstance.close()
                 } else {
                     // Error Scenarios
                 }
