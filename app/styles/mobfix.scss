@@ -237,7 +237,7 @@ p {
 .borderh1 {
     width: 792px;
     margin-left: -77px;
-    border-bottom: 2px solid whitesmoke;
+    border-bottom: 2px solid white;
 }
 
 .ul {
@@ -425,7 +425,7 @@ li a:hover {
     .borderh1 {
         width: 448px;
         margin-left: -69px;
-        border-bottom: 2px solid whitesmoke;
+        border-bottom: 2px solid white;
     }
     .Arrow {
         margin-top: 10px;
@@ -515,9 +515,9 @@ li a:hover {
         margin-left: 30px;
     }
     .borderh1 {
-        width: 732px;
+        width: 681px;
         margin-left: -61px;
-        border-bottom: 2px solid whitesmoke;
+        border-bottom: 2px solid white;
     }
     .footerContiner {
         background-color: black;
@@ -823,17 +823,18 @@ li a:hover {
     }
     .borderh1 {
         margin-left: -73px;
-        border-bottom: 2px solid whitesmoke;
+        border-bottom: 2px solid white;
         width: 138px;
     }
+    .logo{margin-left:-20px;}
 }
 
 @media screen and (min-width: 1300px)and (max-width:2020px) {
     .Readbutton{margin-left: -14px;}
     .borderh1 {
-        width: 1048px;
-        margin-left: -150px;
-        border-bottom: 2px solid whitesmoke;
+        width: 859px;
+        margin-left: -109px;
+        border-bottom: 2px solid white;
     }
     .jquerySlider {
         padding-left: 30px;
@@ -1490,7 +1491,7 @@ input[type="search"] {
         border-radius: 6px;
         margin-top: 0px;
         margin-left: -15px;
-        height: 410px;
+        height: 375px;
         width: 100px;
     }
     .title {
@@ -1654,7 +1655,7 @@ input[type="search"] {
     }
     .MembersSignIn {
         margin-top: -43px;
-        margin-left: 0px;
+        margin-left: -100px;
     }
     .SignInformbox {
         margin-top: -27px;
@@ -1749,7 +1750,7 @@ input[type="search"] {
     text-align: center;
     padding: 30px 0px 40px;
     color: Black;
-    font-size: 23px;
+    font-size: 21px;
 }
 
 .buttonloginRS {
@@ -1767,7 +1768,6 @@ input[type="search"] {
 
 #rcornersRS {
     border-radius: 25px;
-    border: 2px solid #cfb65e;
     padding: 20px;
     width: 506px;
     height: 253px;
@@ -2165,6 +2165,7 @@ input[type="search"] {
     .BKOoption {
         margin-left: -7px;
     }
+    .logo{margin-left:24px;}
     .Repairimg {
         margin-left: 100px;
     }
@@ -2378,7 +2379,7 @@ input[type="search"] {
 }
 
 .Blogcol2 {
-    margin-left: -27px;
+    margin-left: 0px;
     margin-top: -18px;
 }
 
@@ -2411,7 +2412,7 @@ input[type="search"] {
 
 .Bloghr1 {
     margin-top: 310px;
-    border-top: 2px solid whitesmoke;
+    border-top: 2px solid white;
 }
 
 .Blogsh3 {
@@ -2469,7 +2470,7 @@ input[type="search"] {
     }
     .Bloghr1 {
         margin-top: 310px;
-        border-top: 2px solid whitesmoke;
+        border-top: 2px solid white;
     }
     .Blogsh3 {
         color: black;
@@ -2486,7 +2487,7 @@ input[type="search"] {
         margin-left: -70px;
     }
     .Blogcol2 {
-        margin-left: -51px;
+        margin-left: -7px;
         margin-top: -15px;
     }
     .Blogscol {
@@ -2567,12 +2568,12 @@ input[type="search"] {
         margin-left: 0px;
     }
     .Blogcol2 {
-        margin-left: -21px;
+        margin-left: -1px;
         margin-top: -18px;
     }
     .Bloghr1 {
         margin-top: 323px;
-        border-top: 2px solid whitesmoke;
+        border-top: 2px solid white;
     }
     .BlogsImages {
         height: 290px;
@@ -2583,7 +2584,7 @@ input[type="search"] {
 
 @media screen and (min-width: 768px)and (max-width:1023px) {
     .BlogsImage {
-        height: 336px;
+        height: 390px;
         width: 307px;
         padding-top: 20px;
     }
@@ -2591,16 +2592,16 @@ input[type="search"] {
         color: black;
         border: 2px solid black;
         height: 50px;
-        padding-left: 15px;
+        padding-left: 9px;
         font-weight: 700;
-        width: 58px;
+        width: 50px;
     }
     .Blogcol {
         margin-top: 26px;
         margin-left: 0px;
     }
     .Blogcol2 {
-        margin-left: -1px;
+        margin-left: 0px;
         margin-top: -18px;
     }
     .Blogcontent {
@@ -2618,9 +2619,10 @@ input[type="search"] {
         font-weight: bold;
         font-size: 16px;
     }
-    .Bloghr1 {
-        margin-top: 350px;
-    }
+  .Bloghr1 {
+    margin-top: 415px;
+    border-top: 2px solid white;
+  }
 }
 
 /*PDF*/
@@ -2694,19 +2696,21 @@ input[type="search"] {
 
 /*About Us Page*/
 
+.contentp{color:black;}
 .container2 {
-    position: relative;
-    width: 60%;
-    border: 2px solid black;
-    margin-left: 86px;
-    margin-top: 10px;
+  position: relative;
+  width: 60%;
+  border: 2px solid black;
+  margin-left: 86px;
+  margin-top: 10px;
 }
+.MobFixcontent{margin-top:25px;}
 
 .ABUReadbutton {
-    margin-top: 10px;
-    background-color: black;
-    color: white;
-    padding-bottom: 3px;
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+  padding-bottom: 3px;
 }
 
 .ABUReadbutton:hover {
@@ -2810,7 +2814,32 @@ height: 445px;
         margin-left: 93px;
         margin-top: 10px;
     }
-}
+  .img-roundedRS {
+    border-radius: 30px 0 0 30px;
+    margin-top: -22px;
+    margin-left: -37px;
+    height: 268px;
+    width: 105px;
+  }
+  .MembersLoginRs {
+    margin-top: -34px;
+    margin-left:-174px;
+  }
+  .titleRS {
+    text-align: center;
+    padding: 30px 0px 40px;
+    color: Black;
+    font-size: 21px;
+    margin-left: 19px;
+  }
+    #rcornersRS {
+      border-radius: 25px;
+      padding: 20px;
+      width: 506px;
+      height: 269px;
+      margin-top: -6px;
+    }
+  }
 
 @media screen and (min-width: 1300px)and (max-width:2020px) {
     .footer-social-icons2 {
