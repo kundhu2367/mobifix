@@ -19,5 +19,5 @@
         vm.app = 'Mobifix'
      }
     angular.module('mobifixApp')
-        .controller('allUsersCtrl', allUsersControllerConstructor);
+        .controller('vendorProfileCtrl', allUsersControllerConstructor);
 })(angular);
