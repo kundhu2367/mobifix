@@ -238,9 +238,10 @@ p {
 }
 
 .borderh1 {
-  width: 792px;
-  margin-left: -77px;
-  border-bottom: 2px solid whitesmoke;
+    width: 792px;
+    margin-left: -77px;
+    border-bottom: 2px solid white;
+
 }
 
 .ul {
@@ -420,6 +421,471 @@ li a:hover {
 }
 
 @media screen and (min-width: 768px)and (max-width:1023px) {
+
+    .navbar-default .navbar-nav>li>a {
+        color: #cfb65e;
+        font-weight: bold;
+        font-size: 13px;
+    }
+    .borderh1 {
+        width: 448px;
+        margin-left: -69px;
+        border-bottom: 2px solid white;
+    }
+    .Arrow {
+        margin-top: 10px;
+    }
+    .Blogsp {
+        color: white;
+        margin-top: 0px;
+        margin-left: 16px;
+        width: 140px;
+    }
+    .Blogsh5 {
+        color: #cfb65e;
+        margin-left: 17px;
+    }
+    .footerlogo {
+        margin-left: 20px;
+    }
+    .viewbutton {
+        width: 103px;
+        float: right;
+        margin-top: 24px;
+        background-color: #cfb65e;
+        color: white;
+        margin-left: 46px;
+    }
+    .imageservices {
+        width: 160px;
+        margin-left: 88px;
+        margin-bottom: 20px;
+    }
+    .okfooterh {
+        color: white;
+        text-align: left;
+        margin-top: -5px;
+        width: 182px;
+    }
+    .footerboldh5 {
+        font-weight: bold;
+        font-size: 13px;
+        color: white;
+        font-style: italic;
+    }
+    .footer-social-icons {
+        display: flex;
+        list-style-type: none;
+        float: right;
+        margin-top: -41px;
+        margin-right: -357px;
+    }
+    .Readbutton {
+        margin-top: 10px;
+        background-color: black;
+        color: white;
+        margin-left: -18px;
+    }
+    .footerul {
+        list-style-type: none;
+    }
+    .okfooter {
+        color: white;
+        text-align: left;
+        width: 186px;
+    }
+    .footerBlogrow {
+        margin-left: 11px
+    }
+    .footermobfixcompany {
+        margin-left: 15px;
+    }
+    .footermobfixcommunity {
+        margin-left: -30px;
+    }
+    .footermobfixconent {
+        margin-left: -16px;
+    }
+}
+
+@media screen and (min-width: 1024px)and (max-width:1039px) {
+    .viewbutton {
+        float: right;
+        margin-top: 24px;
+        background-color: #cfb65e;
+        color: white;
+        margin-left: 98px;
+    }
+    .footerlogo {
+        margin-left: 30px;
+    }
+    .borderh1 {
+        width: 681px;
+        margin-left: -61px;
+        border-bottom: 2px solid white;
+    }
+    .footerContiner {
+        background-color: black;
+        width: 103%;
+        overflow-x: hidden;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .footerContinerCopyright {
+        background-color: #333;
+        width: 103%;
+    }
+    .footerBlogrow {
+        margin-left: -32px;
+    }
+    .navbar-default .navbar-nav>li>a {
+        color: #cfb65e;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    .jquerySlider {
+        padding-left: 30px;
+        margin-bottom: 25px;
+        padding-right: 30px;
+    }
+    .contenth3 {
+        font-weight: 700;
+        margin-top: 3px;
+        color: Black;
+    }
+    .imageservices {
+        width: 140px;
+        margin-left: 33px;
+    }
+    .footermobfixcommunity {
+        margin-left: -54px;
+    }
+    .footerboldh5 {
+        font-weight: bold;
+        color: white;
+        font-style: italic;
+    }
+}
+
+@media screen and (min-width: 300px)and (max-width:767px) {
+    .footermobfixcompany {
+        margin-left: -17px;
+    }
+    .Readbutton {
+        margin-top: 10px;
+        background-color: black;
+        color: white;
+        margin-left: -12px;
+    }
+    .footerContinerCopyright {
+        background-color: #333;
+        width: 100%;
+    }
+    .footermobfixcommunity {
+        margin-left: 5px;
+    }
+    .footerContiner {
+        background-color: black;
+        width: 100%;
+        overflow-x: hidden;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .jquerySlider {
+        margin-bottom: 20px;
+    }
+    .Sliderwidth {
+        width: 100%;
+        height: 45px;
+        margin-bottom: 19px;
+    }
+    .slideinner {
+        width: 100%;
+        height: 70px;
+    }
+    .searchicons {
+        float: right;
+        margin-top: -35px;
+        font-size: 19px;
+        margin-right: -11px;
+    }
+    .searchicons:hover {
+        color: White;
+        text-decoration: none;
+    }
+    .collapse.in {
+        display: block;
+    }
+    .searchtext {
+        width: 121.4%;
+        margin-left: -30px;
+    }
+    .searchtext1 {
+        height: 35px;
+    }
+    #express-form-typeahead {
+        /*background-color: transparent; */
+        background-image: url(../images/search.png);
+        background-position: 5px center;
+        background-repeat: no-repeat;
+        background-size: 13px 14px;
+        cursor: pointer;
+        height: 55px;
+        margin: -3px 0;
+        padding: 0px 0px 0px 21px;
+        margin-top: -13px;
+        position: relative;
+        width: 0;
+        display: none;
+    }
+    .searchicon {
+        position: relative;
+        top: 1px;
+        display: inline-block;
+        font-family: 'Glyphicons Halflings';
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1;
+    }
+    .footerlogo {
+        margin-left: 67px;
+    }
+    .footer-social-icons {
+        display: flex;
+        margin-top: -8px;
+        margin-right: 0px;
+        margin-left: -46px;
+        float: none;
+    }
+    .footerbold {
+        font-weight: bold;
+        color: #cfb65e;
+        font-size: 16px;
+    }
+    .footerh3 {
+        color: #cfb65e;
+        font-style: italic;
+    }
+    .Blogsp {
+        color: white;
+        margin-top: 6px;
+        width: 278px;
+    }
+    .footerul {
+        list-style-type: none;
+        margin-left: -27px;
+        font-size: 14px;
+    }
+    .footerul1 {
+        list-style-type: none;
+        margin-left: -14px;
+        font-size: 14px;
+    }
+    .navbar-default {
+        background-color: #cfb65e;
+        border-color: #cfb65e;
+        height: 55px;
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: white;
+    }
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form {
+        border-color: #cfb65e;
+        margin-top: 0px;
+    }
+    .background {
+        background-color: #cfb65e;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: #cfb65e;
+    }
+    .navbar-default .navbar-toggle:focus,
+    .navbar-default .navbar-toggle:hover {
+        background-color: #cfb65e;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+        color: White;
+    }
+    .dropdown-menu>li>a {
+        display: block;
+        padding: 3px 20px;
+        clear: both;
+        font-weight: 400;
+        line-height: 1.42857143;
+        color: white;
+        background-color: #cfb65e;
+        white-space: nowrap;
+    }
+    .dropdown-menu>li>a:hover {
+        display: block;
+        padding: 3px 20px;
+        clear: both;
+        font-weight: 400;
+        line-height: 1.42857143;
+        color: white;
+        background-color: black;
+        white-space: nowrap;
+    }
+    .dropdown-menu {
+        background-color: #cfb65e;
+        border: 2px solid #866d15f0;
+    }
+    .companyh3 {
+        color: #cfb65e;
+        margin-left: 5px;
+    }
+    .ul {
+        list-style-type: none;
+        margin-left: -19px;
+        float: left;
+    }
+    .HeaderLogin {
+        margin-left: -2px;
+        margin-top: -28px;
+    }
+    .navbar-toggle {
+        position: relative;
+        float: left;
+        padding: 9px 10px;
+        margin-top: 8px;
+        margin-right: 15px;
+        margin-bottom: 8px;
+        background-color: transparent;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+    .carousel-caption {
+        position: absolute;
+        right: 15%;
+        bottom: 10px;
+        left: 15%;
+        z-index: 10;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #fff;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+    }
+    .okfooterh {
+        color: white;
+        text-align: left;
+        margin-top: 9px;
+        margin-left: 6px;
+    }
+    .okfooter {
+        color: white;
+        text-align: left;
+        margin-left: 6px;
+    }
+    .footerBlogrow {
+        margin-left: -28px;
+    }
+    .copyright {
+        margin-top: 7px;
+        color: White;
+        text-align: center
+    }
+    .viewbutton {
+        margin-right: -9px;
+        margin-top: 109px;
+        background-color: #cfb65e;
+        color: white;
+    }
+    .imageservices {
+        width: 162px;
+        margin-left: 72px;
+        margin-bottom: 30px;
+    }
+    .Okp {
+        color: Black;
+        margin-top: 10px;
+        width: auto;
+    }
+    .Okh4 {
+        color: Black;
+        font-weight: bold;
+        margin-left: 24px;
+    }
+    .Oksh4 {
+        color: Black;
+        font-weight: bold;
+        margin-left: -14px;
+        font-size: 16px;
+    }
+    .Okh3 {
+        color: Black;
+        font-weight: bold;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    .ok-p {
+        color: black;
+        text-align: left;
+        background-color: White;
+        width: auto;
+    }
+    .borderh1 {
+        margin-left: -73px;
+        border-bottom: 2px solid white;
+        width: 138px;
+    }
+    .logo{margin-left:-20px;}
+}
+
+@media screen and (min-width: 1300px)and (max-width:2020px) {
+    .Readbutton{margin-left: -14px;}
+    .borderh1 {
+        width: 859px;
+        margin-left: -109px;
+        border-bottom: 2px solid white;
+    }
+    .jquerySlider {
+        padding-left: 30px;
+        margin-bottom: 25px;
+        padding-right: 30px;
+    }
+    .HeaderLogin {
+       border: 1px solid #cfb65e;
+    }
+    .navbar-default .navbar-nav>li>a {
+        color: #cfb65e;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    .imageservices {
+        width: 139px;
+        margin-left: 60px;
+        margin-bottom: 20px;
+    }
+    .footer-social-icons {
+        display: flex;
+        list-style-type: none;
+        float: right;
+        margin-top: -38px;
+        margin-right: -611px;
+    }
+    .contenth3 {
+        font-weight: 700;
+        margin-top: 3px;
+        color: Black;
+        font-size: 16px;
+    }
+    .Blogsp {
+        width: 244px;
+        margin-top: 10px;
+    }
+    .footermobfixcommunity {
+        margin-left: -47px;
+    }
+    .footermobfixcompany {
+        margin-left: 19px;
+    }
+    .footerBlogrow {
+        margin-left: -35px;
+    }
+}
   .navbar-default .navbar-nav > li > a {
     color: #cfb65e;
     font-weight: bold;
@@ -1600,6 +2066,55 @@ input[type="search"] {
 }
 
 @media screen and (min-width: 280px)and (max-width:767px) {
+    .modal-dialog {
+        width: 329px;
+        margin: 60px auto;
+    }
+    #rcornerslogin {
+        border-radius: 25px;
+        border: 2px solid #cfb65e;
+        padding: 20px;
+        width: 328px;
+        height: 419px;
+    }
+    .img-rounded {
+        border-radius: 6px;
+        margin-top: 0px;
+        margin-left: -15px;
+        height: 375px;
+        width: 100px;
+    }
+    .title {
+        text-align: center;
+        padding: 30px 0px 40px;
+        color: Black;
+        width: 168px;
+        font-size: 25px;
+        margin-left: 34px;
+    }
+    .formbox {
+        margin-top: -27px;
+        width: 210px;
+        margin-left: 22px;
+    }
+    .MembersLogin {
+        margin-top: -34px;
+        margin-left: -87px;
+    }
+    .close {
+        float: right;
+        font-size: 27px;
+        font-weight: 700;
+        line-height: 1;
+        color: #000;
+        margin-right: -9px;
+        text-shadow: 0 1px 0 #fff;
+        opacity: 2.2;
+    }
+    .LogInContainer {
+        margin-top: -54px;
+        margin-left: -15px;
+    }
   .modal-dialog {
     width: 329px;
     margin: 60px auto;
@@ -1796,13 +2311,31 @@ input[type="search"] {
     margin-left: 22px;
   }
 
-  #SignInrcorners {
-    border-radius: 25px;
-    border: 2px solid #cfb65e;
-    padding: 20px;
-    width: 328px;
-    height: 470px;
-  }
+
+@media screen and (min-width: 280px)and (max-width:767px) {
+    .img-roundedSignIn {
+        border-radius: 6px;
+        margin-top: -22px;
+        margin-left: -37px;
+        height: 471px;
+        width: 100px;
+    }
+    .MembersSignIn {
+        margin-top: -43px;
+        margin-left: -100px;
+    }
+    .SignInformbox {
+        margin-top: -27px;
+        width: 210px;
+        margin-left: 22px;
+    }
+    #SignInrcorners {
+        border-radius: 25px;
+        border: 2px solid #cfb65e;
+        padding: 20px;
+        width: 328px;
+        height: 470px;
+    }
 }
 
 
@@ -1819,11 +2352,11 @@ input[type="search"] {
 }
 
 .Repairimg {
-  height: 130px;
-  width: 130px;
-  margin-left: 51px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+
+    height: 130px;
+    width: 130px;
+    margin-left: 45px;
+    margin-bottom: 20px;
 }
 
 .RPheadingh4 {
@@ -1886,10 +2419,10 @@ input[type="search"] {
 /*Rest Password*/
 
 .titleRS {
-  text-align: center;
-  padding: 30px 0px 40px;
-  color: Black;
-  font-size: 23px;
+    text-align: center;
+    padding: 30px 0px 40px;
+    color: Black;
+    font-size: 21px;
 }
 
 .buttonloginRS {
@@ -1906,19 +2439,18 @@ input[type="search"] {
 }
 
 #rcornersRS {
-  border-radius: 25px;
-  border: 2px solid #cfb65e;
-  padding: 20px;
-  width: 506px;
-  height: 253px;
+    border-radius: 25px;
+    padding: 20px;
+    width: 506px;
+    height: 253px;
 }
 
 .img-roundedRS {
-  border-radius: 30px 0 0 30px;
-  margin-top: -22px;
-  margin-left: -37px;
-  height: 252px;
-  width: 226px;
+    border-radius: 30px 0 0 30px;
+    margin-top: -19px;
+    margin-left: -37px;
+    height: 252px;
+    width: 226px;
 }
 
 
@@ -1961,9 +2493,9 @@ input[type="search"] {
 }
 
 .BKOoption {
-  text-align: center;
-  margin-top: 10px;
-  margin-left: -47px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: -38px;
 }
 
 .BKOoptions {
@@ -1976,15 +2508,14 @@ input[type="search"] {
 }
 
 @media screen and (min-width: 1300px)and (max-width:2020px) {
-  .BKOoption {
-    text-align: center;
-    margin-top: 10px;
-    margin-left: -47px;
-  }
-
-  .BKOicons {
-    margin-left: 43px;
-  }
+    .BKOoption {
+        text-align: center;
+        margin-top: 10px;
+        margin-left: -58px;
+    }
+    .BKOicons {
+        margin-left: 43px;
+    }
 }
 
 @media screen and (min-width: 300px)and (max-width:767px) {
@@ -2564,11 +3095,50 @@ input[type="search"] {
 
 /*Blog Page */
 
-.Blogheadingh2 {
-  color: black;
-  font-weight: bold;
-  font-size: 19px;
-  text-align: center;
+@media screen and (min-width: 720px)and (max-width:740px) {
+    .Bkoimg {
+        margin-left: 90px;
+    }
+  .logo {margin-left: 174px;}
+    .footermobfixcompany {
+        margin-left: -6px;
+    }
+  .Blogcol2 {
+    margin-left: 50px;
+    margin-top: -72px;
+    width: 245px;
+  }
+    .footerBlogrow {
+        margin-left: 58px;
+        margin-top: -10px;
+    }
+    .footer-social-icons {
+        margin-left: 67px;
+    }
+    .ABURow {
+        padding-left: 126px;
+    }
+    .footer-social-icons2 {
+        margin-top: 29px;
+        padding-left: 104px;
+    }
+    .ABUtext {
+        font-size: 16px;
+    }
+    .Repairimg {
+        margin-left: 252px;
+    }
+    .Blogh3 {
+        margin-top: 72px;
+        margin-left: -105px;
+    }
+    .Blogh5 {
+        margin-left: -105px;
+    }
+    .Blogsh3 {
+        margin-top: 72px;
+        margin-left: -105px;
+    }
 }
 
 .Blogheadingh6 {
@@ -2582,10 +3152,52 @@ input[type="search"] {
   padding-top: 20px;
 }
 
-.BlogsImages {
-  height: 280px;
-  width: 450px;
-  margin-bottom: 20px;
+
+@media screen and (min-width: 414px)and (max-width: 503px) {
+    .Bkoimg {
+        padding-left: 33px;
+    }
+    .bookonline {
+        margin-left: 0px
+    }
+    .BKOoption {
+        margin-left: -7px;
+    }
+    .logo{margin-left:24px;}
+    .Repairimg {
+        margin-left: 100px;
+    }
+    .imageservices {
+        margin-left: 112px;
+    }
+    .Blogh3 {
+        margin-top: 71px;
+        margin-left: -63px;
+        width: 328px;
+    }
+    .Blogh5 {
+        margin-left: -62px;
+    }
+    .Blogsh3 {
+        margin-top: 71px;
+        margin-left: -63px;
+        width: 328px;
+    }
+    .footer-social-icons {
+        margin-left: -16px;
+    }
+    .ABURow {
+        padding-left: 36px;
+    }
+    .ABUtext {
+        font-size: 16px;
+    }
+    .footer-social-icons2 {
+        padding-left: 60px;
+    }
+    .ABUReadbutton {
+        font-size: 16px;
+    }
 }
 
 .Bloghr {
@@ -2621,10 +3233,22 @@ input[type="search"] {
   color: black;
 }
 
-.Blogh3 {
-  color: #cfb65e;
-  font-weight: bold;
-  font-size: 16px;
+@media screen and (min-width: 1300px)and (max-width:2020px) {
+    .msg {
+        height: 127px;
+        width: 526px;
+        border-color: #cfb65e;
+    }
+    .btnsend {
+        width: 526px;
+    }
+  .Repairimg {
+    height: 130px;
+    width: 130px;
+    margin-left: 37px;
+    margin-bottom: 20px;
+  }
+
 }
 
 .Blogh5 {
@@ -2678,7 +3302,18 @@ input[type="search"] {
     padding-left: 15px;
     font-weight: 700;
     width: 64px;
-  }
+
+}
+
+.Blogcol {
+    margin-top: 32px;
+    margin-left: 0px;
+}
+
+.Blogcol2 {
+    margin-left: 0px;
+    margin-top: -18px;
+}
 
   .Blogcontent {
     margin-top: 60px;
@@ -2709,8 +3344,8 @@ input[type="search"] {
 
   .Bloghr1 {
     margin-top: 310px;
-    border-top: 2px solid whitesmoke;
-  }
+    border-top: 2px solid white;
+}
 
   .Blogsh3 {
     color: black;
@@ -2729,15 +3364,68 @@ input[type="search"] {
     margin-left: -70px;
   }
 
-  .Blogcol2 {
-    margin-left: -6px;
-    margin-top: -15px;
-  }
-
-  .Blogscol {
-    margin-top: 4px;
-    margin-left: -70px;
-  }
+@media screen and (min-width: 1300px)and (max-width:2020px) {
+    .BlogsImage {
+        height: 280px;
+        width: 450px;
+        padding-top: 20px;
+    }
+    .BlogDate {
+        color: black;
+        border: 2px solid black;
+        height: 50px;
+        padding-left: 15px;
+        font-weight: 700;
+        width: 64px;
+    }
+    .Blogcontent {
+        margin-top: 60px;
+        margin-left: 15px;
+        color: black;
+    }
+    .Blogh3 {
+        color: #cfb65e;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .Blogh5 {
+        color: black;
+    }
+    .BlogRM {
+        color: #cfb65e;
+        font-weight: bold;
+        margin-left: 15px;
+    }
+    .BlogRM:hover {
+        color: #cfb65e;
+        text-decoration: none;
+    }
+    .Bloghr1 {
+        margin-top: 310px;
+        border-top: 2px solid white;
+    }
+    .Blogsh3 {
+        color: black;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .BlogsRM {
+        color: gray;
+        font-weight: bold;
+        margin-left: 15px;
+    }
+    .Blogcol {
+        margin-top: 32px;
+        margin-left: -70px;
+    }
+    .Blogcol2 {
+        margin-left: -7px;
+        margin-top: -15px;
+    }
+    .Blogscol {
+        margin-top: 4px;
+        margin-left: -70px;
+    }
 }
 
 @media screen and (min-width: 320px)and (max-width:767px) {
@@ -2813,81 +3501,70 @@ input[type="search"] {
 }
 
 @media screen and (min-width: 1024px)and (max-width:1039px) {
-  .BlogsImage {
-    height: 311px;
-    width: 397px;
-    padding-top: 20px;
-  }
-
-  .Blogcol {
-    margin-top: 26px;
-    margin-left: 0px;
-  }
-
-  .Blogcol2 {
-    margin-left: -21px;
-    margin-top: -18px;
-  }
-
-  .Bloghr1 {
-    margin-top: 323px;
-    border-top: 2px solid whitesmoke;
-  }
-
-  .BlogsImages {
-    height: 290px;
-    width: 402px;
-    margin-bottom: 20px;
-  }
+    .BlogsImage {
+        height: 311px;
+        width: 397px;
+        padding-top: 20px;
+    }
+    .Blogcol {
+        margin-top: 26px;
+        margin-left: 0px;
+    }
+    .Blogcol2 {
+        margin-left: -1px;
+        margin-top: -18px;
+    }
+    .Bloghr1 {
+        margin-top: 323px;
+        border-top: 2px solid white;
+    }
+    .BlogsImages {
+        height: 290px;
+        width: 402px;
+        margin-bottom: 20px;
+    }
 }
 
 @media screen and (min-width: 768px)and (max-width:1023px) {
-  .BlogsImage {
-    height: 336px;
-    width: 307px;
-    padding-top: 20px;
-  }
-
-  .BlogDate {
-    color: black;
-    border: 2px solid black;
-    height: 50px;
-    padding-left: 9px;
-    font-weight: 700;
-    width: 58px;
-    margin-left: -23px;
-  }
-
-  .Blogcol {
-    margin-top: 26px;
-    margin-left: 0px;
-  }
-
-  .Blogcol2 {
-    margin-left: -1px;
-    margin-top: -18px;
-  }
-
-  .Blogcontent {
-    margin-top: 60px;
-    margin-left: -8px;
-    color: black;
-  }
-
-  .BlogsImages {
-    height: 280px;
-    width: 312px;
-    margin-bottom: 20px;
-  }
-
-  .Blogsh3 {
-    color: black;
-    font-weight: bold;
-    font-size: 16px;
-  }
-
+    .BlogsImage {
+        height: 390px;
+        width: 307px;
+        padding-top: 20px;
+    }
+    .BlogDate {
+        color: black;
+        border: 2px solid black;
+        height: 50px;
+        padding-left: 9px;
+        font-weight: 700;
+        width: 50px;
+    }
+    .Blogcol {
+        margin-top: 26px;
+        margin-left: 0px;
+    }
+    .Blogcol2 {
+        margin-left: 0px;
+        margin-top: -18px;
+    }
+    .Blogcontent {
+        margin-top: 60px;
+        margin-left: 15px;
+        color: black;
+    }
+    .BlogsImages {
+        height: 280px;
+        width: 312px;
+        margin-bottom: 20px;
+    }
+    .Blogsh3 {
+        color: black;
+        font-weight: bold;
+        font-size: 16px;
+    }
   .Bloghr1 {
-    margin-top: 350px;
+    margin-top: 415px;
+    border-top: 2px solid white;
   }
 }
 
@@ -2966,6 +3643,7 @@ input[type="search"] {
 
 /*About Us Page*/
 
+.contentp{color:black;}
 .container2 {
   position: relative;
   width: 60%;
@@ -2973,6 +3651,7 @@ input[type="search"] {
   margin-left: 86px;
   margin-top: 10px;
 }
+.MobFixcontent{margin-top:25px;}
 
 .ABUReadbutton {
   margin-top: 10px;
@@ -3077,27 +3756,52 @@ input[type="search"] {
 }
 
 @media screen and (min-width: 300px)and (max-width:767px) {
-  .container2 {
-    position: relative;
-    width: 51%;
-    border: 2px solid black;
-    margin-left: 93px;
-    margin-top: 10px;
+
+    .container2 {
+        position: relative;
+        width: 51%;
+        border: 2px solid black;
+        margin-left: 93px;
+        margin-top: 10px;
+    }
+  .img-roundedRS {
+    border-radius: 30px 0 0 30px;
+    margin-top: -22px;
+    margin-left: -37px;
+    height: 268px;
+    width: 105px;
   }
-}
+  .MembersLoginRs {
+    margin-top: -34px;
+    margin-left:-174px;
+  }
+  .titleRS {
+    text-align: center;
+    padding: 30px 0px 40px;
+    color: Black;
+    font-size: 21px;
+    margin-left: 19px;
+  }
+    #rcornersRS {
+      border-radius: 25px;
+      padding: 20px;
+      width: 506px;
+      height: 269px;
+      margin-top: -6px;
+    }
+  }
 
 @media screen and (min-width: 1300px)and (max-width:2020px) {
-  .footer-social-icons2 {
-    display: flex;
-    list-style-type: none;
-    float: left;
-    margin-top: 6px;
-    margin-left: -32px;
-  }
-
-  .ABUtext {
-    color: white;
-    font-size: 15px;
-    margin-top: 6px;
-  }
+    .footer-social-icons2 {
+        display: flex;
+        list-style-type: none;
+        float: left;
+        margin-top: 6px;
+        margin-left: -32px;
+    }
+    .ABUtext {
+        color: white;
+        font-size: 15px;
+        margin-top: 6px;
+    }
 }
