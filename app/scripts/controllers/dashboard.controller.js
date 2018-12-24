@@ -40,7 +40,19 @@
             };
             commonModal.openModal('vendorLoginModal', resolveAttributes, modalCallBack, modalDismissCallBack);
         }
+      function openVendorLoginModal() {
 
+        var commonResolves = commonModal.commonResolves({});
+        var resolveAttributes = {
+          resolve: angular.extend(commonResolves.accountData)
+        };
+        var modalCallBack = function () {
+
+        };
+        var modalDismissCallBack = function () {
+        };
+        commonModal.openModal('vendorLoginModal', resolveAttributes, modalCallBack, modalDismissCallBack);
+      }
         function signOff() {
             $rootScope.userData = null;
             vm.showProfile = false;
@@ -52,7 +64,8 @@
         });
   
         vm.showProfile = false;
-        vm.openLoginModal = openLoginModal;
+      vm.openLoginModal = openLoginModal;
+      vm.openVendorLoginModal = openVendorLoginModal;
         vm.openVendorLoginModal = openVendorLoginModal;
         vm.signOff = signOff;
 

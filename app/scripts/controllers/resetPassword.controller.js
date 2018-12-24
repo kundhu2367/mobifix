@@ -14,6 +14,7 @@
         vm.app = 'Mobifix'
 
     }
-    angular.module('mobifixApp')
+ //angular.module("blank", ['ngMessages'])
+  angular.module('mobifixApp')
         .controller('resetPasswordCtrl', resetPasswordControllerConstructor);
 })(angular);

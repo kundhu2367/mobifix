@@ -32,5 +32,6 @@
         vm.openLoginModal = openLoginModal;
     }
     angular.module('mobifixApp')
-        .controller('registerCtrl', registerControllerConstructor);
+      .controller('registerCtrl', registerControllerConstructor);
+  $scope.phoneNumbr = /^\+?\d{2}[- ]?\d{3}[- ]?\d{5}$/;
 })(window.angular, window._);

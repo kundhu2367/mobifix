@@ -14,19 +14,19 @@
         var vm = this;
 
         function openVendorRegisterModal() {
-           $('#loginModal').hide();
+          $uibModalInstance.close()
 
-            var commonResolves = commonModal.commonResolves({});
-            var resolveAttributes = {
-                resolve: angular.extend(commonResolves.accountData)
-            };
+          var commonResolves = commonModal.commonResolves({});
+          var resolveAttributes = {
+            resolve: angular.extend(commonResolves.accountData)
+          };
 
-            var modalCallBack = function () {
-            
-            };
-            var modalDismissCallBack = function () {
-            };
-            commonModal.openModal('vendorregisterModal', resolveAttributes, modalCallBack, modalDismissCallBack);
+          var modalCallBack = function () {
+
+          };
+          var modalDismissCallBack = function () {
+          };
+          commonModal.openModal('registerModal', resolveAttributes, modalCallBack, modalDismissCallBack);
         }
           function openVendorResetPasswordModal() {
             $('#registerModal').hide();

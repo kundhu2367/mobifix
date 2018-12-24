@@ -14,7 +14,8 @@
   		.then(function(response) {
      	 $scope.allUsersData = response.data;
          
-  });
+             });
+
          var vm = this;
         vm.app = 'Mobifix'
      }
