@@ -63,10 +63,10 @@ angular
     .constant('ALLVENDORS_STATE_NAME', 'allVendors')
     .constant('USERPROFILE_STATE_NAME', 'userProfile')
     .constant('VENDORPROFILE_STATE_NAME', 'vendorProfile')
-
+  .constant('MOBILEREPAIR_STATE_NAME', 'mobileRepair')
 .config(function($stateProvider, $urlRouterProvider, $locationProvider, ABOUT_STATE_NAME,
     DASHBOARD_STATE_NAME, HOME_STATE_NAME, BLOG_STATE_NAME, BOOKONLINE_STATE_NAME, CONTACTUS_STATE_NAME, REPAIR_STATE_NAME,
-  STATUS_STATE_NAME, PRODUCTDETAILSFORM_STATE_NAME, ALLUSERS_STATE_NAME, ALLVENDORS_STATE_NAME, USERPROFILE_STATE_NAME, VENDORPROFILE_STATE_NAME) {
+  STATUS_STATE_NAME, PRODUCTDETAILSFORM_STATE_NAME, ALLUSERS_STATE_NAME, ALLVENDORS_STATE_NAME, USERPROFILE_STATE_NAME, VENDORPROFILE_STATE_NAME, MOBILEREPAIR_STATE_NAME) {
 
     // This is a server file code
     // app.get("*", function(req, res) {
@@ -156,9 +156,6 @@ angular
         }
     };
 
-
-
-
     var repairStateConfig = {
         url: "/repair",
         parent: DASHBOARD_STATE_NAME,
@@ -170,7 +167,16 @@ angular
         }
     };
 
-
+  var mobilerepairStateConfig = {
+    url: "/mobilerepair",
+    parent: DASHBOARD_STATE_NAME,
+    templateUrl: "views/mobileRepair.html",
+    controller: 'mobilerepairCtrl',
+    controllerAs: 'mobilerepair',
+    data: {
+      requireLogin: false
+    }
+  };
 
     var statusStateConfig = {
         url: "/status",
@@ -224,10 +230,6 @@ angular
     }
   };
 
-
-
-
-
     $stateProvider
         .state(DASHBOARD_STATE_NAME, dashboardStateConfig)
         .state(HOME_STATE_NAME, homeStateConfig)
@@ -242,7 +244,7 @@ angular
         .state(ALLVENDORS_STATE_NAME, allVendorsStateConfig)
         .state(USERPROFILE_STATE_NAME, userProfileStateConfig)
         .state(VENDORPROFILE_STATE_NAME, vendorProfileStateConfig)
-   
+        .state(MOBILEREPAIR_STATE_NAME, mobilerepairStateConfig)
 })
 
 .run(function($rootScope, $state, Notification) {

@@ -12,12 +12,12 @@
                 <form class="box formbox" action="">
                     <div class="inner-addon left-addon inputbox">
                         <i class="glyphicon glyphicon-user col"></i>
-                        <input type="text" class="form-control input-borderless" id="userName" name="userName" placeholder="Username" />
+                        <input type="text" class="form-control input-borderless" id="userName" name="userName" placeholder="Username" ng-model="vm.username" required/>
                     </div>
 
                     <div class="inner-addon left-addon">
                         <i class="glyphicon glyphicon-lock col"></i>
-                        <input id="password" type="text" class="form-control input-borderless" name="passowrd" placeholder="Password">
+                        <input id="password" type="text" class="form-control input-borderless" name="passowrd" placeholder="Password" ng-model="vm.password" required>
                     </div>
 
                     <p style="text-align:center;"> <label class="checkbox-inlinelogin">

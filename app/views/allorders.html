@@ -1,0 +1,22 @@
+<!--{{allOrdersData}}-->
+<div class="panel-body" style="height:350px;overflow-y:scroll">
+  <table class="table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt" style="width:100%;height:500px">
+    <tr>
+      <th>SNO</th>
+      <th>OrderID</th>
+      <th>OrderPlacedDate</th>
+      <th>fullname</th>
+      <th>ContactNumber</th>
+      <th>LoginId</th>
+    </tr>
+    <tr ng-repeat="allOrdersData in allOrdersData">
+      <td>{{allOrdersData.customeradminid}}</td>
+      <td>{{allOrdersData.OrderID}}</td>
+      <td>{{allOrdersData.OrderPlacedDate}}</td>
+      <td>{{allOrdersData.fullname}}</td>
+      <td>{{allOrdersData.ContactNumber}}</td>
+      <td>{{allOrdersData.LoginId}}</td>
+  </tr>
+
+  </table>
+  <div />

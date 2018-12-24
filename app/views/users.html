@@ -1,6 +1,7 @@
-<!--{{userProfileData}}-->
+<!--{{usersData}}-->
 
-  `<div class="container bootstrap snippet">
+
+<div class="container bootstrap snippet">
   <div class="row">
     <div class="col-sm-10"><h1>Customer Profile</h1></div>
     <!-- <div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="http://www.gravatar.com/avatar/28fd20ccec6865e2d5f0e1f4446eb7bf?s=100"></a>
@@ -9,31 +10,58 @@
   <div class="row">
     <div class="col-sm-3">
       <!--left col-->
+
+
       <div class="text-center">
         <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
         <h6>Upload a different photo...</h6>
         <input type="file" class="text-center center-block file-upload">
       </div></hr><br>
+
+
+      <!--  <div class="panel panel-default">
+         <div class="panel-heading">Website <i class="fa fa-link fa-1x"></i></div>
+         <div class="panel-body"><a href="http://bootnipets.com">bootnipets.com</a></div>
+       </div> -->
+      <!--  <ul class="list-group">
+         <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
+         <li class="list-group-item text-right"><span class="pull-left"><strong>Shares</strong></span> 125</li>
+         <li class="list-group-item text-right"><span class="pull-left"><strong>Likes</strong></span> 13</li>
+         <li class="list-group-item text-right"><span class="pull-left"><strong>Posts</strong></span> 37</li>
+         <li class="list-group-item text-right"><span class="pull-left"><strong>Followers</strong></span> 78</li>
+       </ul>  -->
+      <!--  <div class="panel panel-default">
+         <div class="panel-heading">Social Media</div>
+         <div class="panel-body">
+           <i class="fa fa-facebook fa-2x"></i> <i class="fa fa-github fa-2x"></i> <i class="fa fa-twitter fa-2x"></i> <i class="fa fa-pinterest fa-2x"></i> <i class="fa fa-google-plus fa-2x"></i>
+         </div>
+       </div> -->
+
     </div><!--/col-3-->
     <div class="col-sm-9">
+      <!--  <ul class="nav nav-tabs">
+           <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+           <li><a data-toggle="tab" href="#messages">Menu 1</a></li>
+           <li><a data-toggle="tab" href="#settings">Menu 2</a></li>
+         </ul> -->
+
+
       <div class="tab-content">
 
 
         <form class="form" action="##" method="post" id="registrationForm">
           <div class="form-group">
-            <tr>
-              <div class="col-xs-6">
-                <label for="first_name"><h4>First name</h4></label>
-                <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" value="{{userProfileData.FirstName}}" title="enter your first name if any." ng-pattern="/^[a-zA-Z]$/" ng-model="firstName" required />
-                <span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">First name is required</span>
-              </div>
+
+            <div class="col-xs-6">
+              <label for="first_name"><h4>First name</h4></label>
+              <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any. " ngModel={vm.usersData.FirstName}>
+            </div>
           </div>
           <div class="form-group">
 
             <div class="col-xs-6">
               <label for="last_name"><h4>Last name</h4></label>
-              <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" value="{{userProfileData.LastName}}" title="enter your last name if any."  ng-pattern="/^[a-zA-Z]$/" ng-model="lastName" required />
-                <span ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block">Last name is required</span>
+              <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any." ng-model={vm.getUserData.LastName}>
             </div>
           </div>
 
@@ -41,85 +69,67 @@
 
             <div class="col-xs-6">
               <label for="phone"><h4>Phone</h4></label>
-              <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" value="{{userProfileData.ContactNumber}}" title="enter your phone number if any." ng-pattern="/^[0-9]{1,7}$/" ng-model="phone" ng-maxlength="10" ng-minlength="10" required>
-              <div ng-messages="form.phone.$error">
-                <!--<div ng-messages="form.phone.$error.minlength">
-    <div ng-messages="form.phone.$error.maxlength">-->
-                <div ng-messages="form.phone.$error.pattern">
-                  <div ng-message="required">This field is required</div>
-                  <div ng-message="phone">Enter your valid phone number</div>
-                </div>
-              </div>
-
+              <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
             </div>
           </div>
 
           <div class="form-group">
             <div class="col-xs-6">
               <label for="mobile"><h4>Mobile</h4></label>
-              <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" value="{{userProfileData.ContactNumber}}" title="enter your mobile number if any." ng-model="mobile" ng-maxlength="10"ng-pattern="/^[0-9]{1,7}$/"  ng-minlength="10" required>
-              <div ng-messages="form.phone.$error">
-                <!--<div ng-messages="form.phone.$error.minlength">
-        <div ng-messages="form.phone.$error.maxlength">-->
-                <div ng-messages="form.phone.$error.pattern">
-                  <div ng-message="required">This field is required</div>
-                  <div ng-message="phone">Enter your valid phone number</div>
-                </div>
-              </div>
-
+              <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any." ng-model={vm.getUserData.ContactNumber}>
             </div>
           </div>
           <div class="form-group">
 
             <div class="col-xs-6">
               <label for="email"><h4>Email</h4></label>
-              <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" value="{{userProfileData.LoginId}}" title="enter your email." ng-model="email" required>
-              <div ng-messages="myForm.email.$error">
-                <div ng-message="required">This field is required</div>
-                <div ng-message="email">Your email address is invalid</div>
-              </div>
+              <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email." ng-model={vm.getUserData.LoginId}>
+            </div>
+          </div>
+
+          <div class="form-group">
+
+            <div class="col-xs-6">
+              <label for="Address Line1"><h4>Address Line1</h4></label>
+              <input type="text" class="form-control" name="phone" id="Address Line1" placeholder="enter address" title="enter your address line1" ng-model={vm.getUserData.AddressLine1}>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-xs-6">
+              <label for="Address Line2"><h4>Address Line2</h4></label>
+              <input type="text" class="form-control" name="Address Line" id="Address Line2" placeholder="enter address" title="enter your address line2" ng-model={vm.getUserData.AddressLine2}>
             </div>
           </div>
           <div class="form-group">
 
             <div class="col-xs-6">
-              <label for="email"><h4>Location</h4></label>
-              <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location" ng-model="location" required>
-              <div ng-messages="form.location.$error">
-                <div ng-messages="form.location.$error.pattern">
-                  <div ng-message="required">This field is required</div>
-                  <div ng-message="location">please enter your location</div>
-                </div>
-              </div>
+              <label for="City"><h4>City</h4></label>
+              <input type="text" class="form-control" name="City" id="City" placeholder="enter City" title="enter your City" ng-model={vm.getUserData.City}>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-xs-6">
+              <label for="State"><h4>State</h4></label>
+              <input type="text" class="form-control" name="State" id="State" placeholder="enter State" title="enter your State" ng-model={vm.getUserData.State}>
             </div>
           </div>
           <div class="form-group">
 
             <div class="col-xs-6">
-              <label for="password"><h4>Password</h4></label>
-              <input type="password" class="form-control input-borderless" name="password" id="password" value="{{userProfileData.Password}}" title="enter your password." ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/" placeholder="Password" ng-model="password" required>
-              <div ng-messages="form.password.$error">
-                <div ng-messages="form.password.$error.pattern">
-                  <div ng-message="required">This field is required</div>
-                  <div ng-message="password">please type the correct password</div>
-                </div>
-              </div>
+              <label for="Country"><h4>Country</h4></label>
+              <input type="text" class="form-control" name="Country" id="Country" placeholder="enter Country" title="enter your Country" ng-model={vm.getUserData.Country}>
             </div>
           </div>
+
           <div class="form-group">
-
             <div class="col-xs-6">
-              <label for="password2"><h4>Verify</h4></label>
-              <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" value="{{userProfileData.Password}}" title="Conform your password." ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/" ng-model="password2" required>
-              <div ng-messages="form.password.$error">
-                <div ng-messages="form.password2.$error.pattern">
-                  <div ng-message="required">This field is required</div>
-                  <div ng-message="password">please type the correct password</div>
-                </div>
-              </div>
-
+              <label for="Zip code"><h4>Zip code</h4></label>
+              <input type="text" class="form-control" name="Zip code" id="Zip code" placeholder="enter Zip code" title="enter your Zip code" ng-model={vm.getUserData.ZIPCode}>
             </div>
           </div>
+
           <div class="form-group">
             <div class="col-xs-12">
               <br>
@@ -127,12 +137,11 @@
               <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
             </div>
           </div>
-          
-              </tr>
         </form>
 
+
         <hr>
-        
+
         <!--/tab-pane-->
         <div class="tab-pane" id="messages">
 
@@ -281,5 +290,6 @@
 
       </div><!--/tab-pane-->
     </div><!--/tab-content-->
-        </div><!--/col-9-->
-    </div><!--/row-->
+
+  </div><!--/col-9-->
+</div><!--/row-->
