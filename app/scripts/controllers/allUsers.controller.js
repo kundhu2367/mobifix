@@ -13,7 +13,6 @@
          $http.get("http://localhost:50709/api/user/GetAllUsers")
            .then(function (response) {
              $scope.allUsersData = response.data;
-           
          });
      
          var vm = this;

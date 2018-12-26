@@ -1,44 +1,113 @@
+
 <div class="container-fluid">
-
-
-  <div class="container PDFBtm">
+  <div class="container MRBtm">
     <div class="row PDFcontent">
       <div class="col-md-12  col-xs-12">
-        <h4 class="PDFheadingh4">PRODUCT DETAILS FORM</h4>
+        <h4 class="MRheadingh4">Get an instant <br /> mobile repair estimate. It's Easy/Simple/Quick.</h4>
       </div>
     </div>
     <form class="" action="">
-
       <div class="row">
         <div class="col-sm-6 col-md-6 col-lg-6">
           <div class="form-group">
-            <label class="control-label PDFlabel" for="issue">Type Of Issue *</label>
+            <label class="control-label PDFlabel" for="brands">Device Brand *</label>
             <div class="">
-              <select class="form-control" name="issue">
-                <option value="No Incomming">No Incomming</option>
-                <option value="saab">Saab</option>
-                <option value="fiat">Fiat</option>
-                <option value="audi">Audi</option>
+              <select placeholder="Select Brand" ng-options="x for x in y" ng-model="selectedItem" ng-change="selectedItemChanged(selectedItem)">
+               
               </select>
-              <!-- <input type="submit" class="form-control" id="issue" placeholder="Select Type Of issue" name="issue"> -->
+
             </div>
           </div>
         </div>
 
         <div class="col-sm-6 col-md-6 col-lg-6">
           <div class="form-group">
-            <label class="control-label PDFlabel" for="brand">Device Brand *</label>
+            <label class="control-label PDFlabel" for="models">Device Model*</label>
             <div class="">
-              <input type="text" class="form-control" id="brand" placeholder="Enter Device Brand" name="brand">
+                <select ng-options="z.model for z in brands" ng-model="selectedModelItem" ng-change="selectedModelItemChanged(selectedModelItem.varient)">
+                  <option value="select model">select model</option>
+
+                </select>
             </div>
           </div>
         </div>
-      </div>
+          <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="form-group">
+            <label class="control-label PDFlabel" for="models">Device Variants*</label>
+            <div class="">
+                <select ng-options="w for w in  models" ng-model="selectedVariantItem" ng-change="selectedVariantItemChanged(selectedModelItem.issue)">
+                  <option value="select model">select Variant</option>
 
-      <div class="row">
-        <button type="submit" class="btn btnsuccess">Submit</button>
-      </div>
+                </select>
+            </div>
+          </div>
+        </div>
 
+         <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="form-group">
+            <label class="control-label PDFlabel" for="models">Device Issue*</label>
+            <div class="">
+                <select >
+                  <option value="select model">select issue</option>
+
+                </select>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="form-group">
+            <label class="control-label PDFlabel" for="models">Repair Price*</label>
+            <div class="">
+               <input type="text"></input>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+      
     </form>
+
+    <div class="row">
+      <p class="MRTrust">Trusted by</p>
+    </div>
+
+    <div class="BKOicons">
+      <div class="row">
+        <div class="col-md-2 col-sm-4 col-xs-6 ">
+          <img src="../assets/images/Apple.png" class="Bkoimg" />
+          <h4 class="BKOoption"> Apple</h4>
+        </div>
+
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <img src="../assets/images/samsung.png" class="Bkoimg">
+          <h4 class="BKOoption">Samsung</h4>
+        </div>
+
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <img src="../assets/images/blackberry.png" class="Bkoimg">
+          <h4 class="BKOoption">Blackberry</h4>
+        </div>
+
+        <div class="col-md-2 col-sm-4 col-xs-6 ">
+          <img src="../assets/images/microsoft.png" class="Bkoimg">
+          <h4 class="BKOoption">Microsoft</h4>
+        </div>
+
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <img src="../assets/images/nexus.png" class="Bkoimg">
+          <h4 class="BKOoption">Nexus</h4>
+        </div>
+
+        <div class="col-md-2 col-sm-4 col-xs-6">
+          <img src="../assets/images/googlepixel.png" class="Bkoimg">
+          <h4 class="BKOoption">Googlepixel</h4>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
+  
