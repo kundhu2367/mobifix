@@ -45,8 +45,8 @@
 
         function login() {
             vm.loginCred = {
-                username : vm.username,
-                password : vm.password
+                LoginId : vm.username,
+                Password : vm.password
             }
 
             httpDataService.login(vm.loginCred).then(function(resposeObj){
@@ -54,8 +54,11 @@
                     $rootScope.$broadcast("loginbroadcast", {status:200}); //catch in dashboard controller
                     $rootScope.userData = resposeObj.data;
                     $uibModalInstance.close()
-                } else {
+                } else if(resposeObj.status == 404) {
                     // Error Scenarios
+                    $rootScope.$broadcast("loginbroadcast", {status:404}); 
+                    $('#userPwd').show();
+                    $rootScope.userData = resposeObj.data;
                 }
             });
         }

@@ -35,7 +35,7 @@
       // var errorResponse = {status:400};
       // return successResponse;
       // return httpRequestWrapper.post(url, userData, null, null, false);
-      return httpRequestWrapper.get(url, null, null, true);
+      return httpRequestWrapper.post(url,userData,null, null, true);
     }
 
     function logout (userData) {
