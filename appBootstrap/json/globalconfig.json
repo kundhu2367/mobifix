@@ -10,7 +10,7 @@
     }
   ],
   "apiUrls" : {
-    "login" : "mockdata/login.json",
+    "login" : "http://localhost:50709/api/user/UserNameStatus",
     "getallusers" :"http://localhost:50709/api/user/GetAllUsers"
   },
   "data" : {
