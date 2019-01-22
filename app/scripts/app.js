@@ -58,7 +58,8 @@ angular
     .constant('STATUS_STATE_NAME', 'status')
     .constant('PRODUCTDETAILSFORM_STATE_NAME', 'productdetailsform')
     .constant('RESETPASSWORD_STATE_NAME', 'resetPassword')
-    .constant('LOGIN_STATE_NAME', 'login')
+  .constant('LOGIN_STATE_NAME', 'login')
+  .constant('REGISTER_STATE_NAME','register')
     .constant('ALLUSERS_STATE_NAME', 'allUsers')
     .constant('ALLVENDORS_STATE_NAME', 'allVendors')
     .constant('USERPROFILE_STATE_NAME', 'userProfile')
@@ -66,7 +67,7 @@ angular
   .constant('MOBILEREPAIR_STATE_NAME', 'mobileRepair')
 .config(function($stateProvider, $urlRouterProvider, $locationProvider, ABOUT_STATE_NAME,
     DASHBOARD_STATE_NAME, HOME_STATE_NAME, BLOG_STATE_NAME, BOOKONLINE_STATE_NAME, CONTACTUS_STATE_NAME, REPAIR_STATE_NAME,
-  STATUS_STATE_NAME, PRODUCTDETAILSFORM_STATE_NAME, ALLUSERS_STATE_NAME, ALLVENDORS_STATE_NAME, USERPROFILE_STATE_NAME, VENDORPROFILE_STATE_NAME, MOBILEREPAIR_STATE_NAME) {
+  STATUS_STATE_NAME, PRODUCTDETAILSFORM_STATE_NAME, REGISTER_STATE_NAME, ALLUSERS_STATE_NAME, ALLVENDORS_STATE_NAME, USERPROFILE_STATE_NAME, VENDORPROFILE_STATE_NAME, MOBILEREPAIR_STATE_NAME) {
 
     // This is a server file code
     // app.get("*", function(req, res) {
