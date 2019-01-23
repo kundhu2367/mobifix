@@ -38,6 +38,17 @@
       return httpRequestWrapper.post(url,userData,null, null, true);
     }
 
+    function register(userData) {
+      var url = apiUrls.register;
+      return httpRequestWrapper.post(url, userData, null, null, true);
+    }
+
+    function userProfile(userData) {
+      var url = apiUrls.userProfile;
+      return httpRequestWrapper.post(url, userData, null, null, true);
+    }
+
+
     function logout (userData) {
       var url = apiUrls.logout;
       var data = userData ? userData : null;
@@ -46,6 +57,8 @@
 
     return {
       login: login,
+      register: register,
+      userProfile: userProfile,
       logout: logout
     };
   }

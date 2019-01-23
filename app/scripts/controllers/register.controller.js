@@ -8,11 +8,13 @@
 (function(angular, lodash) {
     'use strict';
 
-    function registerControllerConstructor($location, $state, $rootScope, httpDataService, commonModal) {
+  function registerControllerConstructor($location, $state, $rootScope, $uibModalInstance, credentials, httpDataService, commonModal) {
 
         var vm = this;
-         vm.$state = $state;
-           function openLoginModal() {
+      vm.$state = $state;
+
+    function openLoginModal() {
+      $uibModalInstance.close()
 
            	$('#registerModal').hide();
 
@@ -28,10 +30,31 @@
             commonModal.openModal('loginModal', resolveAttributes, modalCallBack, modalDismissCallBack);
         }
   
+      function register() {
+        vm.registerCred = {
+          UserType : vm.UserType,
+          LoginId : vm.username,
+          ContactNumber : vm.ContactNumber,
+          Password : vm.password
+        }
 
+        httpDataService.register(vm.registerCred).then(function (resposeObj) {
+          if (resposeObj.status == 200) {
+            $rootScope.$broadcast("registerbroadcast", { status: 200 }); //catch in dashboard controller
+            $rootScope.userData = resposeObj.data;
+            $uibModalInstance.close()
+          } else if (resposeObj.status == 404) {
+            // Error Scenarios
+            $rootScope.$broadcast("registerbroadcast", { status: 404 });
+            $('#userPwd').show();
+            $rootScope.userData = resposeObj.data;
+          }
+        });
+      }
+      vm.register = register;
         vm.openLoginModal = openLoginModal;
     }
     angular.module('mobifixApp')
       .controller('registerCtrl', registerControllerConstructor);
-  //$scope.phoneNumbr = /^\+?\d{2}[- ]?\d{3}[- ]?\d{5}$/;
+  
 })(window.angular, window._);
