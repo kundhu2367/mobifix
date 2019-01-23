@@ -30,7 +30,7 @@
             <div class="col-xs-6">
               <label for="last_name"><h4>Last name</h4></label>
               <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any." value="{{vendorProfileData.FirstName}}" ng-pattern="/^[a-zA-Z]$/" ng-model="lastName" required />
-              <span ng-show="form.laststName.$dirty && form.lastName.$error.required" class="help-block">Last name is required</span>
+              <span ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block">Last name is required</span>
             </div>
           </div>
 
