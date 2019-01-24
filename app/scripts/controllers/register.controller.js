@@ -16,7 +16,7 @@
     function openLoginModal() {
       $uibModalInstance.close()
 
-           	$('#registerModal').hide();
+           $('#registerModal').hide();
 
             var commonResolves = commonModal.commonResolves({});
             var resolveAttributes = {
@@ -32,18 +32,24 @@
   
       function register() {
         vm.registerCred = {
-          UserType : vm.UserType,
-          LoginId : vm.username,
-          ContactNumber : vm.ContactNumber,
-          Password : vm.password
+          UserType: 1,
+          LoginId: vm.username,
+          Password: vm.password,
+          NoOfAttempts: "",
+          UserStatus: "",
+          CrearedBy: 1,
+          LastUpdateBy: 1,
+          ContactPhoneID: "",
+          ContactNumber: vm.ContactNumber,
+          ContactStatus: "",
+          AddByUserID: "",
+          ChangedByID:""
         }
 
         httpDataService.register(vm.registerCred).then(function (resposeObj) {
           if (resposeObj.status == 200) {
-            $rootScope.$broadcast("registerbroadcast", { status: 200 }); //catch in dashboard controller
-            $rootScope.userData = resposeObj.data;
-            $uibModalInstance.close()
-          } else if (resposeObj.status == 404) {
+            $('#registerSuccess').show();
+                    } else if (resposeObj.status == 404) {
             // Error Scenarios
             $rootScope.$broadcast("registerbroadcast", { status: 404 });
             $('#userPwd').show();

@@ -10,21 +10,6 @@
      function userProfileControllerConstructor($sce, httpDataService, commonModal,$scope, $http) {
       
 
-       $http({
-         url: 'http://localhost:50709/api/User/Getuser',
-         method: "POST",
-         data: {
-           "LoginId": vm.username, "Password": vm.Password},
-         headers: {
-           'Authorization': 'Basic d2VudHdvcnRobWFuOkNoYW5nZV9tZQ==',
-           'Accept': 'application/json;odata=verbose'
-         }
-       })
-      .then(function (response) {
-        $scope.userProfileData = response.data;
-
-         });
-
     var vm = this;
     vm.app = 'Mobifix'
      }
