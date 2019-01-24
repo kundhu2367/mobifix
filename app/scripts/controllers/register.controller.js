@@ -44,7 +44,6 @@
           ContactStatus: "",
           AddByUserID: "",
           ChangedByID:""
-
         }
 
         httpDataService.register(vm.registerCred).then(function (resposeObj) {
