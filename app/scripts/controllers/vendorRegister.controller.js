@@ -13,7 +13,7 @@
 
     var vm = this;
     vm.$state = $state;
-    function openLoginModal() {
+    function openvendorLoginModal() {
 
       $('#registerModal').hide();
 
@@ -26,11 +26,38 @@
       };
       var modalDismissCallBack = function () {
       };
-      commonModal.openModal('loginModal', resolveAttributes, modalCallBack, modalDismissCallBack);
+      commonModal.openModal('vendorloginModal', resolveAttributes, modalCallBack, modalDismissCallBack);
     }
 
+    function vendorregister() {
+      vm.vendorregisterCred = {
+        UserType: 2,
+        LoginId: vm.username,
+        Password: vm.password,
+        NoOfAttempts: "",
+        UserStatus: "",
+        CrearedBy: 1,
+        LastUpdateBy: 1,
+        ContactPhoneID: "",
+        ContactNumber: vm.ContactNumber,
+        ContactStatus: "",
+        AddByUserID: "",
+        ChangedByID: ""
+      }
 
-    vm.openLoginModal = openLoginModal;
+      httpDataService.vendorregister(vm.vendorregisterCred).then(function (resposeObj) {
+        if (resposeObj.status == 200) {
+          $('#vendorregisterSuccess').show();
+        } else if (resposeObj.status == 404) {
+          // Error Scenarios
+          $rootScope.$broadcast("vendorregisterbroadcast", { status: 404 });
+          $('#userPwd').show();
+          $rootScope.userData = resposeObj.data;
+        }
+      });
+    }
+    vm.vendorregister = vendorregister;
+    vm.openLoginModal = openvendorLoginModal;
   }
   angular.module('mobifixApp')
     .controller('vendorRegisterCtrl', vendorRegisterControllerConstructor);
