@@ -8,13 +8,13 @@
 (function(angular) {
     'use strict';
 
-  function vendorRegisterControllerConstructor($sce, $state, httpDataService, commonModal) {
+  function vendorRegisterControllerConstructor($sce, $location, $state, $rootScope, $uibModalInstance, credentials, httpDataService, commonModal) {
 
 
     var vm = this;
     vm.$state = $state;
-    function openvendorLoginModal() {
-
+    function openLoginModal() {
+      $uibModalInstance.close()
       $('#registerModal').hide();
 
       var commonResolves = commonModal.commonResolves({});

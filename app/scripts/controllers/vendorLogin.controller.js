@@ -9,10 +9,10 @@
 (function(angular, lodash) {
     'use strict';
 
-    function vendorLoginControllerConstructor($location, $state, $rootScope, credentials, httpDataService, commonModal) {
+  function vendorLoginControllerConstructor($location, $state, $rootScope, $uibModalInstance, credentials, httpDataService, commonModal) {
 
-        var vm = this;
-        vm.$state = $state;
+      var vm = this;
+      vm.$state = $state;
 
       function openVendorRegisterModal() {
         $uibModalInstance.close()
