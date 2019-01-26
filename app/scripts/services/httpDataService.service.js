@@ -44,7 +44,8 @@
     }
 
     function vendorregister(userData) {
-      var url = apiUrls.register;
+
+      var url = apiUrls.vendorregister;
       return httpRequestWrapper.post(url, userData, null, null, true);
     }
     function logout (userData) {
@@ -53,11 +54,16 @@
       return httpRequestWrapper.post(url, data, null, null, false);
     }
 
+    function vendorlogin(userData) {
+      var url = apiUrls.vendorlogin;
+      return httpRequestWrapper.post(url, userData, null, null, true);
+    }
     return {
       login: login,
       register: register,
       vendorregister: vendorregister,
       logout: logout
+      vendorlogin: vendorlogin
     };
   }
 

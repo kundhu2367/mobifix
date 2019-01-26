@@ -10,55 +10,57 @@
 
 
                 <form class="box formbox" action="">
-                    <div class="inner-addon left-addon inputbox">
-                        <i class="glyphicon glyphicon-user col"></i>
-                        <input type="text" class="form-control input-borderless" id="userName" name="userName" placeholder="Username" ng-model="vm.username" required/>
-                    </div>
+                  <div class="inner-addon left-addon inputbox">
+                    <i class="glyphicon glyphicon-user col"></i>
+                    <input type="text" class="form-control input-borderless" id="userName" name="userName" placeholder="Username" ng-model="vm.username" required />
+                  </div>
 
-                    <div class="inner-addon left-addon">
-                        <i class="glyphicon glyphicon-lock col"></i>
-                        <input id="password" type="text" class="form-control input-borderless" name="passowrd" placeholder="Password" ng-model="vm.password" required>
-                    </div>
-
-                    <p style="text-align:center;"> <label class="checkbox-inlinelogin">
-                <input type="checkbox" id="cb" name="cb" value="">
-                  Remember Me ?
-              </label></p>
-
-       
-
-                    <div class="wrapperlogin">
-                        <button type="submit" class="btn buttonlogin" value="Submit">LOGIN</button>
-                    </div>
-
-                    <div class="Loginlog">
-                        <h5 class="loginh5">Don't have an account ? <a ng-click="vm.openVendorRegisterModal()" class="link"> REGISTER <span class="linkspan">HERE</span></a></h5>
-                    </div>
-
-                    <div class="Loginfg">
-                        <h5 class="loginh5">Forget Password <a ng-click="vm.openVendorResetPasswordModal()" class="link"> Reset</a></h5>
-                    </div>
+                  <div class="inner-addon left-addon">
+                    <i class="glyphicon glyphicon-lock col"></i>
+                    <input id="password" type="password" class="form-control input-borderless" name="passowrd" placeholder="Password" ng-model="vm.password" required>
+                  </div>
+                  <label style="color:red;display:none;font-size: 12px;" id="userPwd">UserName and Passord doesn't Match</label>
+                  <p style="text-align:center;">
+                    <label class="checkbox-inlinelogin">
+                      <input type="checkbox" id="cb" name="cb" value="">
+                      Remember Me ?
+                    </label>
+                  </p>
 
 
-                    <div class="hr"></div>
+
+                  <div class="wrapperlogin">
+                    <button type="submit" class="btn buttonlogin" value="Submit" ng-click="vm.vendorlogin">LOGIN</button>
+                  </div>
+
+                  <div class="Loginlog">
+                    <h5 class="loginh5">Don't have an account ? <a ng-click="vm.openVendorRegisterModal()" class="link"> REGISTER <span class="linkspan">HERE</span></a></h5>
+                  </div>
+
+                  <div class="Loginfg">
+                    <h5 class="loginh5">Forget Password <a ng-click="vm.openVendorResetPasswordModal()" class="link"> Reset</a></h5>
+                  </div>
 
 
-                    <!-- Footer Elements -->
-                    <div class="container social-icons">
+                  <div class="hr"></div>
 
-                        <!-- Social buttons -->
-                        <ul class="list-unstyled list-inline ">
-                            <li class="facebook loginf">
-                                <a href="#">
-                                    <i class="fa fa-facebook"> </i>
-                                </a>
-                                <p class="loginpadding">Login With Facebook</p>
-                            </li>
-                        </ul>
-                        <!-- Social buttons -->
 
-                    </div>
-                    <!-- Footer Elements -->
+                  <!-- Footer Elements -->
+                  <div class="container social-icons">
+
+                    <!-- Social buttons -->
+                    <ul class="list-unstyled list-inline ">
+                      <li class="facebook loginf">
+                        <a href="#">
+                          <i class="fa fa-facebook"> </i>
+                        </a>
+                        <p class="loginpadding">Login With Facebook</p>
+                      </li>
+                    </ul>
+                    <!-- Social buttons -->
+
+                  </div>
+                  <!-- Footer Elements -->
 
                 </form>
 

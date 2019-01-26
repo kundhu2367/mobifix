@@ -13,7 +13,8 @@
     "login": "http://localhost:50709/api/user/UserNameStatus",
     "getallusers": "http://localhost:50709/api/user/GetAllUsers",
     "register": "http://localhost:50709/api/User/InsertUserRegistrationDetails",
-    "vendorregister": "http://localhost:50709/api/Vendor/InsertVendorDetails"
+    "vendorregister": "http://localhost:50709/api/Vendor/InsertVendorRegistrationDetails",
+    "vendorlogin": "http://localhost:50709/api/user/UserNameStatus"
   },
   "data" : {
 

@@ -22,7 +22,7 @@
 
                   <div class="inner-addon left-addon">
                     <i class="glyphicon glyphicon-envelope col"></i>
-                    <input type="email" name="email" class="form-control input-borderless" placeholder="Email" ng-model="vm.LoginId" required>
+                    <input type="email" name="email" class="form-control input-borderless" placeholder="Email" ng-model="vm.LoginId" required
                     <div ng-messages="form.email.$error">
                       <div ng-message="required">This field is required</div>
                       <div ng-message="email">Your email address is invalid</div>
@@ -65,7 +65,7 @@
                   </div>
 
                   <div class="logsignin">
-                    <h5 class="signinh5">Already have an account ? <a ng-click="vm.openLoginModal()" class="link"> LOGIN</a></h5>
+                    <h5 class="signinh5">Already have an account ? <a ng-click="vm.openvendorLoginModal()" class="link"> LOGIN</a></h5>
                   </div>
 
 

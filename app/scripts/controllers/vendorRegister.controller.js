@@ -26,7 +26,7 @@
       };
       var modalDismissCallBack = function () {
       };
-      commonModal.openModal('loginModal', resolveAttributes, modalCallBack, modalDismissCallBack);
+      commonModal.openModal('vendorloginModal', resolveAttributes, modalCallBack, modalDismissCallBack);
     }
 
     function vendorregister() {
@@ -57,7 +57,7 @@
       });
     }
     vm.vendorregister = vendorregister;
-    vm.openLoginModal = openLoginModal;
+    vm.openLoginModal = openvendorLoginModal;
   }
   angular.module('mobifixApp')
     .controller('vendorRegisterCtrl', vendorRegisterControllerConstructor);

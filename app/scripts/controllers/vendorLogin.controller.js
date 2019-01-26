@@ -14,21 +14,21 @@
       var vm = this;
       vm.$state = $state;
 
-        function openVendorRegisterModal() {
-          $uibModalInstance.close()
+      function openVendorRegisterModal() {
+        $uibModalInstance.close()
 
-          var commonResolves = commonModal.commonResolves({});
-          var resolveAttributes = {
-            resolve: angular.extend(commonResolves.accountData)
-          };
+        var commonResolves = commonModal.commonResolves({});
+        var resolveAttributes = {
+          resolve: angular.extend(commonResolves.accountData)
+        };
 
-          var modalCallBack = function () {
+        var modalCallBack = function () {
 
-          };
-          var modalDismissCallBack = function () {
-          };
-          commonModal.openModal('registerModal', resolveAttributes, modalCallBack, modalDismissCallBack);
-        }
+        };
+        var modalDismissCallBack = function () {
+        };
+        commonModal.openModal('registerModal', resolveAttributes, modalCallBack, modalDismissCallBack);
+      }
           function openVendorResetPasswordModal() {
             $('#registerModal').hide();
             $('#loginModal').hide();
