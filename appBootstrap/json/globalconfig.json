@@ -12,7 +12,8 @@
   "apiUrls": {
     "login": "http://localhost:50709/api/user/UserNameStatus",
     "getallusers": "http://localhost:50709/api/user/GetAllUsers",
-    "register": "http://localhost:50709/api/User/InsertUserRegistrationDetails"
+    "register": "http://localhost:50709/api/User/InsertUserRegistrationDetails",
+    "vendorregister": "http://localhost:50709/api/Vendor/InsertVendorDetails"
   },
   "data" : {
 
