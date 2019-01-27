@@ -23,7 +23,9 @@
             <tr>
               <div class="col-xs-6">
                 <label for="first_name"><h4>First name</h4></label>
-                <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any." ng-model="vm.FirstName" />
+
+                <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" value="{{userData[0].FirstName}}" ng-model="vm.FirstName" title="enter your first name if any.">
+
 
                 <!--<span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">First name is required</span>-->
               </div>
@@ -32,7 +34,9 @@
 
             <div class="col-xs-6">
               <label for="last_name"><h4>Last name</h4></label>
-              <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any." ng-model="vm.LastName" />
+
+              <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" value="{{userData[0].LastName}}" ng-model="vm.LastName" title="enter your last name if any." />
+
 
             </div>
           </div>
@@ -41,7 +45,7 @@
 
             <div class="col-xs-6">
               <label for="phone"><h4>Phone</h4></label>
-              <input type="number" class="form-control" name="phone" id="phone" placeholder="enter phone" value="{{userData[0].ContactNumber}}" title="enter your phone number if any." required />
+              <input type="number" class="form-control" name="phone" id="phone" placeholder="enter phone" value="{{userData[0].ContactNumber}}" title="enter your phone number if any." ng-pattern="/^[0-9]{1,7}$/" ng-model="phone" ng-maxlength="10" ng-minlength="10" required/>
               <div ng-messages="form.phone.$error">
                 <!--<div ng-messages="form.phone.$error.minlength">
         <div ng-messages="form.phone.$error.maxlength">-->
@@ -58,8 +62,11 @@
           <!--<div class="form-group">
             <div class="col-xs-6">
               <label for="mobile"><h4>Mobile</h4></label>
-              <input type="number" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" value="" title="enter your mobile number if any." required>
+
+              <input type="number" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" value="{{userData[0].ContactNumber}}" title="enter your mobile number if any." ng-model="mobile" ng-maxlength="10" ng-pattern="/^[0-9]{1,7}$/" ng-minlength="10" required>
               <div ng-messages="form.phone.$error">
+                <!--<div ng-messages="form.phone.$error.minlength">
+                <div ng-messages="form.phone.$error.maxlength">-->
                 <div ng-messages="form.phone.$error.pattern">
                   <div ng-message="required">This field is required</div>
                   <div ng-message="phone">Enter your valid phone number</div>
@@ -72,43 +79,55 @@
 
             <div class="col-xs-6">
               <label for="email"><h4>Email</h4></label>
-              <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email."  ng-model="vm.username">
-
+              <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" value="{{userData[0].LoginId}}" title="enter your email." ng-model="vm.username">
             </div>
           </div>
           <div class="form-group">
 
             <div class="col-xs-6">
               <label for="text"><h4>Address Line1</h4></label>
-              <input type="text" class="form-control" id="location" placeholder="somewhere" title="enter a location" ng-model="vm.AddressLine1">
+
+
+              <input type="text" class="form-control" id="location" placeholder="somewhere" ng-model="vm.AddressLine1" title="enter a location" value="{{userData[0].AddressLine1}}">
+
 
             </div>
             <div class="col-xs-6">
               <label for="text"><h4>Address Line2</h4></label>
-              <input type="text" class="form-control" id="location" placeholder="somewhere" title="enter a location" ng-model="vm.AddressLine2">
+
+              <input type="text" class="form-control" id="location" placeholder="somewhere" title="enter a location" ng-model="vm.AddressLine2" value="{{userData[0].AddressLine2}}">
+
 
             </div>
             <div class="col-xs-6">
               <label for="text"><h4>City</h4></label>
-              <input type="text" class="form-control" id="City" placeholder="City" title="enter a City" ng-model="vm.City">
+
+              <input type="text" class="form-control" id="City" placeholder="City" title="enter a City"  ng-model="vm.City" value="{{userData[0].City}}">
+
 
             </div>
 
             <div class="col-xs-6">
               <label for="text"><h4>State</h4></label>
-              <input type="text" class="form-control" id="State" placeholder="State" title="enter a State" ng-model="vm.State">
+
+              <input type="text" class="form-control" id="State" placeholder="State" title="enter a State" ng-model="vm.State" value="{{userData[0].State}}">
+
 
             </div>
 
             <div class="col-xs-6">
               <label for="text"><h4>Country</h4></label>
-              <input type="text" class="form-control" id="Country" placeholder="Country" title="enter a Country" ng-model="vm.Country">
+
+              <input type="text" class="form-control" id="Country" placeholder="Country" title="enter a Country" ng-model="vm.Country" value="{{userData[0].Country}}">
+
 
             </div>
 
             <div class="col-xs-6">
               <label for="text"><h4>Zipcode</h4></label>
-              <input type="text" class="form-control" id="ZIPCode" placeholder="ZIPCode" title="enter a ZIPCode" ng-model="vm.ZIPCode">
+
+              <input type="text" class="form-control" id="ZIPCode" placeholder="ZIPCode" title="enter a ZIPCode" ng-model="vm.ZIPCode" value="{{userData[0].ZIPCode}}">
+
 
             </div>
 
@@ -118,14 +137,18 @@
           <div class="form-group">
             <div class="col-xs-12 btnbottom">
               <br>
+
               <!--<button class="btn btn-lg btn-success" type="submit" ng-click="vm.userProfile()"><i class="glyphicon glyphicon-ok-sign"></i> Update</button>-->
               <button type="submit" class="btn btn-lg btn-success" value="Submit" ng-click="vm.userProfile()">UPDATE</button>
+
             </div>
           </div>
 
           </tr>
         </form>
 
+
       </div><!--/tab-content-->
     </div><!--/col-9-->
   </div><!--/row-->
+
