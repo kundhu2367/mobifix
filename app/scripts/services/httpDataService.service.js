@@ -46,7 +46,7 @@
 
     function userProfile(userData) {
       var url = apiUrls.userProfile;
-      return httpRequestWrapper.put(url, userData, null, null, true);
+      return httpRequestWrapper.post(url, userData, null, null, true);
     }
     
 
@@ -70,7 +70,7 @@
       login: login,
       register: register,
       vendorregister: vendorregister,
-      logout: logout
+      logout: logout,
       vendorlogin: vendorlogin
     };
   }
