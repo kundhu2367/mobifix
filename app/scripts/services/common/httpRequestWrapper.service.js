@@ -50,7 +50,7 @@
 
     function put(url,data,query,header,authRequired){
 
-      var requestObject = createRequestObject('PUT', url, data, query, header, authRequired);
+        var requestObject = createRequestObject('PUT', url, data, query, header, authRequired);
       return $http(requestObject);
     }
 
