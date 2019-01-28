@@ -41,7 +41,7 @@
             };
             var modalDismissCallBack = function () {
             };
-            commonModal.openModal('vendorresetPasswordModal', resolveAttributes, modalCallBack, modalDismissCallBack);
+            commonModal.openModal('resetPasswordModal', resolveAttributes, modalCallBack, modalDismissCallBack);
         }
       function vendorlogin() {
         vm.verdorloginCred = {

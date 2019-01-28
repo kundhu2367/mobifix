@@ -13,7 +13,7 @@
 
     var vm = this;
     vm.$state = $state;
-    function openLoginModal() {
+    function vendorLoginModal() {
       $uibModalInstance.close()
       $('#registerModal').hide();
 
@@ -26,7 +26,7 @@
       };
       var modalDismissCallBack = function () {
       };
-      commonModal.openModal('loginModal', resolveAttributes, modalCallBack, modalDismissCallBack);
+      commonModal.openModal('vendorLoginModal', resolveAttributes, modalCallBack, modalDismissCallBack);
     }
 
     function vendorregister() {
@@ -57,7 +57,7 @@
       });
     }
     vm.vendorregister = vendorregister;
-    vm.openLoginModal = openLoginModal;
+    vm.vendorLoginModal = vendorLoginModal;
   }
   angular.module('mobifixApp')
     .controller('vendorRegisterCtrl', vendorRegisterControllerConstructor);
