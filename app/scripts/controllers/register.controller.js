@@ -13,7 +13,7 @@
         var vm = this;
       vm.$state = $state;
 
-    function openLoginModal() {
+    function openloginModal() {
       $uibModalInstance.close()
 
            $('#registerModal').hide();
@@ -58,7 +58,7 @@
         });
       }
       vm.register = register;
-        vm.openLoginModal = openLoginModal;
+        vm.openloginModal = openloginModal;
     }
     angular.module('mobifixApp')
       .controller('registerCtrl', registerControllerConstructor);

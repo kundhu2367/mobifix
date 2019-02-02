@@ -46,15 +46,26 @@
 
     function userProfile(userData) {
       var url = apiUrls.userProfile;
+      return httpRequestWrapper.put(url, userData, null, null, true);
+    }
+
+    function vendorProfile(userData) {
+      var url = apiUrls.vendorProfile;
+      return httpRequestWrapper.put(url, userData, null, null, true);
+    }
+
+    function vendorLogin(userData) {
+      var url = apiUrls.vendorLogin;
       return httpRequestWrapper.post(url, userData, null, null, true);
     }
+
+    function vendorRegister(userData) {
+
+      var url = apiUrls.vendorRegister;
+      return httpRequestWrapper.post(url, userData, null, null, true);
+    }
+
     
-
-    function vendorregister(userData) {
-
-      var url = apiUrls.vendorregister;
-      return httpRequestWrapper.post(url, userData, null, null, true);
-    }
 
     function logout (userData) {
       var url = apiUrls.logout;
@@ -62,16 +73,15 @@
       return httpRequestWrapper.post(url, data, null, null, false);
     }
 
-    function vendorlogin(userData) {
-      var url = apiUrls.vendorlogin;
-      return httpRequestWrapper.post(url, userData, null, null, true);
-    }
+    
     return {
       login: login,
       register: register,
-      vendorregister: vendorregister,
+      userProfile: userProfile,
+      vendorProfile: vendorProfile,
+      vendorRegister: vendorRegister,
       logout: logout,
-      vendorlogin: vendorlogin
+      vendorLogin: vendorLogin
     };
   }
 

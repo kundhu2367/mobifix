@@ -13,7 +13,7 @@
         var vm = this;
         vm.$state = $state;
 
-        function openLoginModal() {
+        function openloginModal() {
 
             var commonResolves = commonModal.commonResolves({});
             var resolveAttributes = {
@@ -26,21 +26,8 @@
             };
             commonModal.openModal('loginModal', resolveAttributes, modalCallBack, modalDismissCallBack);
         }
-
-         function openVendorLoginModal() {
-
-            var commonResolves = commonModal.commonResolves({});
-            var resolveAttributes = {
-                resolve: angular.extend(commonResolves.accountData)
-            };
-            var modalCallBack = function () {
-            
-            };
-            var modalDismissCallBack = function () {
-            };
-            commonModal.openModal('vendorLoginModal', resolveAttributes, modalCallBack, modalDismissCallBack);
-        }
-      function openVendorLoginModal() {
+      
+      function openvendorLoginModal() {
 
         var commonResolves = commonModal.commonResolves({});
         var resolveAttributes = {
@@ -62,12 +49,16 @@
             console.log( data)
             vm.showProfile = true;
         });
+
+      $rootScope.$on("vendorLoginbroadcast", function (evt, data) {
+        console.log(data)
+        vm.showProfile = true;
+      });
   
         vm.showProfile = false;
-      vm.openLoginModal = openLoginModal;
-      vm.openVendorLoginModal = openVendorLoginModal;
-        vm.openVendorLoginModal = openVendorLoginModal;
-        vm.signOff = signOff;
+      vm.openloginModal = openloginModal;
+      vm.openvendorLoginModal = openvendorLoginModal;
+      vm.signOff = signOff;
 
 
     }
