@@ -5,17 +5,19 @@
  * # vendorRegisterCtrl
  * Controller of the mobifixApp
  */
-(function(angular) {
+(function (angular, lodash) {
     'use strict';
 
-  function vendorRegisterControllerConstructor($sce, $location, $state, $rootScope, $uibModalInstance, credentials, httpDataService, commonModal) {
+  function vendorRegisterControllerConstructor($location, $state, $rootScope, $uibModalInstance, credentials, httpDataService, commonModal) {
 
 
     var vm = this;
     vm.$state = $state;
-    function openLoginModal() {
+
+    function openvendorLoginModal() {
       $uibModalInstance.close()
-      $('#registerModal').hide();
+
+      $('#vendorRegisterModal').hide();
 
       var commonResolves = commonModal.commonResolves({});
       var resolveAttributes = {
@@ -26,11 +28,11 @@
       };
       var modalDismissCallBack = function () {
       };
-      commonModal.openModal('vendorloginModal', resolveAttributes, modalCallBack, modalDismissCallBack);
+      commonModal.openModal('loginModal', resolveAttributes, modalCallBack, modalDismissCallBack);
     }
 
-    function vendorregister() {
-      vm.vendorregisterCred = {
+    function vendorRegister() {
+      vm.vendorRegisterCred = {
         UserType: 2,
         LoginId: vm.username,
         Password: vm.password,
@@ -45,21 +47,21 @@
         ChangedByID: ""
       }
 
-      httpDataService.vendorregister(vm.vendorregisterCred).then(function (resposeObj) {
+      httpDataService.vendorRegister(vm.vendorRegisterCred).then(function (resposeObj) {
         if (resposeObj.status == 200) {
-          $('#vendorregisterSuccess').show();
+          $('#vendorRegisterSuccess').show();
         } else if (resposeObj.status == 404) {
           // Error Scenarios
-          $rootScope.$broadcast("vendorregisterbroadcast", { status: 404 });
+          $rootScope.$broadcast("vendorRegisterbroadcast", { status: 404 });
           $('#userPwd').show();
           $rootScope.userData = resposeObj.data;
         }
       });
     }
-    vm.vendorregister = vendorregister;
-    vm.openLoginModal = openvendorLoginModal;
+    vm.vendorRegister = vendorRegister;
+    vm.openvendorLoginModal = openvendorLoginModal;
   }
   angular.module('mobifixApp')
     .controller('vendorRegisterCtrl', vendorRegisterControllerConstructor);
-  //$scope.phoneNumbr = /^\+?\d{2}[- ]?\d{3}[- ]?\d{5}$/;
+
 })(window.angular, window._);

@@ -1,8 +1,8 @@
 /**
  * @ngdoc function
- * @name mobifixApp.controller:vendorloginCtrl
+ * @name mobifixApp.controller:vendorLoginCtrl
  * @description
- * # vendorloginCtrl
+ * # vendorLoginCtrl
  * Controller of the mobifixApp
  */
  
@@ -14,7 +14,7 @@
       var vm = this;
       vm.$state = $state;
 
-      function openVendorRegisterModal() {
+      function openvendorRegisterModal() {
         $uibModalInstance.close()
 
         var commonResolves = commonModal.commonResolves({});
@@ -27,11 +27,11 @@
         };
         var modalDismissCallBack = function () {
         };
-        commonModal.openModal('registerModal', resolveAttributes, modalCallBack, modalDismissCallBack);
+        commonModal.openModal('vendorRegisterModal', resolveAttributes, modalCallBack, modalDismissCallBack);
       }
           function openVendorResetPasswordModal() {
-            $('#registerModal').hide();
-            $('#loginModal').hide();
+            //$('#registerModal').hide();
+            //$('#loginModal').hide();
             var commonResolves = commonModal.commonResolves({});
             var resolveAttributes = {
                 resolve: angular.extend(commonResolves.accountData)
@@ -43,28 +43,35 @@
             };
             commonModal.openModal('vendorresetPasswordModal', resolveAttributes, modalCallBack, modalDismissCallBack);
         }
-      function vendorlogin() {
-        vm.verdorloginCred = {
+      function vendorLogin() {
+        vm.vendorLoginCred = {
           LoginId: vm.username,
           Password: vm.password
         }
 
-        httpDataService.vendorlogin(vm.vendorloginCred).then(function (resposeObj) {
+    //function vendorlogin() {
+    //  vm.loginCred = {
+    //    LoginId: vm.username,
+    //    Password: vm.password
+    //  }
+
+
+        httpDataService.vendorLogin(vm.vendorLoginCred).then(function (resposeObj) {
           if (resposeObj.status == 200) {
-            $rootScope.$broadcast("vendorloginbroadcast", { status: 200 }); //catch in dashboard controller
+            $rootScope.$broadcast("vendorLoginbroadcast", { status: 200 }); //catch in dashboard controller
             $rootScope.userData = resposeObj.data;
             $uibModalInstance.close()
           } else if (resposeObj.status == 404) {
             // Error Scenarios
-            $rootScope.$broadcast("vendorloginbroadcast", { status: 404 });
+            $rootScope.$broadcast("vendorLoginbroadcast", { status: 404 });
             $('#userPwd').show();
             $rootScope.userData = resposeObj.data;
           }
         });
       }
 
-      vm.vendorlogin = vendorlogin;
-        vm.openVendorRegisterModal = openVendorRegisterModal;
+      vm.vendorLogin = vendorLogin;
+        vm.openvendorRegisterModal = openvendorRegisterModal;
         vm.openVendorResetPasswordModal = openVendorResetPasswordModal;
 
     }

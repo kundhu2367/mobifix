@@ -65,9 +65,10 @@ angular
     .constant('USERPROFILE_STATE_NAME', 'userProfile')
     .constant('VENDORPROFILE_STATE_NAME', 'vendorProfile')
   .constant('MOBILEREPAIR_STATE_NAME', 'mobileRepair')
+  .constant('VENDORREGISTER_STATE_NAME','vendorRegister')
 .config(function($stateProvider, $urlRouterProvider, $locationProvider, ABOUT_STATE_NAME,
     DASHBOARD_STATE_NAME, HOME_STATE_NAME, BLOG_STATE_NAME, BOOKONLINE_STATE_NAME, CONTACTUS_STATE_NAME, REPAIR_STATE_NAME,
-  STATUS_STATE_NAME, PRODUCTDETAILSFORM_STATE_NAME, REGISTER_STATE_NAME, ALLUSERS_STATE_NAME, ALLVENDORS_STATE_NAME, USERPROFILE_STATE_NAME, VENDORPROFILE_STATE_NAME, MOBILEREPAIR_STATE_NAME) {
+  STATUS_STATE_NAME, VENDORREGISTER_STATE_NAME, PRODUCTDETAILSFORM_STATE_NAME, REGISTER_STATE_NAME, ALLUSERS_STATE_NAME, ALLVENDORS_STATE_NAME, USERPROFILE_STATE_NAME, VENDORPROFILE_STATE_NAME, MOBILEREPAIR_STATE_NAME) {
 
     // This is a server file code
     // app.get("*", function(req, res) {
@@ -219,6 +220,16 @@ angular
     data: {
       requireLogin: true
     }
+    };
+  var vendorRegisterStateConfig = {
+    url: "/vendorRegister",
+    parent: DASHBOARD_STATE_NAME,
+    templateUrl: "views/vendorRegister.html",
+    controller: 'vendorRegisterCtrl',
+    controllerAs: 'vm',
+    data: {
+      requireLogin: true
+    }
   };
     var vendorProfileStateConfig = {
     url: "/vendorProfile",
@@ -245,7 +256,8 @@ angular
         .state(ALLVENDORS_STATE_NAME, allVendorsStateConfig)
         .state(USERPROFILE_STATE_NAME, userProfileStateConfig)
         .state(VENDORPROFILE_STATE_NAME, vendorProfileStateConfig)
-        .state(MOBILEREPAIR_STATE_NAME, mobilerepairStateConfig)
+      .state(MOBILEREPAIR_STATE_NAME, mobilerepairStateConfig)
+      .state(VENDORREGISTER_STATE_NAME, vendorRegisterStateConfig)
 })
 
 .run(function($rootScope, $state, Notification) {
