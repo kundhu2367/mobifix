@@ -12,7 +12,7 @@
           <div class="form-group">
             <label class="control-label PDFlabel" for="brands">Device Brand *</label>
             <div class="">
-              <select placeholder="Select Brand" ng-options="x for x in y" ng-model="selectedItem" ng-change="selectedItemChanged(selectedItem)">
+              <select placeholder="Select Brand" ng-options="x.MobileCompany for x in brand" ng-model="selectedItem" ng-change="selectedItemChanged(selectedItem)">
                
               </select>
 
@@ -24,46 +24,48 @@
           <div class="form-group">
             <label class="control-label PDFlabel" for="models">Device Model*</label>
             <div class="">
-                <select ng-options="z.model for z in brands" ng-model="selectedModelItem" ng-change="selectedModelItemChanged(selectedModelItem.varient)">
+                <select ng-options="z.MobileVersionDescription for z in model" ng-model="selectedModelItem" ng-change="selectedModelItemChanged(selectedModelItem)">
                   <option value="select model">select model</option>
 
                 </select>
             </div>
           </div>
         </div>
-          <div class="col-sm-6 col-md-6 col-lg-6">
-          <div class="form-group">
-            <label class="control-label PDFlabel" for="models">Device Variants*</label>
-            <div class="">
-                <select ng-options="w for w in  models" ng-model="selectedVariantItem" ng-change="selectedVariantItemChanged(selectedModelItem.issue)">
-                  <option value="select model">select Variant</option>
 
-                </select>
-            </div>
-          </div>
-        </div>
 
-         <div class="col-sm-6 col-md-6 col-lg-6">
-          <div class="form-group">
-            <label class="control-label PDFlabel" for="models">Device Issue*</label>
-            <div class="">
-                <select >
-                  <option value="select model">select issue</option>
+        <div>
+        <label class="control-label PDFlabel" for="models">Final Cost*</label>
+        <input id="finalCost" type="text"></input>
 
-                </select>
-            </div>
-          </div>
-        </div>
+        <button type="submit" value="checkout">Checkout</button>
 
-         <div class="col-sm-6 col-md-6 col-lg-6">
-          <div class="form-group">
-            <label class="control-label PDFlabel" for="models">Repair Price*</label>
-            <div class="">
-               <input type="text"></input>
-            </div>
-          </div>
-        </div>
+        <div>
+       
+<table class="table">
+<thead>
+  <tbody>
+    <tr>
 
+
+<th>
+Select the Mobile Issue
+</th>
+<th>
+MobileIssue
+</th>
+<th>
+RepairPrice
+</th>
+
+    </tr>
+  </tbody>
+</thead>
+<tr ng-repeat="d in issueprice">
+<td><input type="checkbox" ng-model="vm.eduToEdit.test">{{vm.eduToEdit.test}}</input></td><td> {{d.MobileIssue}} </td><td> {{d.FinalCost}}</td>
+</tr>
+</ul>
+
+  
 
 
       </div>

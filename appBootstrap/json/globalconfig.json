@@ -14,9 +14,11 @@
     "getallusers": "http://localhost:50709/api/user/GetAllUsers",
     "register": "http://localhost:50709/api/User/InsertUserRegistrationDetails",
     "userProfile": "http://localhost:50709/api/User/UpdateUserStatus",
-    "vendorRegister": "http://localhost:50709/api/Vendor/InsertVendorRegistrationDetails",
-    "vendorLogin": "http://localhost:50709/api/Vendor/VendorNameStatus"
-  
+    "vendorregister": "http://localhost:50709/api/Vendor/InsertVendorRegistrationDetails",
+    "vendorlogin": "http://localhost:50709/api/user/UserNameStatus",
+    "model": "http://localhost:50709/api/MobileVersion/GetMobileVersion",
+    "issueprice": "http://localhost:50709/api/IssuePrice/GetIssueprice"
+
   },
   "data" : {
 

@@ -8,29 +8,51 @@
 (function (angular) {
   'use strict';
 
-  function mobileRepairControllerConstructor($scope, $http) {
+  function mobileRepairControllerConstructor($scope, $http, httpDataService) {
 
-    $http.get("http://localhost:9000/mockData/mobilvariants.json")
+    $http.get("http://localhost:50709/api/MobileTypes/GetAllMobileTypes")
       .then(function (response) {
 
-        $scope.y = Object.keys(response.data);
+ 
          $scope.brand = response.data;
 
+
         $scope.selectedItemChanged = function (item) {
-          $scope.brands = $scope.brand[item];
 
-        }
+          vm.slectedBrand = {
+                MobileCompanyID : item.MobileCompanyID
+              
+            }
+
+            httpDataService.brandModel(vm.slectedBrand).then(function(resposeObj){
+                if(resposeObj.status == 200){
+              $scope.model=resposeObj.data;
+
+
+              }
+            });
+            }
+
         $scope.selectedModelItemChanged = function (item) {
-          $scope.models = item;
+          vm.slectedModel = {
+                MobileVerTypeID : item.MobileVersionTypeID
+              
+            }
 
-        }
-        $scope.selectedVariantItemChanged=function (item) {
-          $scope.models = item;
+            httpDataService.issuePrice(vm.slectedModel).then(function(resposeObj){
+                if(resposeObj.status == 200){
+              $scope.issueprice=resposeObj.data;
 
-        }
+
+              }
+            });
+            }
+     
    });
  
     var vm = this;
+           vm.eduToEdit = {};
+  vm.eduToEdit.test = false;
     vm.app = 'Mobifix'
   }
   angular.module('mobifixApp')

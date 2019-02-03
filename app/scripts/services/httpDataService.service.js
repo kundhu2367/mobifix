@@ -31,12 +31,18 @@
 
     function login (userData) {
       var url = apiUrls.login;
-      // var successResponse = {status:200};
-      // var errorResponse = {status:400};
-      // return successResponse;
-      // return httpRequestWrapper.post(url, userData, null, null, false);
       return httpRequestWrapper.post(url,userData,null, null, true);
     }
+
+    function brandModel (userData) {
+      var url = apiUrls.model;
+      return httpRequestWrapper.post(url,userData,null, null, true);
+    }
+    function issuePrice (userData) {
+      var url = apiUrls.issueprice;
+      return httpRequestWrapper.post(url,userData,null, null, true);
+    }
+
 
     function register(userData) {
       var url = apiUrls.register;
@@ -81,7 +87,9 @@
       vendorProfile: vendorProfile,
       vendorRegister: vendorRegister,
       logout: logout,
-      vendorLogin: vendorLogin
+      vendorLogin: vendorLogin,
+      brandModel:brandModel,
+      issuePrice:issuePrice
     };
   }
 
