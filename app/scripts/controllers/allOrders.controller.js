@@ -10,7 +10,7 @@
      function allOrdersControllerConstructor($sce, httpDataService, commonModal,$scope, $http) {
        //var self = this;
     //self.tableParams = new NgTableParams({}, { dataset: allOrdersData});
-       $http.get("http://localhost:50709/api/Order/GetAllOrders")
+       $http.get("http://mobfix.co.in/api/Order/GetAllOrders")
   		.then(function(response) {
      	 $scope.allOrdersData = response.data;
          
