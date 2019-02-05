@@ -11,7 +11,7 @@
   function usersControllerConstructor($sce, httpDataService, commonModal, $scope, $http) {
     //var self = this;
     //self.tableParams = new NgTableParams({}, { dataset: userProfileData});
-   /* $http.get("http://localhost:50709/api/User/Getuser")
+   /* $http.get("http://mobfix.co.in/api/User/Getuser")
       .then(function (response) {
         $scope.usersData = response.data;
 

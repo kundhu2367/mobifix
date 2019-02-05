@@ -10,7 +10,7 @@
 
   function mobileRepairControllerConstructor($scope, $http, httpDataService) {
 
-    $http.get("http://localhost:50709/api/MobileTypes/GetAllMobileTypes")
+    $http.get("http://mobfix.co.in/api/MobileTypes/GetAllMobileTypes")
       .then(function (response) {
 
  

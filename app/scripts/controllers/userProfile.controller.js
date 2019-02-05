@@ -8,7 +8,17 @@
  
     var vm = this;
     vm.userData = $rootScope.userData[0];
-   // vm.app = 'Mobifix'
+    vm.app = 'Mobifix';
+
+    $("#registrationForm input").attr("disabled",true);
+    $("#updateSuccess").hide();
+
+
+function edituserProfile()
+{
+$("#registrationForm input").attr("disabled",false);
+}    
+
 
 function userProfile() {
     vm.userProfileCred = {
@@ -26,7 +36,8 @@ function userProfile() {
 
       httpDataService.userProfile(vm.userProfileCred).then(function(resposeObj) {
         if (resposeObj.status == 200) {
-        //$('#registerSuccess').show();
+         $("#updateSuccess").show();
+         $("#registrationForm input").attr("disabled",true);
       } else if (resposeObj.status == 404) {
         // Error Scenarios
         $rootScope.$broadcast("userProfilebroadcast", { status: 404 });
@@ -34,8 +45,13 @@ function userProfile() {
         $rootScope.userData = resposeObj.data;
       }
     });
+
+    
+   
   }
   vm.userProfile = userProfile;
+  vm.edituserProfile=edituserProfile
+  vm.userData= $rootScope.userData[0];
 }
 
   angular.module('mobifixApp')

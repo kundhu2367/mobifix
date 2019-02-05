@@ -24,7 +24,7 @@
               <div class="col-xs-6">
                 <label for="first_name"><h4>First name</h4></label>
 
-                <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" value="{{vm.userData.FirstName}}" ng-model="{{vm.userData.FirstName}}" title="enter your first name if any.">
+                <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name"  ng-model="vm.userData.FirstName" title="enter your first name" required>
 
 
                 <!--<span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">First name is required</span>-->
@@ -35,7 +35,7 @@
             <div class="col-xs-6">
               <label for="last_name"><h4>Last name</h4></label>
 
-              <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" value="{{userData[0].LastName}}" ng-model="vm.LastName" title="enter your last name if any." />
+              <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" ng-model="vm.userData.LastName" title="enter your last name if any." required/>
 
 
             </div>
@@ -45,8 +45,11 @@
 
             <div class="col-xs-6">
               <label for="phone"><h4>Phone</h4></label>
-              <input type="number" class="form-control" name="phone" id="phone" placeholder="enter phone" value="{{userData[0].ContactNumber}}" title="enter your phone number if any." ng-pattern="/^[0-9]{1,7}$/" ng-model="phone" ng-maxlength="10" ng-minlength="10" required/>
-              <div ng-messages="form.phone.$error">
+              <input type="number" class="form-control" name="phone" id="phone" placeholder="enter phone"  title="enter your phone number if any." ng-pattern="/^[0-9]{1,7}$/" 
+              ng-model="vm.userData.ContactNumber" ng-maxlength="10" ng-minlength="10" required/>
+              <div ng-messages="form.phone.$error" required>
+
+
                 <!--<div ng-messages="form.phone.$error.minlength">
         <div ng-messages="form.phone.$error.maxlength">-->
                 <div ng-messages="form.phone.$error.pattern">
@@ -79,7 +82,7 @@
 
             <div class="col-xs-6">
               <label for="email"><h4>Email</h4></label>
-              <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" value="{{userData[0].LoginId}}" title="enter your email." ng-model="vm.username">
+              <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com"  title="enter your email." ng-model="vm.userData.LoginId" required>
             </div>
           </div>
           <div class="form-group">
@@ -88,21 +91,21 @@
               <label for="text"><h4>Address Line1</h4></label>
 
 
-              <input type="text" class="form-control" id="location" placeholder="somewhere" ng-model="vm.AddressLine1" title="enter a location" value="{{userData[0].AddressLine1}}">
+              <input type="text" class="form-control" id="location" placeholder="somewhere" ng-model="vm.userData.AddressLine1" title="enter a location" required>
 
 
             </div>
             <div class="col-xs-6">
               <label for="text"><h4>Address Line2</h4></label>
 
-              <input type="text" class="form-control" id="location" placeholder="somewhere" title="enter a location" ng-model="vm.AddressLine2" value="{{userData[0].AddressLine2}}">
+              <input type="text" class="form-control" id="location" placeholder="somewhere" title="enter a location" ng-model="vm.userData.AddressLine2">
 
 
             </div>
             <div class="col-xs-6">
               <label for="text"><h4>City</h4></label>
 
-              <input type="text" class="form-control" id="City" placeholder="City" title="enter a City"  ng-model="vm.City" value="{{userData[0].City}}">
+              <input type="text" class="form-control" id="City" placeholder="City" title="enter a City"  ng-model="vm.userData.City" required>
 
 
             </div>
@@ -110,7 +113,7 @@
             <div class="col-xs-6">
               <label for="text"><h4>State</h4></label>
 
-              <input type="text" class="form-control" id="State" placeholder="State" title="enter a State" ng-model="vm.State" value="{{userData[0].State}}">
+              <input type="text" class="form-control" id="State" placeholder="State" title="enter a State" ng-model="vm.userData.State" required>
 
 
             </div>
@@ -118,7 +121,7 @@
             <div class="col-xs-6">
               <label for="text"><h4>Country</h4></label>
 
-              <input type="text" class="form-control" id="Country" placeholder="Country" title="enter a Country" ng-model="vm.Country" value="{{userData[0].Country}}">
+              <input type="text" class="form-control" id="Country" placeholder="Country" title="enter a Country" ng-model="vm.userData.Country" required>
 
 
             </div>
@@ -126,7 +129,7 @@
             <div class="col-xs-6">
               <label for="text"><h4>Zipcode</h4></label>
 
-              <input type="text" class="form-control" id="ZIPCode" placeholder="ZIPCode" title="enter a ZIPCode" ng-model="vm.ZIPCode" value="{{userData[0].ZIPCode}}">
+              <input type="text" class="form-control" id="ZIPCode" placeholder="ZIPCode" title="enter a ZIPCode" ng-model="vm.userData.ZIPCode" required>
 
 
             </div>
@@ -139,8 +142,14 @@
               <br>
 
               <!--<button class="btn btn-lg btn-success" type="submit" ng-click="vm.userProfile()"><i class="glyphicon glyphicon-ok-sign"></i> Update</button>-->
-              <button type="submit" class="btn btn-lg btn-success" value="Submit" ng-click="vm.userProfile()">UPDATE</button>
+              <button type="submit" class="btn btn-lg btn-success" value="Submit" ng-click="vm.edituserProfile()">UPDATE</button>
 
+              <button type="submit" class="btn btn-lg btn-success" value="Submit" ng-click="vm.userProfile()">SAVE</button>
+
+              
+<div class="alert alert-success m-t-20" id="updateSuccess">
+  <strong>Success!</strong> User Profile updated.
+</div>
             </div>
           </div>
 
