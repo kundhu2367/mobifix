@@ -3,11 +3,12 @@
 (function (angular, lodash) {
   'use strict';
 
-  function userProfileControllerConstructor($sce, httpDataService, commonModal, $scope, $http) {
+  function userProfileControllerConstructor($sce, httpDataService, commonModal, $scope, $rootScope, $http) {
 
  
     var vm = this;
-    vm.app = 'Mobifix'
+    vm.userData = $rootScope.userData[0];
+   // vm.app = 'Mobifix'
 
 function userProfile() {
     vm.userProfileCred = {

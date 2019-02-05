@@ -24,7 +24,7 @@
               <div class="col-xs-6">
                 <label for="first_name"><h4>First name</h4></label>
 
-                <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" value="{{userData[0].FirstName}}" ng-model="vm.FirstName" title="enter your first name if any.">
+                <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" value="{{vm.userData.FirstName}}" ng-model="{{vm.userData.FirstName}}" title="enter your first name if any.">
 
 
                 <!--<span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">First name is required</span>-->
