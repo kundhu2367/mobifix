@@ -61,14 +61,16 @@ angular
   .constant('LOGIN_STATE_NAME', 'login')
   .constant('REGISTER_STATE_NAME','register')
     .constant('ALLUSERS_STATE_NAME', 'allUsers')
-    .constant('ALLVENDORS_STATE_NAME', 'allVendors')
+  .constant('ALLVENDORS_STATE_NAME', 'allVendors')
+  .constant('ALLORDERS_STATE_NAME', 'allOrders')
+  .constant('MYORDERS_STATE_NAME', 'myOrders')
     .constant('USERPROFILE_STATE_NAME', 'userProfile')
     .constant('VENDORPROFILE_STATE_NAME', 'vendorProfile')
   .constant('MOBILEREPAIR_STATE_NAME', 'mobileRepair')
   .constant('VENDORREGISTER_STATE_NAME','vendorRegister')
 .config(function($stateProvider, $urlRouterProvider, $locationProvider, ABOUT_STATE_NAME,
     DASHBOARD_STATE_NAME, HOME_STATE_NAME, BLOG_STATE_NAME, BOOKONLINE_STATE_NAME, CONTACTUS_STATE_NAME, REPAIR_STATE_NAME,
-  STATUS_STATE_NAME, VENDORREGISTER_STATE_NAME, PRODUCTDETAILSFORM_STATE_NAME, REGISTER_STATE_NAME, ALLUSERS_STATE_NAME, ALLVENDORS_STATE_NAME, USERPROFILE_STATE_NAME, VENDORPROFILE_STATE_NAME, MOBILEREPAIR_STATE_NAME) {
+  STATUS_STATE_NAME, ALLORDERS_STATE_NAME, MYORDERS_STATE_NAME, VENDORREGISTER_STATE_NAME, PRODUCTDETAILSFORM_STATE_NAME, REGISTER_STATE_NAME, ALLUSERS_STATE_NAME, ALLVENDORS_STATE_NAME, USERPROFILE_STATE_NAME, VENDORPROFILE_STATE_NAME, MOBILEREPAIR_STATE_NAME) {
 
     // This is a server file code
     // app.get("*", function(req, res) {
@@ -201,6 +203,26 @@ angular
             requireLogin: false
         }
     };
+  var allOrdersStateConfig = {
+    url: "/allOrders",
+    parent: DASHBOARD_STATE_NAME,
+    templateUrl: "views/allOrders.html",
+    controller: 'allOrdersCtrl',
+    controllerAs: 'vm',
+    data: {
+      requireLogin: false
+    }
+  };
+  var myOrdersStateConfig = {
+    url: "/myOrders",
+    parent: DASHBOARD_STATE_NAME,
+    templateUrl: "views/myOrders.html",
+    controller: 'myOrdersCtrl',
+    controllerAs: 'vm',
+    data: {
+      requireLogin: false
+    }
+  };
   var allVendorsStateConfig = {
     url: "/allVendors",
     parent: DASHBOARD_STATE_NAME,
@@ -252,7 +274,9 @@ angular
         .state(REPAIR_STATE_NAME, repairStateConfig)
         .state(STATUS_STATE_NAME, statusStateConfig)
         .state(PRODUCTDETAILSFORM_STATE_NAME, productDetailsFormStateConfig)
-        .state(ALLUSERS_STATE_NAME, allUsersStateConfig)
+      .state(ALLUSERS_STATE_NAME, allUsersStateConfig)
+      .state(ALLORDERS_STATE_NAME, allOrdersStateConfig)
+      .state(MYORDERS_STATE_NAME, myOrdersStateConfig)
         .state(ALLVENDORS_STATE_NAME, allVendorsStateConfig)
         .state(USERPROFILE_STATE_NAME, userProfileStateConfig)
         .state(VENDORPROFILE_STATE_NAME, vendorProfileStateConfig)
