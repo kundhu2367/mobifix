@@ -33,7 +33,18 @@
       var url = apiUrls.login;
       return httpRequestWrapper.post(url,userData,null, null, true);
     }
-
+    function allorders(){
+      var url = apiUrls.allorders;
+      return httpRequestWrapper.get(url,null, null, true);
+    }
+     function allusers(){
+      var url = apiUrls.allusers;
+      return httpRequestWrapper.get(url,null, null, true);
+    }
+    function myorders(){
+      var url = apiUrls.myorders;
+      return httpRequestWrapper.get(url,null, null, true);
+    }
     function brandModel (userData) {
       var url = apiUrls.model;
       return httpRequestWrapper.post(url,userData,null, null, true);
@@ -42,17 +53,19 @@
       var url = apiUrls.issueprice;
       return httpRequestWrapper.post(url,userData,null, null, true);
     }
-
-
-    function register(userData) {
+   function register(userData) {
       var url = apiUrls.register;
       return httpRequestWrapper.post(url, userData, null, null, true);
     }
-
-
     function userProfile(userData) {
       var url = apiUrls.userProfile;
       return httpRequestWrapper.put(url, userData, null, null, true);
+    }
+
+    function checkout(userData) {
+      var header={"x-api-key":"d703f4f1b0f4d375e1c0efcd8be7f9bc","X-Auth-Token":"6c88138892719fa75e76768e6cfe7696"}
+      var url = apiUrls.checkout;
+      return httpRequestWrapper.post(url, userData, null, header, true);
     }
 
     function vendorProfile(userData) {
@@ -70,9 +83,12 @@
       var url = apiUrls.vendorRegister;
       return httpRequestWrapper.post(url, userData, null, null, true);
     }
+    function allmobiletypes() {
 
+      var url = apiUrls.allmobiletypes;
+      return httpRequestWrapper.get(url, null, null, true);
+    }
     
-
     function logout (userData) {
       var url = apiUrls.logout;
       var data = userData ? userData : null;
@@ -89,7 +105,13 @@
       logout: logout,
       vendorLogin: vendorLogin,
       brandModel:brandModel,
-      issuePrice:issuePrice
+      issuePrice:issuePrice,
+      checkout:checkout,
+      allorders:allorders,
+      allusers:allusers,
+      myorders:myorders,
+      allmobiletypes:allmobiletypes
+
     };
   }
 

@@ -109,7 +109,7 @@ angular
         parent: DASHBOARD_STATE_NAME,
         templateUrl: "views/about.html",
         controller: 'aboutCtrl',
-        controllerAs: 'about',
+        controllerAs: 'vm',
         data: {
             requireLogin: false
         }
@@ -176,7 +176,7 @@ angular
     parent: DASHBOARD_STATE_NAME,
     templateUrl: "views/mobileRepair.html",
     controller: 'mobilerepairCtrl',
-    controllerAs: 'mobilerepair',
+    controllerAs: 'vm',
     data: {
       requireLogin: false
     }
