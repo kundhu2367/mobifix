@@ -7,16 +7,21 @@
  */
 (function(angular) {
   'use strict';
-       function allUsersControllerConstructor($sce, httpDataService, commonModal,$scope, $http) {
-       //var self = this;
-    //self.tableParams = new NgTableParams({}, { dataset: allUsersData});
-         $http.get("http://mobfix.co.in/api/user/GetAllUsers")
-           .then(function (response) {
-             $scope.allUsersData = response.data;
-         });
+       function allUsersControllerConstructor($sce, httpDataService, commonModal,$scope, $http, $state) {
+
+           httpDataService.allusers().then(function(resposeObj){
+                if(resposeObj.status == 200){
+                   $scope.allUsersData = resposeObj.data;
+                   
+                } else if(resposeObj.status == 404) {
+                    // Error Scenarios
+            
+                }
+              });
      
          var vm = this;
-        vm.app = 'Mobifix'
+         vm.app = 'Mobifix';
+         vm.$state = $state;
      }
     angular.module('mobifixApp')
         .controller('allUsersCtrl', allUsersControllerConstructor);

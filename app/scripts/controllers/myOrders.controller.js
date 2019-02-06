@@ -7,16 +7,21 @@
  */
 (function (angular) {
   'use strict';
-  function myOrdersControllerConstructor($sce, httpDataService, commonModal, $scope, $http) {
-    //var self = this;
-    //self.tableParams = new NgTableParams({}, { dataset: allUsersData});
-    $http.get("http://localhost:50709/api/Order/GetemailOrder")
-      .then(function (response) {
-        $scope.myOrdersData = response.data;
-      });
+  function myOrdersControllerConstructor($sce, httpDataService, commonModal, $scope, $http, $state) {
+
+     httpDataService.myorders().then(function(resposeObj){
+                if(resposeObj.status == 200){
+                   $scope.myOrdersData = resposeObj.data;
+                   
+                } else if(resposeObj.status == 404) {
+                    // Error Scenarios
+            
+                }
+              });
 
     var vm = this;
-    vm.app = 'Mobifix'
+    vm.app = 'Mobifix';
+    vm.$state = $state;
   }
   angular.module('mobifixApp')
     .controller('myOrdersCtrl', myOrdersControllerConstructor);
