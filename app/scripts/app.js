@@ -187,7 +187,7 @@ angular
         parent: DASHBOARD_STATE_NAME,
         templateUrl: "views/status.html",
         controller: 'statusCtrl',
-        controllerAs: 'status',
+        controllerAs: 'vm',
         data: {
             requireLogin: false
         }

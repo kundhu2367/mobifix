@@ -5,17 +5,17 @@
       <th>SNO</th>
       <th>OrderID</th>
       <th>OrderPlacedDate</th>
-      <th>fullname</th>
-      <th>ContactNumber</th>
-      <th>LoginId</th>
+      <th>OrderStatusDescrpition</th>
+      <th>Final Cost</th>
+     
     </tr>
     <tr ng-repeat="myOrdersData in myOrdersData">
       <td>{{myOrdersData.customeradminid}}</td>
       <td>{{myOrdersData.OrderID}}</td>
       <td>{{myOrdersData.OrderPlacedDate}}</td>
-      <td>{{myOrdersData.fullname}}</td>
-      <td>{{myOrdersData.ContactNumber}}</td>
-      <td>{{myOrdersData.LoginId}}</td>
+      <td>{{myOrdersData.OrderstatusDesc}}</td>
+      <td>{{myOrdersData.FinalCost}}</td>
+      
     </tr>
 
   </table>

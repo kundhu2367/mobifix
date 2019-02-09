@@ -1050,7 +1050,7 @@ input[type="search"] {
   font-size: 13px;
   font-weight: bold;
   margin-top: 14px;
-  margin-right: -1px;
+  margin-right: 98px;
   float: right;
 }
 
@@ -1118,7 +1118,7 @@ input[type="search"] {
   font-size: 13px;
   font-weight: bold;
   margin-top: 14px;
-  margin-right: 101px;
+  margin-right: 157px;
   color: #af963e;
   float: right;
 }
@@ -1131,7 +1131,7 @@ input[type="search"] {
   font-weight: bold;
   margin-top: 14px;
   margin-right: -306px;
-  color: white;
+  //color: white;
   float: right;
 }
 
@@ -1222,7 +1222,7 @@ input[type="search"] {
     padding: 5px;
     font-size: 13px;
     font-weight: bold;
-    margin-top: 14px;
+    margin-top: 1px;
     float: right;
   }
 }
@@ -3119,4 +3119,7 @@ input[type="search"] {
 li.dropdown.open a.dropdown-toggle span{
   
   color:#ffffff;
+}
+#ordersuccess,#orderfailure{
+  display:none;
 }

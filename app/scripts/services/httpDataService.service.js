@@ -41,9 +41,13 @@
       var url = apiUrls.allusers;
       return httpRequestWrapper.get(url,null, null, true);
     }
-    function myorders(){
+    function myorders(userData){
       var url = apiUrls.myorders;
-      return httpRequestWrapper.get(url,null, null, true);
+      return httpRequestWrapper.post(url,userData,null, null, true);
+    }
+    function status(userData) {
+      var url = apiUrls.status;
+      return httpRequestWrapper.post(url, userData, null, null, true);
     }
     function brandModel (userData) {
       var url = apiUrls.model;
@@ -88,7 +92,10 @@
       var url = apiUrls.allmobiletypes;
       return httpRequestWrapper.get(url, null, null, true);
     }
-    
+    function insertorder(userData) {
+      var url = apiUrls.insertorder;
+      return httpRequestWrapper.post(url, userData, null, null, true);
+    }
     function logout (userData) {
       var url = apiUrls.logout;
       var data = userData ? userData : null;
@@ -109,8 +116,10 @@
       checkout:checkout,
       allorders:allorders,
       allusers:allusers,
-      myorders:myorders,
-      allmobiletypes:allmobiletypes
+      myorders: myorders,
+      status: status,
+      allmobiletypes: allmobiletypes,
+      insertorder: insertorder
 
     };
   }
