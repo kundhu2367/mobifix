@@ -45,41 +45,15 @@
 
             <div class="col-xs-6">
               <label for="phone"><h4>Phone</h4></label>
-              <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any." 
-                     ng-model="vm.userData.ContactNumber"  required />
-              
 
-              <!--<div ng-messages="form.phone.$error" required>
+              <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone"  title="enter your phone number if any."  
+              ng-model="vm.userData.ContactNumber" ng-maxlength="10" ng-minlength="10" required/>
 
-
-                <div ng-messages="form.phone.$error.minlength">
-    <div ng-messages="form.phone.$error.maxlength">
-                <div ng-messages="form.phone.$error.pattern">
-                  <div ng-message="required">This field is required</div>
-                  <div ng-message="phone">Enter your valid phone number</div>
-                </div>
-              </div>-->
 
             </div>
           </div>
 
-          <!-- ng-model="mobile" ng-maxlength="10" ng-pattern="/^[0-9]{1,7}$/" ng-minlength="10" -->
-          <!--<div class="form-group">
-            <div class="col-xs-6">
-              <label for="mobile"><h4>Mobile</h4></label>
 
-              <input type="number" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" value="{{userData[0].ContactNumber}}" title="enter your mobile number if any." ng-model="mobile" ng-maxlength="10" ng-pattern="/^[0-9]{1,7}$/" ng-minlength="10" required>
-              <div ng-messages="form.phone.$error">
-                <!--<div ng-messages="form.phone.$error.minlength">
-                <div ng-messages="form.phone.$error.maxlength">-->
-               <!-- <div ng-messages="form.phone.$error.pattern">
-                  <div ng-message="required">This field is required</div>
-                  <div ng-message="phone">Enter your valid phone number</div>
-                </div>
-              </div>
-
-            </div>
-          </div>-->
           <div class="form-group">
 
             <div class="col-xs-6">
@@ -143,15 +117,20 @@
             <div class="col-xs-12 btnbottom">
               <br>
 
-              <button type="submit" class="btn btn-lg btn-success" value="Submit" ng-click="vm.userProfile()">UPDATE</button>
 
-              <!--<button type="submit" class="btn btn-lg btn-success" value="Submit" ng-click="vm.edituserProfile()">UPDATE</button>
+              <!--<button class="btn btn-lg btn-success" type="submit" ng-click="vm.userProfile()"><i class="glyphicon glyphicon-ok-sign"></i> Update</button>-->
+              <!--<button  class="btn btn-lg btn-success"  ng-click="vm.edituserProfile()">UPDATE</button>-->
 
-              <button type="submit" class="btn btn-lg btn-success" value="Submit" ng-click="vm.userProfile()">SAVE</button>-->
+              <button  class="btn btn-lg btn-success"  ng-click="vm.userProfile()">Update</button>
+
+
 
               
 <div class="alert alert-success m-t-20" id="updateSuccess">
   <strong>Success!</strong> User Profile updated.
+</div>
+<div class="alert alert-warning m-t-20" id="updateFailure">
+  <strong>Warning!</strong> User Profile not updated.
 </div>
             </div>
           </div>
