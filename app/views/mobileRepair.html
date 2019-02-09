@@ -35,7 +35,7 @@
 
         <div>
         <label class="control-label PDFlabel" for="models">Final Cost*</label>
-        <input id="finalCost" type="text"></input>
+        <input id="finalCost" type="text" value="{{vm.totalprice}}" disabled></input>
 
         <button type="submit" value="checkout" ng-click="vm.checkout()">Checkout</button>
 
@@ -61,7 +61,7 @@ RepairPrice
   </tbody>
 </thead>
 <tr ng-repeat="d in issueprice">
-<td><input type="checkbox" ng-model="vm.eduToEdit.test">{{vm.eduToEdit.test}}</input></td><td> {{d.MobileIssue}} </td><td> {{d.FinalCost}}</td>
+<td><input type="checkbox" ng-model="d.checked" ng-change="vm.priceCalculation()"></input></td><td> {{d.MobileIssue}} </td><td> {{d.FinalCost}}</td>
 </tr>
 </ul>
 

@@ -8,10 +8,15 @@
 (function (angular) {
   'use strict';
 
-  function mobileRepairControllerConstructor($scope, $http, httpDataService, $state) {
+  function mobileRepairControllerConstructor($scope, $http, httpDataService, $state,$rootScope) {
 
     var vm = this;
     vm.$state = $state;
+    vm.checkedIssues=[];
+    
+
+ 
+    
 
 
 
@@ -20,15 +25,15 @@
 
               vm.checkoutdata = {
                     allow_repeated_payments:false,
-                    amount:10,
-                    buyer_name:"santosh",
-                    purpose:"fifa",
+                    amount:vm.totalprice,
+                    buyer_name:vm.userData.FullName,
+                    purpose:"mobilerepair",
                     redirect_url:"http://mobfix.co.in/#/mobilerepair",
-                    phone:9652930617,
+                    phone:vm.userData.ContactNumber,
                     send_email:true,
                     webhook:"http://www.mobfix.co.in/webhook",
                     send_sms:true,
-                    email:"santosh132456@gmail.com"
+                    email:vm.userData.LoginId
                }
                httpDataService.checkout(vm.checkoutdata).then(function(resposeObj){
                 if(resposeObj.status == 200){
@@ -91,11 +96,30 @@
             }
 
 
+
    });
+
+    function priceCalculation()
+   {
+    vm.totalprice=0;
+    vm.issueDetails=$scope.issueprice;
+
+    for (var i = 0; i < vm.issueDetails.length; i++){
+
+      if (vm.issueDetails[i].checked) {
+
+vm.totalprice+= vm.issueDetails[i].FinalCost;
+      }
+    }
+
+
+    vm.totalprice;     
+
+  }
  
     vm.checkout = checkout;
-    vm.eduToEdit = {};
-    vm.eduToEdit.test = false;
+    vm.priceCalculation=priceCalculation;
+    vm.userData=$rootScope.userData;
    // vm.app = 'Mobifix';
     
   }

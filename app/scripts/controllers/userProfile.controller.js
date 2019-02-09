@@ -10,28 +10,30 @@
     vm.userData = $rootScope.userData[0];
     vm.app = 'Mobifix';
 
-    $("#registrationForm input").attr("disabled",true);
+    //$("#registrationForm input").attr("disabled",true);
     $("#updateSuccess").hide();
+     $("#updateFailure").hide();
 
 
 function edituserProfile()
 {
-$("#registrationForm input").attr("disabled",false);
+
 }    
 
 
 function userProfile() {
+  //$("#registrationForm input").attr("disabled",false);
     vm.userProfileCred = {
-      LoginId: vm.username,
-      FirstName: vm.FirstName,
-      LastName: vm.LastName,
+      LoginId: vm.userData.LoginId,
+      FirstName: vm.userData.FirstName,
+      LastName: vm.userData.LastName,
       FullName: "",
-      AddressLine1: vm.AddressLine1,
-      AddressLine2: vm.AddressLine2,
-      City: vm.City,
-      State: vm.State,
-      Country: vm.Country,
-      ZIPCode: vm.ZIPCode
+      AddressLine1: vm.userData.AddressLine1,
+      AddressLine2: vm.userData.AddressLine2,
+      City: vm.userData.City,
+      State: vm.userData.State,
+      Country: vm.userData.Country,
+      ZIPCode: vm.userData.ZIPCode
     }
 
       httpDataService.userProfile(vm.userProfileCred).then(function(resposeObj) {
@@ -41,8 +43,7 @@ function userProfile() {
       } else if (resposeObj.status == 404) {
         // Error Scenarios
         $rootScope.$broadcast("userProfilebroadcast", { status: 404 });
-        $('#userPwd').show();
-        $rootScope.userData = resposeObj.data;
+        $("#updateFailure").show();
       }
     });
 
