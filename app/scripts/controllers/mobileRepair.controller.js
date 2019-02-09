@@ -12,11 +12,48 @@
 
     var vm = this;
     vm.$state = $state;
+    vm.checkedIssues=[];
+    
 
-    vm.userData = $rootScope.userData[0];
+ 
+    
+
+
+
             function checkout()
             {
-              vm.insertorderdata = {
+
+              vm.checkoutdata = {
+                    allow_repeated_payments:false,
+                    amount:vm.totalprice,
+                    buyer_name:vm.userData.FullName,
+                    purpose:"mobilerepair",
+                    redirect_url:"http://mobfix.co.in/#/mobilerepair",
+                    phone:vm.userData.ContactNumber,
+                    send_email:true,
+                    webhook:"http://www.mobfix.co.in/webhook",
+                    send_sms:true,
+                    email:vm.userData.LoginId
+               }
+               httpDataService.checkout(vm.checkoutdata).then(function(resposeObj){
+                if(resposeObj.status == 200){
+
+                  vm.checkoutinfo = response.data;
+      
+
+                    $('#ordersuccesful').show();
+                   
+                } else if(resposeObj.status == 404) {
+                    // Error Scenarios
+                  
+                    $('#ordernotsuccesful').show();
+                   
+                }
+              else if(resposeObj.status == 201) {
+
+
+
+                              vm.insertorderdata = {
 
                 UserType: 1,
                 LoginId: "rezamohd@gmail.com",
@@ -43,8 +80,8 @@
                 OrderPlacedDate: "NOW()", 
                 EstimatedTimetoDeliver: "NOW()" //change
               }
-              
-              httpDataService.insertorder(vm.insertorderdata).then(function (resposeObj) {
+
+                httpDataService.insertorder(vm.insertorderdata).then(function (resposeObj) {
                 if (resposeObj.status == 200) {
                   $("#ordersuccess").show();
                 }
@@ -53,27 +90,14 @@
                 }
                 });
 
-      vm.checkoutinfo = response.data;
-      vm.checkedIssues=[];
-    
-              vm.checkoutdata = {
-                    allow_repeated_payments:false,
-                    amount:vm.totalprice,
-                    buyer_name:vm.userData.FullName,
-                    purpose:"mobilerepair",
-                    redirect_url:"http://mobfix.co.in/#/mobilerepair",
-                    phone:vm.userData.ContactNumber,
-                    send_email:true,
-                    webhook:"http://www.mobfix.co.in/webhook",
-                    send_sms:true,
-                    email:vm.userData.LoginId
-               }
-               httpDataService.checkout(vm.checkoutdata).then(function(resposeObj){
-                if(resposeObj.status == 200){
 
-                  vm.checkoutinfo = response.data;
 
-     
+                    // Error Scenarios
+                  window.location=resposeObj.data.payment_request.longurl;
+                    
+                   
+                }
+            });
 
 
             }
@@ -111,7 +135,7 @@
 
               }
             });
-            
+            }
 
 
 
