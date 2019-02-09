@@ -34,10 +34,20 @@
 
 
         <div>
+
         <label class="control-label PDFlabel" for="models">Final Cost*</label>
         <input id="finalCost" type="text" value="{{vm.totalprice}}" disabled></input>
 
-        <button type="submit" value="checkout" ng-click="vm.checkout()">Checkout</button>
+
+          <button type="submit" value="checkout" ng-click="vm.checkout()">Checkout</button>
+          <div class="alert alert-success" id="ordersuccess">
+            <strong>Success!</strong> Your order is successful
+          </div>
+          <div class="alert alert-danger" id="orderfailure">
+            <strong>Warning!</strong> Your order is not successful
+          </div>
+          <div>
+
 
         <div>
        
@@ -65,12 +75,34 @@ RepairPrice
 </tr>
 </ul>
 
-  
 
 
-      </div>
-      
-    </form>
+                  <th>
+                    Select the Mobile Issue
+                  </th>
+                  <th>
+                    MobileIssue
+                  </th>
+                  <th>
+                    RepairPrice
+                  </th>
+
+                </tr>
+              </tbody>
+              </thead>
+              <tr ng-repeat="d in issueprice">
+                <td><input type="checkbox" ng-model="vm.eduToEdit.test">{{vm.eduToEdit.test}}</input></td>
+                <td> {{d.MobileIssue}} </td>
+                <td> {{d.FinalCost}}</td>
+              </tr>
+              </ul>
+
+
+
+
+          </div>
+
+</form>
 
     <div class="row">
       <p class="MRTrust">Trusted by</p>

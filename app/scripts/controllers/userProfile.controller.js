@@ -1,5 +1,4 @@
 
-
 (function (angular, lodash) {
   'use strict';
 
@@ -58,3 +57,4 @@ function userProfile() {
   angular.module('mobifixApp')
     .controller('userProfileCtrl', userProfileControllerConstructor);
 })(window.angular, window._);
+

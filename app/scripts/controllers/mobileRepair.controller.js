@@ -12,17 +12,50 @@
 
     var vm = this;
     vm.$state = $state;
-    vm.checkedIssues=[];
-    
 
- 
-    
-
-
-
+    vm.userData = $rootScope.userData[0];
             function checkout()
             {
+              vm.insertorderdata = {
 
+                UserType: 1,
+                LoginId: "rezamohd@gmail.com",
+                Password: "abc456", //remove password field from frontend and backend
+                NoOfAttempts: 2, //remove
+                LastLoginDate: "NOW()",
+                UserStatus: "B", //remove
+                CreatedDate: "NOW()",
+                CrearedBy: 1,
+                LastUpdateDate: "NOW()",
+                LastUpdateBy: 1,
+                AssignedtoVendorID: 2, //reomve
+                IssuesTypeID: 6,
+                IssueDetails: "screen damage",
+                IEMI: "abc1253645765",
+                MobileCompID: 3,
+                MobileVersionTypeID: 4,
+                CustDemoID: 2,
+                ContactAddrID: 2,
+                ContactPhoneID: 5,
+                InitialQuote: "900.00",
+                EstimatedQuote: "900.00",
+                FinalCost: "1000.00",
+                OrderPlacedDate: "NOW()", 
+                EstimatedTimetoDeliver: "NOW()" //change
+              }
+              
+              httpDataService.insertorder(vm.insertorderdata).then(function (resposeObj) {
+                if (resposeObj.status == 200) {
+                  $("#ordersuccess").show();
+                }
+                else if (resposeObj.status == 404) {
+                  $("#orderfailure").show();
+                }
+                });
+
+      vm.checkoutinfo = response.data;
+      vm.checkedIssues=[];
+    
               vm.checkoutdata = {
                     allow_repeated_payments:false,
                     amount:vm.totalprice,
@@ -39,23 +72,8 @@
                 if(resposeObj.status == 200){
 
                   vm.checkoutinfo = response.data;
-      
 
-                    $('#ordersuccesful').show();
-                   
-                } else if(resposeObj.status == 404) {
-                    // Error Scenarios
-                  
-                    $('#ordernotsuccesful').show();
-                   
-                }
-              else if(resposeObj.status == 201) {
-                    // Error Scenarios
-                  window.location=resposeObj.data.payment_request.longurl;
-                    $('#ordernotsuccesful').show();
-                   
-                }
-            });
+     
 
 
             }
@@ -93,7 +111,7 @@
 
               }
             });
-            }
+            
 
 
 

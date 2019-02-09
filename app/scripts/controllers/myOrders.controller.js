@@ -7,9 +7,21 @@
  */
 (function (angular) {
   'use strict';
-  function myOrdersControllerConstructor($sce, httpDataService, commonModal, $scope, $http, $state) {
+  function myOrdersControllerConstructor($sce, httpDataService, commonModal, $scope, $http, $state, $rootScope) {
+    
 
-     httpDataService.myorders().then(function(resposeObj){
+   // vm.userData = $rootScope.userData[0];
+
+    //    myOrdersData = { LoginId: userData.username };
+    var vm = this;
+    vm.app = 'Mobifix';
+    // vm.$state = $state;
+    vm.userData = $rootScope.userData[0];
+    vm.myOrdersData = { LoginId: vm.userData.LoginId };
+
+
+
+    httpDataService.myorders(vm.myOrdersData).then(function (resposeObj) {
                 if(resposeObj.status == 200){
                    $scope.myOrdersData = resposeObj.data;
                    
@@ -19,10 +31,9 @@
                 }
               });
 
-    var vm = this;
-    vm.app = 'Mobifix';
-    vm.$state = $state;
+    
   }
+
   angular.module('mobifixApp')
     .controller('myOrdersCtrl', myOrdersControllerConstructor);
 })(angular);
