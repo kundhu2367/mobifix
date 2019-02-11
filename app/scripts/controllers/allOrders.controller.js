@@ -8,6 +8,9 @@
 (function(angular) {
     'use strict';
      function allOrdersControllerConstructor($sce, httpDataService, commonModal,$scope, $http, $state) {
+       var vm = this;
+       vm.app = 'Mobifix';
+       vm.$state = $state;
 
             httpDataService.allorders().then(function(resposeObj){
                 if(resposeObj.status == 200){
@@ -18,10 +21,7 @@
             
                 }
               });
-         var vm = this;
-         vm.app = 'Mobifix';
-         vm.$state = $state;
-     }
+         }
     angular.module('mobifixApp')
         .controller('allOrdersCtrl', allOrdersControllerConstructor);
 })(angular);
