@@ -22,11 +22,11 @@
 
             function checkout()
             {
-
+              vm.userData = $rootScope.userData;
               vm.checkoutdata = {
                     allow_repeated_payments:false,
                     amount:vm.totalprice,
-                    buyer_name:vm.userData.FullName,
+                    buyer_name:vm.userData.FirstName,
                     purpose:"mobilerepair",
                     redirect_url:"http://mobfix.co.in/#/mobilerepair",
                     phone:vm.userData.ContactNumber,
@@ -56,7 +56,7 @@
                               vm.insertorderdata = {
 
                 UserType: 1,
-                LoginId: "rezamohd@gmail.com",
+                LoginId: "akhilavooturi@gmail.com",
                 Password: "abc456", //remove password field from frontend and backend
                 NoOfAttempts: 2, //remove
                 LastLoginDate: "NOW()",
@@ -161,7 +161,7 @@ vm.totalprice+= vm.issueDetails[i].FinalCost;
  
     vm.checkout = checkout;
     vm.priceCalculation=priceCalculation;
-    vm.userData=$rootScope.userData;
+   
    // vm.app = 'Mobifix';
     
   }
