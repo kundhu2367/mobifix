@@ -13,7 +13,7 @@
     "login": "http://mobfix.co.in/api/user/UserNameStatus",
     "getallusers": "http://mobfix.co.in/api/user/GetAllUsers",
     "register": "http://mobfix.co.in/api/User/InsertUserRegistrationDetails",
-    "userProfile": "http://localhost:50709/api/User/UpdateUserStatus",
+    "userProfile": "http://mobfix.co.in/api/User/UpdateUserStatus",
     "vendorregister": "http://mobfix.co.in/api/Vendor/InsertVendorRegistrationDetails",
     "vendorLogin": "http://mobfix.co.in/api/Vendor/VendorNameStatus",
     "model": "http://mobfix.co.in/api/MobileVersion/GetMobileVersion",
