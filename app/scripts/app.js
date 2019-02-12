@@ -288,11 +288,15 @@ angular
 
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {
         var requireLogin = toState.data.requireLogin;
+        $rootScope.currentUser = localStorage.getItem("currentUser");
         // $rootScope.currentUser = localStorage.getItem("currentUser");
         // Notification.clearAll();
         if (requireLogin && (typeof $rootScope.userData === 'undefined' || $rootScope.userData === null)) {
           event.preventDefault();
           $state.go('home');
+        }
+        else {
+            $rootScope.$broadcast("sessionbroadcast", $rootScope.currentUser);
         }
     });
 

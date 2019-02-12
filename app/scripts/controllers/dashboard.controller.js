@@ -42,6 +42,7 @@
       }
         function signOff() {
             $rootScope.userData = null;
+            localStorage.setItem("currentUser", null);
             vm.showProfile = false;
         }
 
@@ -49,6 +50,11 @@
             console.log( data)
             vm.showProfile = true;
         });
+         $rootScope.$on("sessionbroadcast", function(evt,data){
+            console.log( data)
+            vm.showProfile = true;
+        });
+
 
       $rootScope.$on("vendorLoginbroadcast", function (evt, data) {
         console.log(data)
