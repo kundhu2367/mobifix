@@ -22,7 +22,7 @@
 
             function checkout()
             {
-              vm.userData = $rootScope.userData;
+              vm.userData= $rootScope.userData[0];
               vm.checkoutdata = {
                     allow_repeated_payments:false,
                     amount:vm.totalprice,
