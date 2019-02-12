@@ -32,7 +32,7 @@
   </div>-->
           <div class="inner-addon left-addon">
             <i class="glyphicon glyphicon-envelope col"></i>
-            <input type="email" name="email" class="form-control input-borderless" ng-model="vm.username" placeholder="Email" required>
+            <input type="email" name="email" class="form-control input-borderless" ng-model="vm.username" placeholder="Email" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/;" required>
             <div ng-messages="form.email.$error">
               <div ng-message="required">This field is required</div>
               <div ng-message="email">Your email address is invalid</div>
@@ -48,7 +48,7 @@
 
           <div class="inner-addon left-addon">
             <i class="glyphicon glyphicon-phone col"></i>
-            <input type="number" name="phone" class="form-control input-borderless" ng-model="vm.ContactNumber" placeholder="Phone" required>
+            <input type="number" name="phone" class="form-control input-borderless" ng-model="vm.ContactNumber" placeholder="Phone" ng-pattern="/^[(]{0,1}[0-9]{3}[)\.\- ]{0,1}[0-9]{3}[\.\- ]{0,1}[0-9]{4}$/;" maxlength="10" required>
             <div ng-messages="form.phone.$error">
               <!--<div ng-messages="form.phone.$error.minlength">
       <div ng-messages="form.phone.$error.maxlength">-->

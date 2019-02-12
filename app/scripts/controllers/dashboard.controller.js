@@ -49,7 +49,12 @@
             console.log( data)
             vm.showProfile = true;
         });
+         $rootScope.$on("sessionbroadcast", function(evt,data){
+            console.log( data)
+            vm.showProfile = true;
+        });
 
+      $rootScope.$emit('initiateEvent', null); 
       $rootScope.$on("vendorLoginbroadcast", function (evt, data) {
         console.log(data)
         vm.showProfile = true;

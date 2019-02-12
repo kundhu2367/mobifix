@@ -67,10 +67,13 @@ angular
     .constant('USERPROFILE_STATE_NAME', 'userProfile')
     .constant('VENDORPROFILE_STATE_NAME', 'vendorProfile')
   .constant('MOBILEREPAIR_STATE_NAME', 'mobileRepair')
-  .constant('VENDORREGISTER_STATE_NAME','vendorRegister')
+  .constant('VENDORREGISTER_STATE_NAME', 'vendorRegister')
+  .constant('FAQ_STATE_NAME', 'faq')
+  .constant('TERMS_STATE_NAME', 'terms')
+  .constant( 'PRIVACYPOLICY_STATE_NAME', 'privacyPolicy')
 .config(function($stateProvider, $urlRouterProvider, $locationProvider, ABOUT_STATE_NAME,
     DASHBOARD_STATE_NAME, HOME_STATE_NAME, BLOG_STATE_NAME, BOOKONLINE_STATE_NAME, CONTACTUS_STATE_NAME, REPAIR_STATE_NAME,
-  STATUS_STATE_NAME, ALLORDERS_STATE_NAME, MYORDERS_STATE_NAME, VENDORREGISTER_STATE_NAME, PRODUCTDETAILSFORM_STATE_NAME, REGISTER_STATE_NAME, ALLUSERS_STATE_NAME, ALLVENDORS_STATE_NAME, USERPROFILE_STATE_NAME, VENDORPROFILE_STATE_NAME, MOBILEREPAIR_STATE_NAME) {
+  STATUS_STATE_NAME, ALLORDERS_STATE_NAME, MYORDERS_STATE_NAME, VENDORREGISTER_STATE_NAME, PRODUCTDETAILSFORM_STATE_NAME, REGISTER_STATE_NAME, ALLUSERS_STATE_NAME, ALLVENDORS_STATE_NAME, USERPROFILE_STATE_NAME, VENDORPROFILE_STATE_NAME, MOBILEREPAIR_STATE_NAME, FAQ_STATE_NAME, TERMS_STATE_NAME, PRIVACYPOLICY_STATE_NAME ) {
 
     // This is a server file code
     // app.get("*", function(req, res) {
@@ -264,6 +267,39 @@ angular
     }
   };
 
+  var faqStateConfig = {
+    url: "/faq",
+    parent: DASHBOARD_STATE_NAME,
+    templateUrl: "views/faq.html",
+    controller: 'faqCtrl',
+    controllerAs: 'faq',
+    data: {
+      requireLogin: false
+    }
+  };
+
+  var termsStateConfig = {
+    url: "/terms",
+    parent: DASHBOARD_STATE_NAME,
+    templateUrl: "views/terms.html",
+    controller: 'termsCtrl',
+    controllerAs: 'terms',
+    data: {
+      requireLogin: false
+    }
+  };
+
+  var privacyPolicyStateConfig = {
+    url: "/privacyPolicy",
+    parent: DASHBOARD_STATE_NAME,
+    templateUrl: "views/privacyPolicy.html",
+    controller: 'privacyPolicyCtrl',
+    controllerAs: 'privacyPolicy',
+    data: {
+      requireLogin: false
+    }
+  };
+
     $stateProvider
         .state(DASHBOARD_STATE_NAME, dashboardStateConfig)
         .state(HOME_STATE_NAME, homeStateConfig)
@@ -282,18 +318,28 @@ angular
         .state(VENDORPROFILE_STATE_NAME, vendorProfileStateConfig)
       .state(MOBILEREPAIR_STATE_NAME, mobilerepairStateConfig)
       .state(VENDORREGISTER_STATE_NAME, vendorRegisterStateConfig)
+      .state(FAQ_STATE_NAME, faqStateConfig)
+      .state(TERMS_STATE_NAME, termsStateConfig)
+    .state(PRIVACYPOLICY_STATE_NAME, privacyPolicyStateConfig)
 })
 
 .run(function($rootScope, $state, Notification) {
 
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {
         var requireLogin = toState.data.requireLogin;
+         $rootScope.currentUser = JSON.parse(localStorage.getItem("currentUser"));
         // $rootScope.currentUser = localStorage.getItem("currentUser");
         // Notification.clearAll();
         if (requireLogin && (typeof $rootScope.userData === 'undefined' || $rootScope.userData === null)) {
           event.preventDefault();
           $state.go('home');
         }
+        else {
+            $rootScope.$broadcast("sessionbroadcast", $rootScope.currentUser);
+        }
+    });
+    $rootScope.$on('initiateEvent', function(event, b) {
+        $rootScope.$broadcast('sessionbroadcast', $rootScope.currentUser);
     });
 
 });

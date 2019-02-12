@@ -51,8 +51,9 @@
 
             httpDataService.login(vm.loginCred).then(function(resposeObj){
                 if(resposeObj.status == 200){
-                    $rootScope.$broadcast("loginbroadcast", {status:200}); //catch in dashboard controller
+                    $rootScope.$broadcast("loginbroadcast", resposeObj.data[0]); //catch in dashboard controller
                     $rootScope.userData = resposeObj.data;
+                    localStorage.setItem("currentUser", JSON.stringify(resposeObj.data[0]));
                     $uibModalInstance.close()
                 } else if(resposeObj.status == 404) {
                     // Error Scenarios

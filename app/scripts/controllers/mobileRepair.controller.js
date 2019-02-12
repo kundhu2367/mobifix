@@ -13,6 +13,9 @@
     var vm = this;
     vm.$state = $state;
     vm.checkedIssues=[];
+
+       $("#ordersuccess").hide();
+     $("#orderfailure").hide();
     
 
  
@@ -22,7 +25,7 @@
 
             function checkout()
             {
-
+              vm.userData= $rootScope.userData[0];
               vm.checkoutdata = {
                     allow_repeated_payments:false,
                     amount:vm.totalprice,
@@ -30,9 +33,9 @@
                     purpose:"mobilerepair",
                     redirect_url:"http://mobfix.co.in/#/mobilerepair",
                     phone:vm.userData.ContactNumber,
-                    send_email:true,
+                    send_email:false,
                     webhook:"http://www.mobfix.co.in/webhook",
-                    send_sms:true,
+                    send_sms:false,
                     email:vm.userData.LoginId
                }
                httpDataService.checkout(vm.checkoutdata).then(function(resposeObj){
@@ -55,8 +58,10 @@
 
                               vm.insertorderdata = {
 
-                UserType: 1,
-                LoginId: "rezamohd@gmail.com",
+
+
+                  UserType: 1,
+                LoginId: vm.userData.LoginId,
                 Password: "abc456", //remove password field from frontend and backend
                 NoOfAttempts: 2, //remove
                 LastLoginDate: "NOW()",
@@ -74,11 +79,11 @@
                 CustDemoID: 2,
                 ContactAddrID: 2,
                 ContactPhoneID: 5,
-                InitialQuote: "900.00",
-                EstimatedQuote: "900.00",
-                FinalCost: "1000.00",
+                InitialQuote: "",
+                EstimatedQuote: "",
+                FinalCost: vm.totalprice,
                 OrderPlacedDate: "NOW()", 
-                EstimatedTimetoDeliver: "NOW()" //change
+                EstimatedTimetoDeliver: "NOW()"//change
               }
 
                 httpDataService.insertorder(vm.insertorderdata).then(function (resposeObj) {
@@ -161,7 +166,6 @@ vm.totalprice+= vm.issueDetails[i].FinalCost;
  
     vm.checkout = checkout;
     vm.priceCalculation=priceCalculation;
-    vm.userData=$rootScope.userData;
    // vm.app = 'Mobifix';
     
   }
