@@ -63,18 +63,20 @@
     }
     function userProfile(userData) {
       var url = apiUrls.userProfile;
-      return httpRequestWrapper.put(url, userData, null, null, true);
+      return httpRequestWrapper.post(url, userData, null, null, true);
     }
 
     function checkout(userData) {
-      var header={"x-api-key":"d703f4f1b0f4d375e1c0efcd8be7f9bc","X-Auth-Token":"6c88138892719fa75e76768e6cfe7696"}
+      var header={"x-api-key":"d703f4f1b0f4d375e1c0efcd8be7f9bc","X-Auth-Token":"6c88138892719fa75e76768e6cfe7696",'Access-Control-Allow-Origin': true,
+            'Content-Type': 'application/json; charset=utf-8',
+            "X-Requested-With": "XMLHttpRequest"}
       var url = apiUrls.checkout;
       return httpRequestWrapper.post(url, userData, null, header, true);
     }
 
     function vendorProfile(userData) {
       var url = apiUrls.vendorProfile;
-      return httpRequestWrapper.put(url, userData, null, null, true);
+      return httpRequestWrapper.post(url, userData, null, null, true);
     }
 
     function vendorLogin(userData) {

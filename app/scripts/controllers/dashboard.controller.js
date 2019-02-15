@@ -12,6 +12,7 @@
     	
         var vm = this;
         vm.$state = $state;
+        vm.showProfile = false;
 
         function openloginModal() {
 
@@ -42,20 +43,34 @@
       }
         function signOff() {
             $rootScope.userData = null;
+            localStorage.setItem("currentUser", null);
             vm.showProfile = false;
         }
 
         $rootScope.$on("loginbroadcast", function(evt,data){
-            console.log( data)
+            //console.log( data)
             vm.showProfile = true;
         });
+         $rootScope.$on("sessionbroadcast", function(evt,data){
+            if (data!=null){
+                $rootScope.userData=data;
+                vm.showProfile = true;
+            }
+            else{
+                vm.showProfile = false;
+            }
+            //console.log( data)
+            
+            
+        });
+        $rootScope.$emit('initiateEvent', null);
 
       $rootScope.$on("vendorLoginbroadcast", function (evt, data) {
-        console.log(data)
+        //console.log(data);
         vm.showProfile = true;
       });
   
-        vm.showProfile = false;
+        
       vm.openloginModal = openloginModal;
       vm.openvendorLoginModal = openvendorLoginModal;
       vm.signOff = signOff;

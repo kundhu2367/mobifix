@@ -14,10 +14,6 @@
      $("#updateFailure").hide();
 
 
-function edituserProfile()
-{
-
-}    
 
 
 function userProfile() {
@@ -50,7 +46,7 @@ function userProfile() {
    
   }
   vm.userProfile = userProfile;
-  vm.edituserProfile=edituserProfile
+  //vm.edituserProfile=edituserProfile
   vm.userData= $rootScope.userData[0];
 }
 

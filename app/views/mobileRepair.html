@@ -1,125 +1,236 @@
 
-<div class="container-fluid">
-  <div class="container MRBtm">
-    <div class="row PDFcontent">
+<div class="container-fluid MRBtm">
+    <div class="row PDFcontent1">
       <div class="col-md-12  col-xs-12">
-        <h4 class="MRheadingh4">Get an instant <br /> mobile repair estimate. It's Easy/Simple/Quick.</h4>
+        <h4 class="headingh4 width">Get AN INSTANT MOBILE REPAIR ESTIMATE. IT's EASY/SIMPLE/QUICK</h4>
       </div>
     </div>
-    <form class="" action="">
+    <div class="MobilerepairBtm">
       <div class="row">
-        <div class="col-sm-6 col-md-6 col-lg-6">
-          <div class="form-group">
-            <label class="control-label PDFlabel" for="brands">Device Brand *</label>
-            <div class="">
-              <select placeholder="Select Brand" ng-options="x.MobileCompany for x in brand" ng-model="selectedItem" ng-change="selectedItemChanged(selectedItem)">
-               
-              </select>
+        <div class="col-md-8 col-sm-12 col-xs-12 repaircheckout">
+          <div class="repair_flow">
+            <div class="liner">
+            </div>
+            <ul class="R-flow">
+              <li>
+                <a class="" href="">
+                  <img src="../assets/images/device - Copy.png">
+                </a>
+                <p class="mobilerepaircontent">
+                  Select Your Device
+                </p>
+              </li>
+              <li>
+                <a class="" href="">
+                  <img src="../assets/images/repair - Copy.png">
+                </a>
+                <p class="mobilerepaircontent">
+                  Select Repair Type
+                </p>
+              </li>
+              <li>
+                <a href="">
+                  <img src="../assets/images/checkout - Copy.png">
+                </a>
+                <p class="mobilerepaircontent">
+                  Checkout
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="select-modaldevice">
+            <p>
+              Which Device are you using
+            </p>
+            <div class="input-dropdown">
+              <div class="col-md-12 col-sm-12 col-xs-12 padding-none">
+                <div class="form-group row repair_test">
+                  <div class="col-md-4 col-sm-4 col-xs-12 padding-rightnone">
+                    <select id="brandId" placeholder="Select Brand" ng-options="x.MobileCompany for x in brand" ng-model="selectedItem" ng-change="selectedItemChanged(selectedItem)" class="form-control select-type-dropdown required">
+                      <option value="">Select Device Brand</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-12 padding-rightnone2">
+                    <select id="modelId" ng-options="z.MobileVersionDescription for z in model" ng-model="selectedModelItem" ng-change="selectedModelItemChanged(selectedModelItem)" class="form-control select-type-dropdown required"
+                            style="height: auto">
+                      <option value="">Select Device Model</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-12 padding-rightnone1" id="cometo_cahangepin">
+                    <span class="pincodegroup">Final Cost*</span>
+                    <div class="input-group pinchek">
+                      <input id="finalCost" type="text" ng-model="vm.totalprice" disabled class="form-control pininput"></input>
+<!--                       <div class="input-group-addon subscribebutton" data-toggle="modal" data-target="#pincheckModal" ng-click="vm.checkout()">
+                        Checkout
+                      </div> -->
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-sm-12 col-xs-12 padding-rightnone delivery_Avail" id="delivery_Avail">
+                    <div class="alert alert-success" id="ordersuccess">
+                      <strong>Success!</strong> Your order is successful
+                    </div>
+                    <div class="alert alert-danger" id="orderfailure">
+                      <strong>Warning!</strong> Your order is not successful
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <table class="table2">
+              <thead>
+              <tbody>
+                <tr>
 
+
+                  <th>
+                    Select the Mobile Issue
+                  </th>
+                  <th>
+                    MobileIssue
+                  </th>
+                  <th>
+                    RepairPrice
+                  </th>
+
+                </tr>
+              </tbody>
+              </thead>
+              <tr ng-repeat="d in issueprice">
+                <td><input type="checkbox" ng-model="d.checked" ng-change="vm.priceCalculation()"></input></td>
+                <td> {{d.MobileIssue}} </td>
+                <td> {{d.FinalCost}}</td>
+              </tr>
+              </ul>
+
+
+
+            </table>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12 borderleft">
+          <div class="tblt_cart">
+            <h2 class="Mobfixmobile">
+              Repair List for<br><span class="phone-model">Mobile Brand</span>
+            </h2>
+            <div class="cart-contain">
+              <ul class="list-unstyled">
+                <!-- ngRepeat: issue in Order.createOrderService.issues -->
+              </ul>
+            </div>
+            <div class="totl">
+              <ul class="list-unstyled">
+                <li class="font-bold">
+                  <p class="font-bold border">Repair Total</p>
+                  <span class="totalspan">
+                    <input id="totalprice" type="text" ng-model="vm.totalprice" disabled class="form-control pininput finalcost"></input>
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+                        <div class="totl">
+              <ul class="list-unstyled">
+                <li class="font-bold">
+                  <span class="font-bold border">Coupon</span>
+                  <a class ="coupon" ng-click="$event.preventDefault();vm.couponValidation()"><span id="couponApply" class="couponApply" >Apply</span></a>
+
+                  <span class="font-bold border couponSuccess m-r-30" id="couponSuccess">Succes</span>
+                  <span class="font-bold border couponFailure m-r-30" id="couponFailure">Invalid</span>
+
+                  <span class="totalspan">
+                   <!--  <input id="finalCost" type="text" ng-model="vm.totalprice" disabled class="form-control pininput finalcost"></input> -->
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="totl">
+              <ul class="list-unstyled">
+                <li class="font-bold">
+                  <span class="totalspan">
+                  <input id="finalcoupon" type="text" ng-model="vm.finalcoupon" class="form-control pininput finalcost"></input>
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+              <div class="totl">
+              <ul class="list-unstyled">
+                <li class="font-bold">
+                  <p class="font-bold border">Special Discount</p>
+                  <span class="totalspan">
+                    <input id="finaldiscount" type="text" ng-model="vm.finaldiscount" disabled class="form-control pininput finalcost"></input>
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div class="totl">
+              <ul class="list-unstyled">
+                <li class="font-bold">
+                  <p class="font-bold border">Grand Total</p>
+                  <span class="totalspan">
+                    <input id="grandtotal" type="text" ng-model="vm.grandtotal" disabled class="form-control pininput finalcost"></input>
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div class="t_cntr">
+              <div class="form-group text-left">
+               <!--  <label>Issue Description</label> -->
+                <textarea class="form-control ng-pristine ng-untouched ng-valid" rows="3" ng-model="Order.createOrderService.orderDetails.issue_desc" placeholder="Anything else you would want us to know about the device/problem?"></textarea>
+              </div>
+              <button type="submit" class="btn checkout" ng-click="vm.checkout()" >
+                Checkout
+              </button>
             </div>
           </div>
-        </div>
-
-        <div class="col-sm-6 col-md-6 col-lg-6">
-          <div class="form-group">
-            <label class="control-label PDFlabel" for="models">Device Model*</label>
-            <div class="">
-                <select ng-options="z.MobileVersionDescription for z in model" ng-model="selectedModelItem" ng-change="selectedModelItemChanged(selectedModelItem)">
-                  <option value="select model">select model</option>
-
-                </select>
-            </div>
+          <div class="row">
+            <!-- ngRepeat: issue in Order.createOrderService.issues -->
           </div>
-        </div>
-
-
-        <div>
-
-        <label class="control-label PDFlabel" for="models">Final Cost*</label>
-        <input id="finalCost" type="text" value="{{vm.totalprice}}" disabled></input>
-
-
-          <button type="submit" value="checkout" ng-click="vm.checkout()">Checkout</button>
-          <div class="alert alert-success" id="ordersuccess">
-            <strong>Success!</strong> Your order is successful
-          </div>
-          <div class="alert alert-danger" id="orderfailure">
-            <strong>Warning!</strong> Your order is not successful
-          </div>
-          <div>
-
-
-        <div>
-       
-<table class="table">
-<thead>
-  <tbody>
-    <tr>
-
-
-<th>
-Select the Mobile Issue
-</th>
-<th>
-MobileIssue
-</th>
-<th>
-RepairPrice
-</th>
-
-    </tr>
-  </tbody>
-</thead>
-<tr ng-repeat="d in issueprice">
-<td><input type="checkbox" ng-model="d.checked" ng-change="vm.priceCalculation()"></input></td><td> {{d.MobileIssue}} </td><td> {{d.FinalCost}}</td>
-</tr>
-</ul>
-
-
-
-
-          </div>
-
-</form>
-
-    <div class="row">
-      <p class="MRTrust">Trusted by</p>
-    </div>
-
-    <div class="BKOicons">
-      <div class="row">
-        <div class="col-md-2 col-sm-4 col-xs-6 ">
-          <img src="../assets/images/Apple.png" class="Bkoimg" />
-          <h4 class="BKOoption"> Apple</h4>
-        </div>
-
-        <div class="col-md-2 col-sm-4 col-xs-6">
-          <img src="../assets/images/samsung.png" class="Bkoimg">
-          <h4 class="BKOoption">Samsung</h4>
-        </div>
-
-        <div class="col-md-2 col-sm-4 col-xs-6">
-          <img src="../assets/images/blackberry.png" class="Bkoimg">
-          <h4 class="BKOoption">Blackberry</h4>
-        </div>
-
-        <div class="col-md-2 col-sm-4 col-xs-6 ">
-          <img src="../assets/images/microsoft.png" class="Bkoimg">
-          <h4 class="BKOoption">Microsoft</h4>
-        </div>
-
-        <div class="col-md-2 col-sm-4 col-xs-6">
-          <img src="../assets/images/nexus.png" class="Bkoimg">
-          <h4 class="BKOoption">Nexus</h4>
-        </div>
-
-        <div class="col-md-2 col-sm-4 col-xs-6">
-          <img src="../assets/images/googlepixel.png" class="Bkoimg">
-          <h4 class="BKOoption">Googlepixel</h4>
         </div>
       </div>
+
     </div>
-  </div>
+      <div class="row">
+        <p class="MRTrust">Trusted by</p>
+      </div>
+
+      <div class="BKOicons BKOicons1">
+        <div class="row">
+          <div class="col-md-12 col-xs-12">
+            <h4 class="headingh4">FAMOUS MOBILE BRANDS</h4>
+          </div>
+          <div class="col-md-2 col-sm-4 col-xs-6 ">
+            <img src="../assets/images/Apple.png" class="Bkoimg Bkoimg1 Bkoimg2" />
+            <h4 class="BKOoption"> Apple</h4>
+          </div>
+
+          <div class="col-md-2 col-sm-4 col-xs-6">
+            <img src="../assets/images/samsung.png" class="Bkoimg Bkoimg1 Bkoimg2">
+            <h4 class="BKOoption">Samsung</h4>
+          </div>
+
+          <div class="col-md-2 col-sm-4 col-xs-6">
+            <img src="../assets/images/blackberry.png" class="Bkoimg Bkoimg1 Bkoimg2">
+            <h4 class="BKOoption">Blackberry</h4>
+          </div>
+
+          <div class="col-md-2 col-sm-4 col-xs-6 ">
+            <img src="../assets/images/microsoft.png" class="Bkoimg Bkoimg1 Bkoimg2">
+            <h4 class="BKOoption">Microsoft</h4>
+          </div>
+
+          <div class="col-md-2 col-sm-4 col-xs-6">
+            <img src="../assets/images/nexus.png" class="Bkoimg Bkoimg1 Bkoimg2">
+            <h4 class="BKOoption">Nexus</h4>
+          </div>
+
+          <div class="col-md-2 col-sm-4 col-xs-6">
+            <img src="../assets/images/googlepixel.png" class="Bkoimg Bkoimg1 Bkoimg2">
+            <h4 class="BKOoption">Googlepixel</h4>
+          </div>
+        </div>
+      </div>
 </div>
 
   

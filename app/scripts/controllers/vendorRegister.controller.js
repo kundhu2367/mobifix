@@ -49,11 +49,13 @@
 
       httpDataService.vendorRegister(vm.vendorRegisterCred).then(function (resposeObj) {
         if (resposeObj.status == 200) {
-          $('#vendorRegisterSuccess').show();
+         $('#vendorregisterSuccess').css("display","block");
+            $('#vendorregistrationForm')[0].reset();
         } else if (resposeObj.status == 404) {
           // Error Scenarios
           $rootScope.$broadcast("vendorRegisterbroadcast", { status: 404 });
-          $('#userPwd').show();
+           $('#vendorregisterFailure').css("display","block");
+          
           $rootScope.userData = resposeObj.data;
         }
       });

@@ -12,6 +12,9 @@
 
         var vm = this;
       vm.$state = $state;
+      
+      
+       
 
     function openloginModal() {
       $uibModalInstance.close()
@@ -48,11 +51,12 @@
 
         httpDataService.register(vm.registerCred).then(function (resposeObj) {
           if (resposeObj.status == 200) {
-            $('#registerSuccess').show();
+            $('#registerSuccess').css("display","block");
+            $('#registrationForm')[0].reset();
                     } else if (resposeObj.status == 404) {
             // Error Scenarios
             $rootScope.$broadcast("registerbroadcast", { status: 404 });
-            $('#userPwd').show();
+           $('#registerFailure').css("display","block");
             $rootScope.userData = resposeObj.data;
           }
         });

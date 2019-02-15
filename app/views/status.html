@@ -60,7 +60,7 @@
           <input type="text" class="OrderlabelNo" id="finalCost"></input>-->
 
           <label class="Orderlabel" for="models">ORDER ID:</label>
-          <input type="text" value="{{vm.statusData.OrderID}}" disabled></input>
+          <input type="text" class="OrderlabelNo" value="{{vm.statusData.OrderID}}" disabled></input>
         </div>
 
         <div class="col-md-6 col-sm-6 col-xs-12">
@@ -84,9 +84,36 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <img src="../assets/images/tracking.jpeg" class="img-responsivestatus trackimg" />
+      <div class="row statuswidth1">
+        <div class="col-xs-2 col-lg-2 col-sm-2">
+          <img src="../assets/images/confitmed order.png" class="Statuswidth" />
+          <p class="ordertrackingcontent">
+            Confirmed Order
+          </p>
+        </div>
+        <div class="col-xs-2 col-lg-2 col-sm-2">
+          <img src="../assets/images/processing order.png" class="Statuswidth" />
+          <p class="ordertrackingcontent">
+            Processing Order
+          </p>
+        </div>
+        <div class="col-xs-2 col-lg-2 col-sm-2">
+          <img src="../assets/images/quality.png" class="Statuswidth" />
+          <p class="ordertrackingcontent">
+            Quality Check
+          </p>
+        </div>
+        <div class="col-xs-2 col-lg-2 col-sm-2">
+          <img src="../assets/images/dispatched.png" class="Statuswidth" />
+          <p class="ordertrackingcontent">
+            Dispatched Item
+          </p>
+        </div>
+        <div class="col-xs-2 col-lg-2 col-sm-2">
+          <img src="../assets/images/delevered.png" class="Statuswidth" />
+          <p class="ordertrackingcontent">
+            Product Delivered
+          </p>
         </div>
       </div>
 

@@ -284,16 +284,23 @@ angular
       .state(VENDORREGISTER_STATE_NAME, vendorRegisterStateConfig)
 })
 
-.run(function($rootScope, $state, Notification) {
+.run(function($rootScope, $state, Notification) { 
 
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {
         var requireLogin = toState.data.requireLogin;
+        $rootScope.currentUser = JSON.parse(localStorage.getItem("currentUser"));
         // $rootScope.currentUser = localStorage.getItem("currentUser");
         // Notification.clearAll();
         if (requireLogin && (typeof $rootScope.userData === 'undefined' || $rootScope.userData === null)) {
           event.preventDefault();
           $state.go('home');
         }
+        else {
+            $rootScope.$broadcast("sessionbroadcast", $rootScope.currentUser);
+        }
     });
+    $rootScope.$on('initiateEvent', function(event, b) {
+      $rootScope.$broadcast('sessionbroadcast', $rootScope.currentUser);
+  });
 
 });

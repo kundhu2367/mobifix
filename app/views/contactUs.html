@@ -1,47 +1,119 @@
 <div class="container-fluid">
-    <div class="ContactusBtm">
-        <div class="rows">
-            <div class="col-sm-6 col-md-6 col-xs-12">
-                <h3 class="colh3"> Visit Our Office </h3>
-                <h5 class="contentp"> Address:AAA Office, Secunderabad, 500003, India.</h5>
-                <br />
-                <img src="../assets/images/contactus-left-image.png" alt="Responsive" class="img">
+  <div class="ContactusBtm">
+    <div class="row faq">
+      <div class="col-sm-12 col-xs-12">
+        <div class="headingh4">
+          <h4>CONTACT US</h4>
+          <hr class="HIWhr" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12 MobFixcontentbg">
+
+        <div class="contact-bg">
+
+          <div class="col-md-12 cont-head">
+            <h2>QUESTION, COMMENTS?</h2>
+            <p class="color">Let us know !</p>
+          </div>
+
+          <div class="col-md-8 col-sm-7 col-xs-12 form-style">
+            <form class="form-horizontal" id="home_page_contact_form" method="post" novalidate="novalidate">
+              <div class="form-group">
+                <div class="col-sm-6 makeconright">
+                  <input type="text" id="fname" name="fname" class="form-control required" placeholder="First Name">
+                </div>
+                <div class="col-sm-6 makeconleft">
+                  <input type="text" id="lname" name="lname" class="form-control" placeholder="Last Name">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-6 makeconright">
+                  <input type="text" id="Text3" name="phone" minlength="10" maxlength="10" class="form-control required number" placeholder="Phone">
+                </div>
+                <div class="col-sm-6 makeconleft">
+                  <input type="text" id="Text4" name="email" class="form-control required email" placeholder="Email">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <textarea id="feedback" name="feedback" class="form-control textarea" placeholder="Enter your feedback..." rows="5"></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-12 formbtn">
+                  <button type="submit" name="SaveChanges" id="SaveChanges" value="Submit" class="btn subscribebutton">Send to us</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-md-4 col-sm-5 col-xs-12 reach">
+            <div class="reach">
+              <h3 class="reachh3">REACH US</h3>
+              <div class="contact-txt">
+                <ul class="conlink">
+                  <li>
+                    <span class="iconaddress"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                    <div class="textadress">
+                      <p>MobFix Business <br>Services Pvt Ltd  <br> 118, 1st floor, <br>chandralok residency,paradise, Secunderabad, Telangana 500003, India</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="iconaddress"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                    <div class="textadress">
+                      <p><a href="tel:+91 8448282445">+91 79950 63244</a></p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="iconaddress"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                    <div class="textadress">
+                      <p><a href="mailto:info@mobifix.co.in">info@mobifix.co.in</a></p>
+                    </div>
+                  </li>
+                </ul>
+
+              </div>
+              <div class="inline-socila">
+                <div class="social">
+                  <ul class="footer-social-icons">
+
+                    <li>
+                      <a href="#">
+                        <img src="images/facebook_gold.png" alt="" class="footerfb" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="images/googleplus_black.png" alt="" class="footergplus" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="images/twitter_gold.png" alt="" class="footertwitter" />
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="#">
+                        <img src="images/instragram_black.png" alt="" class="footerwivfi" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="images/rssfeed_gold.png" alt="" class="footerwivfi" />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-
-            <div class="col-sm-6 col-md-6 col-xs-12 contactus">
-                <h3 class="col"> Leave Us a Message </h3>
-                <h5 class="contactp">We will get back to you as soon as possible </h5>
-                <form class="box formbox2" action="">
-
-                  <div class="inner-addon left-addon col1">
-                    <i class="glyphicon glyphicon-user col"></i>
-                    <input type="text" class="form-control" id="userName" name="userName" placeholder="User name" />
-                  </div><br>
-
-
-
-
-                  <div class="inner-addon left-addon col1">
-                    <i class="glyphicon glyphicon-envelope col"></i>
-                    <input id="email" type="text" class="form-control" name="email" placeholder="Email">
-                  </div><br>
-
-                  <div class="inner-addon left-addon col1">
-                    <i class="glyphicon glyphicon-earphone col"></i>
-                    <input id="inputPhone" type="tel" class="form-control" name="phone" placeholder="Phone number">
-                  </div><br>
-
-                  <!--<div class="inner-addon left-addon">
-    <span class="input-group-addon"><i class="glyphicon glyphicon-earphone col"></i></span>
-    <input id="inputPhone" type="tel" class="form-control" name="phone" placeholder="Phone number">
-  </div><br>-->
-
-                  <textarea id="message" name="message" placeholder="Message.." class="msg"></textarea>
-
-                  <button type="send" class="btn btnsend" value="Send">SEND</button>
-</form>
-</div>
+          </div>
 
         </div>
+      </div>
     </div>
+  </div>
 </div>

@@ -7,10 +7,18 @@
       </div>
 
       <div class="col-sm-6 col-md-6 col-lg-6 col-xs-6 MembersSignIn">
+
+      <div id="vendorregisterSuccess" class="alert alert-success" style="display:none;">
+          Registration Successful !!
+        </div>
+      <div id="vendorregisterFailure"  class="alert alert-danger" style="display:none;">
+        Registration not Successful
+      </div>
         <h3 class="title">Vendor Register</h3>
 
 
-        <form class="box SignInformbox" action="">
+
+        <form class="box SignInformbox" id="vendorregistrationForm">
 
           <div class="form-group" ng-class="{ 'has-error': form.firstName.$dirty && form.firstName.$error.required }">
             <div class="inner-addon left-addon inputbox col">

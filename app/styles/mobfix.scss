@@ -1,14 +1,14 @@
 body {
-  background-color: #f3f3f3;
+  background-color: white;
   overflow-x: hidden;
-  font-family: "VarelaRound", "Raleway";
+  font-family: "Comfortaa";
   font-size: 16px;
   color: Black;
 }
 
 .active {
-  background-color: #cfb65e !important;
-  color: White !important;
+  background-color: none;
+  color: #cfb65e;
 }
 
 .active1 {
@@ -23,16 +23,18 @@ body {
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-  background-color: #cfb65e;
-  color: White;
+  color: #cfb65e;
 }
 
 .Sliderwidth {
-  width: 100%;
-  height: 150px;
+  height: 120px;
+  padding-top: 20px;
+  text-align: center;
 }
 
-.btnbottom{margin-bottom:20px;}
+.btnbottom {
+  margin-bottom: 20px;
+}
 
 footerlogo {
   margin-left: -20px;
@@ -104,7 +106,9 @@ p {
 }
 
 .logo {
-  height: 50px;
+  height: 115px;
+  margin-top: -30px;
+  width: 215px;
 }
 
 .companyh3 {
@@ -137,12 +141,12 @@ p {
   color: #cfb65e;
   font-weight: bold;
   font-size: 25px;
-  text-align: center;
+  text-align: left;
 }
 
 .whyMobfixp {
   color: black;
-  text-align: center;
+  text-align: left;
 }
 
 .contenth3 {
@@ -155,8 +159,6 @@ p {
 .servicescontentp {
   color: Black;
 }
-
-
 
 .viewbutton {
   float: right;
@@ -177,7 +179,7 @@ p {
 .navbar-default {
   background-color: white;
   border-color: white;
-  height: 76px;
+  height: 100px;
 }
 
 .carousel-caption {
@@ -218,6 +220,10 @@ p {
 
 .HeaderLogin {
   border: 1px solid #cfb65e;
+  background-color: #cfb65e;
+  margin-left: -20px;
+  margin-top: 12px;
+  color: white;
 }
 
 .navbar-default .navbar-nav > .open > a,
@@ -236,6 +242,7 @@ p {
   text-decoration: none;
   color: White;
 }
+
 .borderh1 {
   width: 674px;
   margin-left: -57px;
@@ -312,7 +319,9 @@ li a:hover {
 .okfooterh {
   color: white;
   text-align: left;
-  margin-top: -5px;
+  font-size: 18px;
+  margin-top: 21px;
+  text-transform: capitalize;
 }
 
 .okfooter {
@@ -390,7 +399,7 @@ li a:hover {
 .Oksh4 {
   color: Black;
   font-weight: bold;
-  margin-left: 24px;
+  text-align: center;
 }
 
 .Okh3 {
@@ -418,17 +427,305 @@ li a:hover {
   margin-left: 0px;
 }
 
+.viewrepairbutton {
+  float: none;
+  background-color: #cfb65e;
+  color: white;
+  margin-left: 0px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 1px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #000\9;
+  background-color: rgba(0,0,0,0);
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+.carousel-indicators .active {
+  width: 12px;
+  height: 12px;
+  margin: 0px
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  margin-left: -30%;
+  padding-left: 0;
+  text-align: center;
+  display: inline-table;
+}
+
+.searchbar {
+  width: 70%;
+  height: 40px;
+  border: 1px solid gray;
+}
+
+.searchbaricon {
+  background-color: white;
+  border: 1px solid white;
+  height: 30px;
+  margin-left: -34px;
+}
+
+.hr1 {
+margin-top: 0px;
+    padding: 5px;
+  margin-bottom: 0px;
+  width: 930px;
+  margin-left: 16px;
+  border: 0;
+  float: left;
+  border-top: 2px solid #eee;
+}
+
+.carousel {
+  width: 1102px;
+  margin-left: -97px;
+}
+
+.navbar2 {
+  list-style-type: none;
+  display: flex;
+  margin-top: 15px;
+  position:absolute;
+  left:20%;
+}
+
+.navmailid {
+  margin-left: -68px;
+}
+
+.navemail {
+  color: black;
+  padding-left: 16px;
+}
+
+.navemail > a:hover {
+  color: Black;
+}
+
+.navphone {
+  margin-left: 34px;
+}
+
+.vendorlog {
+  margin-left: 1px;
+}
+
+.cartamount {
+  color: Black;
+  padding-left: 8px;
+  font-weight: bold
+}
+
+.cartdiv {
+  margin-top: 15px;
+}
+
+.cartdiv > a:hover {
+  color: #cfb65e;
+}
+
+.viewcontent {
+  margin-top: 25px;
+}
+
+.headingh4 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.HIWhr {
+  border-bottom: 2px solid #cfb65e;
+  width: 98px;
+}
+
+.whyblacyimg {
+  margin-top: 83px;
+  float: right;
+  width: 427px;
+}
+
+.MobFixcontent {
+  background-color: #f8f7f7;
+  box-shadow: 1px 1px 22px #e2e2e2;
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+.bannercontent {
+  color: Black;
+}
+
+.mobifixsmart {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.align {
+  text-align: center
+}
+
+.subcribe {
+  border: 1px solid white;
+}
+
+.subscribebutton {
+  float: none;
+  background-color: #cfb65e;
+  color: black;
+  margin-left: 0px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: -1px;
+}
+
+.reach {
+  background-color: #cfb65e;
+}
+
+.reachh3 {
+  color: White;
+  text-transform: capitalize;
+}
+
+.conlink {
+  list-style-type: none;
+}
+
+.color {
+  color: Black;
+}
+
+.carousel-inner {
+  position: initial;
+}
+
+.MobFixcontentbg {
+  background-color: #f8f7f7;
+  box-shadow: 1px 1px 22px #e2e2e2;
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+.navbar-right {
+  float: left !important;
+  margin-left: 153px;
+  margin-top: -26px;
+}
+
+.vendorlog {
+  margin-left: -56px;
+}
+
+.navbar-nav > li > a {
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+  padding-left: 50px;
+}
+
+.cart {
+  height: 26px;
+  width: 26px;
+}
+
+.textbox {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+.whyMobfix1 {
+  color: #cfb65e;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+}
+
+.Okh4U {
+  color: Black;
+  font-weight: bold;
+  text-align: center;
+}
+
+.fixing {
+  margin-left: -22px;
+}
+
+.MobFixcontent1 {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.carousel-indicators1 {
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  margin-left: -30%;
+  padding-left: 0;
+  text-align: center;
+  display: inline-table;
+}
+
+.carousel-indicators1 li {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 1px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #000\9;
+  background-color: rgba(0,0,0,0);
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.carousel-indicators1 .active {
+  width: 12px;
+  height: 12px;
+  margin: 0px
+}
+
+.slideinner {
+  margin-left: -28px;
+}
+
+.headerdropdown {
+  margin-top: -14px;
+  margin-left:39px;
+}
+
 @media screen and (min-width: 768px)and (max-width:1023px) {
   .navbar-default .navbar-nav > li > a {
-    color: #cfb65e;
+    color: black;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 11px;
+    padding-left: 26px;
   }
+
   .borderh1 {
     width: 448px;
     margin-left: -69px;
     border-bottom: 2px solid white;
   }
+
   .Arrow {
     margin-top: 10px;
   }
@@ -460,15 +757,16 @@ li a:hover {
 
   .imageservices {
     width: 160px;
-    margin-left: 88px;
+    margin-left: 14px;
     margin-bottom: 20px;
   }
 
   .okfooterh {
     color: white;
     text-align: left;
-    margin-top: -5px;
-    width: 182px;
+    margin-top: 24px;
+    width: 213px;
+    font-size: 15px;
   }
 
   .footerboldh5 {
@@ -518,6 +816,72 @@ li a:hover {
   .footermobfixconent {
     margin-left: -16px;
   }
+
+  .logo {
+    height: 115px;
+    margin-top: -30px;
+    width: 187px;
+    margin-left: -53px;
+  }
+
+  .navphone {
+    margin-left: -74px;
+  }
+
+  .vendorlog {
+    margin-left: 213px;
+  }
+
+  .HeaderLogin {
+    border: 1px solid #cfb65e;
+    background-color: #cfb65e;
+    margin-left: -46px;
+    margin-top: 7px;
+    color: white;
+  }
+
+  .hr1 {
+    margin-top: -8px;
+    margin-bottom: 0px;
+    width: 691px;
+    margin-left: 16px;
+    border: 0;
+    float: left;
+    border-top: 2px solid #eee;
+  }
+
+  .navbar-right {
+    float: left !important;
+    margin-left: 96px;
+    margin-top: -25px;
+  }
+
+  .cartdiv {
+    margin-top: 15px;
+    margin-left: 32px;
+  }
+
+  .carousel {
+    width: 816px;
+    margin-left: -38px;
+  }
+
+  .carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    margin-left: -30%;
+    padding-left: 0;
+    text-align: center;
+    display: inline-table;
+  }
+
+  .headerdropdown {
+    margin-top: -14px;
+    margin-left: 190px;
+  }
 }
 
 @media screen and (min-width: 1024px)and (max-width:1039px) {
@@ -532,11 +896,13 @@ li a:hover {
   .footerlogo {
     margin-left: 30px;
   }
+
   .borderh1 {
     width: 681px;
     margin-left: -61px;
     border-bottom: 2px solid white;
   }
+
   .footerContiner {
     background-color: black;
     width: 103%;
@@ -555,7 +921,7 @@ li a:hover {
   }
 
   .navbar-default .navbar-nav > li > a {
-    color: #cfb65e;
+    color: black;
     font-weight: bold;
     font-size: 15px;
   }
@@ -585,6 +951,70 @@ li a:hover {
     font-weight: bold;
     color: white;
     font-style: italic;
+  }
+
+  .HeaderLogin {
+    border: 1px solid #cfb65e;
+    background-color: #cfb65e;
+    margin-left: -42px;
+    margin-top: 17px;
+    color: white;
+  }
+
+  .navbar-right {
+    float: left !important;
+    margin-left: 96px;
+    margin-top: -33px;
+  }
+
+  .cartamount {
+    color: Black;
+    padding-left: 60px;
+  }
+
+  .cartdiv {
+    margin-top: 15px;
+  }
+
+  .cartdiv > a:hover {
+    color: #cfb65e;
+  }
+
+  .carousel {
+    width: 1046px;
+    margin-left: -54px;
+  }
+
+  .headingh4border {
+    border-bottom: 2px solid #cfb65e;
+    width: 98px;
+    margin-left: 450px;
+  }
+
+  .logo {
+    height: 115px;
+    margin-top: -30px;
+    width: 215px;
+    margin-left: -58px;
+  }
+
+  .hr1 {
+    margin-top: -10px;
+    margin-bottom: 0px;
+    width: 923px;
+    margin-left: 16px;
+    border: 0;
+    float: left;
+    border-top: 2px solid #eee;
+  }
+
+  .vendorlog {
+    margin-left: 100px;
+  }
+
+  .headerdropdown {
+    margin-top: -14px;
+    margin-left: 215px;
   }
 }
 
@@ -622,9 +1052,10 @@ li a:hover {
   }
 
   .Sliderwidth {
-    width: 100%;
-    height: 45px;
-    margin-bottom: 19px;
+    padding-left: 4px;
+    height: 46px;
+    padding-top: 20px;
+    text-align: center
   }
 
   .slideinner {
@@ -725,27 +1156,30 @@ li a:hover {
   }
 
   .navbar-default {
-    background-color: #cfb65e;
-    border-color: #cfb65e;
-    height: 55px;
+    background-color: white;
+    border-color: white;
+    height: 110px;
   }
 
   .navbar-default .navbar-toggle .icon-bar {
-    background-color: white;
+    background-color: #cfb65e;
   }
+
 
   .navbar-default .navbar-collapse,
   .navbar-default .navbar-form {
     border-color: #cfb65e;
     margin-top: 0px;
+    margin-left: -28px;
   }
 
   .background {
-    background-color: #cfb65e;
+    background-color: white;
   }
 
   .navbar-default .navbar-toggle {
     border-color: #cfb65e;
+    margin-right: 40px;
   }
 
   .navbar-default .navbar-toggle:focus,
@@ -754,7 +1188,11 @@ li a:hover {
   }
 
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: White;
+    color: black;
+  }
+
+  .navbar-default .navbar-toggle .icon-bar:hover {
+    color: white
   }
 
   .dropdown-menu > li > a {
@@ -796,16 +1234,16 @@ li a:hover {
   }
 
   .HeaderLogin {
-    margin-left: -2px;
+    margin-left: -59px;
     margin-top: -28px;
   }
 
   .navbar-toggle {
     position: relative;
-    float: left;
+    float: right;
     padding: 9px 10px;
-    margin-top: 8px;
-    margin-right: 15px;
+    margin-top: 26px;
+    margin-right: 24px;
     margin-bottom: 8px;
     background-color: transparent;
     background-image: none;
@@ -816,7 +1254,7 @@ li a:hover {
   .carousel-caption {
     position: absolute;
     right: 15%;
-    bottom: 10px;
+    bottom: 54px;
     left: 15%;
     z-index: 10;
     padding-top: 20px;
@@ -840,7 +1278,7 @@ li a:hover {
   }
 
   .footerBlogrow {
-    margin-left: -28px;
+    margin-left: -4px;
   }
 
   .copyright {
@@ -858,7 +1296,7 @@ li a:hover {
 
   .imageservices {
     width: 162px;
-    margin-left: 72px;
+    margin-left: -9px;
     margin-bottom: 30px;
   }
 
@@ -877,7 +1315,7 @@ li a:hover {
   .Oksh4 {
     color: Black;
     font-weight: bold;
-    margin-left: -14px;
+    text-align: center;
     font-size: 16px;
   }
 
@@ -894,16 +1332,190 @@ li a:hover {
     background-color: White;
     width: auto;
   }
+
   .borderh1 {
     margin-left: -73px;
     border-bottom: 2px solid whitesmoke;
     width: 138px;
+  }
+
+  .carousel {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 100%;
+    margin: auto;
+    height: 120px;
+  }
+
+  .logo {
+    height: 86px;
+    margin-top: -6px;
+    width: 135px;
+    margin-left: -21px;
+  }
+
+  .whyblacyimg {
+    margin-top: 20px;
+    float: left;
+    width: 280px;
+  }
+
+  .helpline {
+    color: #cfb65e;
+    margin-top: -8px;
+    margin-left: 31px;
+  }
+
+  .phoneno {
+    color: Black;
+    margin-left: 11px;
+    margin-top: -5px;
+  }
+
+  .navbar2 {
+    list-style-type: none;
+    display: flex;
+    margin-top: 15px;
+    margin-left: -95px;
+    float: left;
+  }
+
+  .navbar-right {
+    float: left !important;
+    margin-left: -12px;
+    margin-top: 0px;
+    display: flex;
+  }
+
+  .searchbar {
+    width: 85%;
+    height: 40px;
+    border: 1px solid gray;
+  }
+
+  .carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    margin-left: -30%;
+    padding-left: 0;
+    text-align: center;
+    display: inline-table;
+  }
+
+  .cartdiv {
+    margin-top: 9px;
+    float: right;
+    margin-right: 25px;
+  }
+
+  .cart {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+  }
+
+  .cartamount {
+    color: Black;
+    padding-left: 0px;
+    font-weight: bold;
+    display: flex;
+  }
+
+  .vendorlog {
+    margin-left: 81px;
+  }
+
+  .mobifixsmart {
+    text-align: center;
+    margin-top: 18px;
+  }
+
+  .headerdropdown {
+    margin-top: -11px;
+    margin-left: 16px;
   }
 }
 
 @media screen and (min-width: 1300px)and (max-width:2020px) {
   .Readbutton {
     margin-left: -14px;
+  }
+
+  .cartamount {
+    color: Black;
+    padding-left: 25px;
+  }
+
+  .cartdiv {
+    margin-top: 15px;
+    margin-left: 81px;
+  }
+
+  .cartdiv > a:hover {
+    color: #cfb65e;
+  }
+
+
+  .hr1 {
+    margin-bottom: 0px;
+    width: 1052px;
+    margin-left: -11px;
+    border: 0;
+    float: left;
+    border-top: 2px solid #eee;
+  }
+
+  .navmailid {
+    margin-left: -68px;
+  }
+
+  .navemail {
+    color: black;
+    padding-left: 16px;
+  }
+
+  .navemail > span:hover {
+    color: Black;
+  }
+
+  .navphone {
+    margin-left: 34px;
+  }
+
+  .vendorlog {
+    margin-left: 77px
+  }
+
+  .navbar-right {
+    float: left !important;
+    margin-left: 145px;
+    margin-top: -31px;
+  }
+
+  .headingh4border {
+    border-bottom: 2px solid #cfb65e;
+    width: 98px;
+    margin-left: 611px;
+  }
+
+  .whyblacyimg {
+    margin-top: 80px;
+    float: right;
+    width: 450px;
+    margin-right: 38px;
+  }
+
+  .logo {
+    height: 115px;
+    margin-top: -30px;
+    width: 230px;
+    margin-left: -23px;
   }
 
   .borderh1 {
@@ -920,17 +1532,21 @@ li a:hover {
 
   .HeaderLogin {
     border: 1px solid #cfb65e;
+    background-color: #cfb65e;
+    margin-left: -29px;
+    margin-top: 10px;
+    color: white;
   }
 
   .navbar-default .navbar-nav > li > a {
-    color: #cfb65e;
+    color: black;
     font-weight: bold;
     font-size: 15px;
   }
 
   .imageservices {
     width: 139px;
-    margin-left: 60px;
+    margin-left: 4px;
     margin-bottom: 20px;
   }
 
@@ -965,6 +1581,17 @@ li a:hover {
   .footerBlogrow {
     margin-left: -35px;
   }
+
+  .carousel {
+    width: 1346px;
+    margin-left: -119px;
+  }
+  .headerdropdown {
+    margin-top: -14px;
+    float: right;
+    margin-left: 272px;
+  }
+
 }
 
 
@@ -1050,7 +1677,7 @@ input[type="search"] {
   font-size: 13px;
   font-weight: bold;
   margin-top: 14px;
-  margin-right: 98px;
+  margin-right: 83px;
   float: right;
 }
 
@@ -1060,7 +1687,7 @@ input[type="search"] {
   padding: 5px;
   font-size: 13px;
   font-weight: bold;
-  margin-top: 14px;
+  margin-top: 9px;
   margin-right: -256px;
   float: right;
 }
@@ -1108,7 +1735,7 @@ input[type="search"] {
   font-weight: bold;
   margin-top: 11px;
   margin-left: -63px;
-  color: white;
+  color: black;
 }
 
 .OrderlabelDT {
@@ -1118,7 +1745,7 @@ input[type="search"] {
   font-size: 13px;
   font-weight: bold;
   margin-top: 14px;
-  margin-right: 157px;
+  margin-right: 134px;
   color: #af963e;
   float: right;
 }
@@ -1131,7 +1758,7 @@ input[type="search"] {
   font-weight: bold;
   margin-top: 14px;
   margin-right: -306px;
-  //color: white;
+  color: black;
   float: right;
 }
 
@@ -1170,15 +1797,50 @@ input[type="search"] {
 .trackimg {
   width: 100%
 }
-
+.Statuswidth {
+  height: 120px;
+  padding-top: 20px;
+  text-align: center;
+  margin-top: -19px;
+  margin-left:30px;
+}
+.statuswidth1{width:1105px;}
+.ordertrackingcontent {
+  color: #cfb65e;
+  font-size: 16px;
+  margin-left: 22px;
+  font-weight: bold;
+}
+.contentp2 {
+  text-align: justify;
+  color: black;
+  margin-top: 10px;
+}
+.headingh41 {
+  text-align: left;
+  font-weight: bold;
+  font-size: 18px;  
+}
+.termslist{list-style-type:circle;}
+.contentp3 {
+  text-align: justify;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+}
 @media screen and (min-width: 1024px)and (max-width:1039px) {
   .Statustext {
     border: 1px solid #cfb65e;
     margin-top: 11px;
     height: 35px;
-    width: 792px;
+    width: 731px;
     margin-left: -69PX;
     color: Black;
+  }
+  .totalspan {
+    float: right;
+    margin-top: -30px;
+    margin-right: -3px;
   }
 }
 
@@ -1193,7 +1855,7 @@ input[type="search"] {
     border: 1px solid #cfb65e;
     margin-top: 11px;
     height: 35px;
-    width: 528px;
+    width: 499px;
     margin-left: 0px;
     color: Black;
   }
@@ -1204,6 +1866,7 @@ input[type="search"] {
     padding: 5px;
     font-size: 13px;
     font-weight: bold;
+
   }
 
   .OrderlbStatusDT {
@@ -1211,8 +1874,8 @@ input[type="search"] {
     height: 35px;
     padding: 5px;
     font-weight: bold;
-    margin-top: 14px;
-    margin-right: -260px;
+    margin-top: 10px;
+    margin-right: -255px;
     float: right;
   }
 
@@ -1222,8 +1885,19 @@ input[type="search"] {
     padding: 5px;
     font-size: 13px;
     font-weight: bold;
-    margin-top: 1px;
+    margin-top: 14px;
     float: right;
+  }
+
+  .statuswidth1 {
+    width: 800px;
+  }
+
+  .ordertrackingcontent {
+    color: #cfb65e;
+    font-size: 16px;
+    margin-left: 53px;
+    font-weight: bold;
   }
 }
 
@@ -1233,15 +1907,15 @@ input[type="search"] {
     max-width: 100%;
     height: 58px;
   }
-  
+
   .OrderlabelNo {
-    width: 144px;
-    height: 35px;
+    width: 120px;
+    height: 27px;
     padding: 5px;
     font-weight: bold;
     margin-top: 4px;
-    margin-right: -52px;
-    color: white;
+    margin-right: -12px;
+    color:black;
     float: right;
   }
 
@@ -1297,7 +1971,7 @@ input[type="search"] {
     font-weight: bold;
     margin-top: 13px;
     margin-right: -51px;
-    color: white;
+    color: black;
     float: right;
   }
 
@@ -1313,13 +1987,13 @@ input[type="search"] {
   }
 
   .OrderlbDT {
-    width: 144px;
-    height: 35px;
+    width: 104px;
+    height: 29px;
     padding: 5px;
     font-weight: bold;
     margin-top: -38px;
-    margin-right: -22px;
-    color: white;
+    margin-right: -15px;
+    color: black;
     float: right;
   }
 
@@ -1334,15 +2008,14 @@ input[type="search"] {
 
   .OrderStatuslabelNo {
     width: 144px;
-    height: 35px;
+    height: 27px;
     padding: 5px;
     font-size: 13px;
     font-weight: bold;
     margin-top: -2px;
-    margin-right: -39px;
+    margin-right: -12px;
     float: right;
   }
-
   .OrderlabelStatusDT {
     width: 160px;
     height: 35px;
@@ -1355,14 +2028,33 @@ input[type="search"] {
   }
 
   .OrderlbStatusDT {
-    width: 10px;
-    height: 17px;
+    width: 144px;
+    height: 27px;
     padding: 5px;
     font-size: 13px;
     font-weight: bold;
-    margin-top: -16px;
-    margin-right: 48px;
+    margin-top: -33px;
+    margin-right: -11px;
     float: right;
+  }
+
+  .statuswidth1 {
+    width: 317px;
+  }
+
+  .Statuswidth {
+    height: 57px;
+    padding-top: 20px;
+    text-align: center;
+    margin-top: -19px;
+    margin-left: 5px;
+  }
+
+  .ordertrackingcontent {
+    color: #cfb65e;
+    font-size: 9px;
+    margin-left: 7px;
+    font-weight: bold;
   }
 }
 
@@ -1371,7 +2063,7 @@ input[type="search"] {
     border: 1px solid #cfb65e;
     margin-top: 12px;
     height: 35px;
-    width: 139%;
+    width: 142%;
     margin-left: -90px;
     color: Black;
   }
@@ -1380,6 +2072,10 @@ input[type="search"] {
     display: block;
     max-width: 100%;
     height: 174px;
+  }
+
+  .statuswidth1 {
+    width: 1345px;
   }
 }
 
@@ -1968,6 +2664,11 @@ input[type="search"] {
   text-decoration: none;
 }
 
+.BKNext {
+  color: #cfb65e;
+  font-weight: bold;
+}
+
 @media screen and (min-width: 1300px)and (max-width:2020px) {
   .BKOoption {
     text-align: center;
@@ -1987,6 +2688,7 @@ input[type="search"] {
     padding-top: 20px;
     text-align: center;
   }
+
   .img-roundedRS {
     border-radius: 30px 0 0 30px;
     margin-top: -27px;
@@ -1994,10 +2696,12 @@ input[type="search"] {
     height: 268px;
     width: 105px;
   }
+
   .MembersLoginRs {
     margin-top: -34px;
     margin-left: -174px;
   }
+
   .titleRS {
     text-align: center;
     padding: 30px 0px 40px;
@@ -2005,6 +2709,7 @@ input[type="search"] {
     font-size: 21px;
     margin-left: 19px;
   }
+
   .BookOnlineheadingh4 {
     font-weight: bold;
     color: White;
@@ -2045,6 +2750,8 @@ input[type="search"] {
     margin-left: -109px;
     padding-left: 120px;
   }
+
+  .BKOicons1{margin-top:-43px;}
 }
 
 @media screen and (min-width: 504px) and (max-width:550px) {
@@ -2260,15 +2967,25 @@ input[type="search"] {
   .imageservices {
     margin-left: 44px;
   }
+
+  .thead {
+    width: 507px
+  }
+
+  .accordion {
+    width: 497px;
+  }
 }
 
 @media screen and (min-width: 720px)and (max-width:740px) {
   .Bkoimg {
     margin-left: 90px;
   }
+
   .logo {
-    margin-left: 174px;
+    margin-left: -22px;
   }
+
   .footermobfixcompany {
     margin-left: -6px;
   }
@@ -2312,6 +3029,68 @@ input[type="search"] {
     margin-top: 72px;
     margin-left: -105px;
   }
+
+  .thead {
+    border-bottom: 2px solid #cfb65e;
+    background-color: #cfb65e;
+    font-weight: 400;
+    padding: 10px 10px 10px 45px;
+    margin-left: -15px;
+    width: 688px;
+    margin-top: 0px;
+  }
+
+  .accordion {
+    background-color: white;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    margin-left: -5px;
+    width: 667px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: 0.4s;
+    margin-top: -9px;
+    font-family: none;
+  }
+
+  .navbar-right {
+    float: left !important;
+    margin-left: -5px;
+    margin-top: 9px;
+  }
+
+  .whyblacyimg {
+    margin-top: 20px;
+    float: left;
+    width: 280px;
+    margin-left: 200px;
+  }
+  .headerli {
+    margin-top: 48px;
+    margin-left: -223px;
+  }
+  .headerli1 {
+    margin-top: 13px;
+    margin-left: -223px;
+  }
+}
+@media screen and (min-width: 720px)and (max-width:740px) {
+  .repair_flow {
+    position: relative;
+    width: 700px;
+    margin-left: -36px;
+  }
+  .width {
+    width: 100%;
+    font-size: 16px;
+    margin-left: 0px;
+  }
+  .Bkoimg2 {
+    padding-left: 104px;
+  }
 }
 
 @media screen and (min-width: 504px)and (max-width: 529px) {
@@ -2334,6 +3113,14 @@ input[type="search"] {
   .footer-social-icons {
     margin-left: 0px;
   }
+
+  .thead {
+    width: 472px;
+  }
+
+  .accordion {
+    width: 462px;
+  }
 }
 
 @media screen and (min-width: 400px)and (max-width: 413px) {
@@ -2341,6 +3128,16 @@ input[type="search"] {
     margin-top: 24px;
     margin-left: -63px;
     width: 328px;
+  }
+}
+
+@media screen and (min-width: 400px)and (max-width: 413px) {
+  .thead {
+    width: 343px;
+  }
+
+  .accordion {
+    width: 332px
   }
 }
 
@@ -2362,7 +3159,7 @@ input[type="search"] {
   }
 
   .imageservices {
-    margin-left: 112px;
+    margin-left: -5px;
   }
 
   .Blogh3 {
@@ -2402,6 +3199,34 @@ input[type="search"] {
   }
 }
 
+@media screen and (min-width: 414px)and (max-width: 503px) {
+  .thead {
+    border-bottom: 2px solid #cfb65e;
+    background-color: #cfb65e;
+    font-weight: 400;
+    padding: 10px 10px 10px 45px;
+    margin-left: -15px;
+    width: 400px;
+    margin-top: 0px;
+  }
+
+  .accordion {
+    background-color: white;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    margin-left: -5px;
+    width: 495px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: 0.4s;
+    margin-top: -9px;
+    font-family: none;
+  }
+}
+
 @media screen and (min-width: 960px)and (max-width: 999px) {
   .Bkoimg {
     padding-left: 22px;
@@ -2421,6 +3246,13 @@ input[type="search"] {
 
   .ABUtext {
     font-size: 16px;
+  }
+
+  .Bkoimg1 {
+    height: 120px;
+    padding-top: 20px;
+    text-align: center;
+    padding-left: 0px;
   }
 }
 
@@ -2481,6 +3313,41 @@ input[type="search"] {
 
   .footer-social-icons3 {
     padding-left: 58px;
+  }
+  .Bkoimg1 {
+    padding-left: 14px;
+  }
+
+  .footerBlogrow {
+    margin-left: 4px;
+  }
+
+  .border {
+    width: 96%;
+    border-bottom: 1px solid grey;
+  }
+
+  .Bkoimg2 {
+    padding-left: 23px;
+  }
+
+  .width {
+    padding-left: 42px;
+  }
+  .repair_flow {
+    position: relative;
+    width: 410px;
+    padding-left: 26px;
+  }
+}
+
+@media screen and (min-width: 390px)and (max-width: 503px) {
+  .thead {
+    width: 358px;
+  }
+
+  .accordion {
+    width: 348px;
   }
 }
 
@@ -2676,6 +3543,12 @@ input[type="search"] {
   margin-left: 0px;
 }
 
+.blockquote {
+  border: 2px solid #cfb65e;
+  height: 233px;
+  width: 322px;
+}
+
 @media screen and (min-width: 1300px)and (max-width:2020px) {
   .BlogsImage {
     height: 280px;
@@ -2837,7 +3710,7 @@ input[type="search"] {
   }
 
   .Blogcol2 {
-    margin-left: -21px;
+    margin-left: 0px;
     margin-top: -18px;
   }
 
@@ -2851,6 +3724,12 @@ input[type="search"] {
     width: 402px;
     margin-bottom: 20px;
   }
+  .blockquote {
+    border: 2px solid #cfb65e;
+    height: 233px;
+    width: 268px;
+  }
+
 }
 
 @media screen and (min-width: 768px)and (max-width:1023px) {
@@ -2927,6 +3806,12 @@ input[type="search"] {
     -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
     box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
   }
+
+  .blockquote {
+    border: 2px solid #cfb65e;
+    height: 233px;
+    width: 248px;
+  }
 }
 
 .modal-content2 {
@@ -2974,12 +3859,24 @@ input[type="search"] {
     width: auto;
   }
 }
-
+.success {
+  color: black;
+  background-color: #cfb65e;
+  border-color: #cfb65e;
+  font-weight: bold;
+  font-size: 17px;
+}
 
 /*About Us Page*/
 .contentp {
   color: black;
 }
+
+.contentp1 {
+  text-align: justify;
+  color: black;
+}
+
 .container2 {
   position: relative;
   width: 60%;
@@ -3090,6 +3987,19 @@ input[type="search"] {
   height: 445px;
 }
 
+.whyblacyimg1 {
+  margin-left: 169px;
+}
+
+.awidth {
+  width: 100%;
+}
+
+.whyMobfixp4 {
+  color: black;
+  text-align: center;
+}
+
 @media screen and (min-width: 300px)and (max-width:767px) {
   .container2 {
     position: relative;
@@ -3097,6 +4007,11 @@ input[type="search"] {
     border: 2px solid black;
     margin-left: 93px;
     margin-top: 10px;
+  }
+
+
+  .whyblacyimg1 {
+    margin-left: 0px;
   }
 }
 
@@ -3115,11 +4030,643 @@ input[type="search"] {
     font-size: 15px;
     margin-top: 6px;
   }
+
+  .whyblacyimg1 {
+    margin-left: 255px;
+  }
+
+  .checkout {
+    border: 1px solid #cfb65e;
+    background-color: #cfb65e;
+    margin-left: 4px;
+    margin-top: 25px;
+    color: black;
+    font-weight: bold;
+    width: 100%;
+  }
+  .border {
+    border-bottom: 1px solid gray;
+    width: 97%;
+  }
+
+.awidth {
+  width: 100%;
+  margin-top:132px;
 }
-li.dropdown.open a.dropdown-toggle span{
-  
-  color:#ffffff;
 }
-#ordersuccess,#orderfailure{
-  display:none;
+/*Mobile Repair Page*/
+.R-flow {
+  display: flex;
+  width: 100%;
+  list-style-type: none;
+}
+
+.repair_flow {
+  position: relative;
+  margin-left: -50px;
+}
+
+.repair_flow .liner {
+  height: 2px;
+  background: #cfb65e;
+  position: absolute;
+  width: 68%;
+  margin: 0 auto;
+  left: 62px;
+  right: 0;
+  top: 27%;
+  z-index: -3;
+}
+
+.repair_flow ul li {
+  list-style: none;
+  display: inline-block;
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.MobilerepairBtm {
+  margin-bottom: 20px;
+  margin-top: 43px;
+}
+
+.mobilerepaircontent {
+  color: Black;
+  font-size: 16px;
+}
+
+.padding-rightnone1 {
+  margin-top: -23px;
+}
+
+.delivery_Avail {
+  float: right;
+}
+
+.repaircheckout {
+  margin-left: 0px
+}
+
+.PDFcontent1 {
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 27px;
+}
+
+.col-border-right {
+  min-height: auto;
+}
+
+.tblt_cart {
+  max-width: 540px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-right: -54px;
+  width: 362px;
+  margin-top: -19px;
+}
+
+.phone-model {
+  display: inline-block;
+  padding-top: 10px;
+  font-size: 14px;
+  color: black;
+  font-weight: 500;
+}
+
+.Mobfixmobile {
+  color: #cfb65e;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  margin-right: 48px;
+}
+
+.cart-contain {
+  margin: 20px 0;
+}
+
+.border {
+  border-bottom: 1px solid gray;
+  width: 98%;
+}
+
+.totalspan {
+  float: right;
+  margin-top: -30px;
+  margin-right: 8px;
+}
+
+.font-bold {
+  color: black
+}
+
+textarea.form-control {
+  height: auto;
+  width: 100%;
+}
+
+.checkout {
+  border: 1px solid #cfb65e;
+  background-color: #cfb65e;
+  margin-left: 4px;
+  margin-top: 25px;
+  color: black;
+  font-weight: bold;
+  width: 100%;
+}
+
+.borderleft {
+  border-left: 2px solid #eee;
+}
+.pincodegroup{margin-left:8px; font-weight:bold;}
+
+.input-group-addon {
+  padding: 0px 5px;
+}
+
+.BKOicons1 {
+  margin-top: -20px;
+  margin-bottom:20px;
+}
+.finalcost {
+  margin-top: -8px;
+  width: 100px;
+  height: 26px;
+}
+  @media screen and (min-width: 300px)and (max-width:767px) {
+    .padding-rightnone1 {
+      margin-top: 38px;
+    }
+
+    .padding-rightnone2 {
+      margin-top: 28px;
+    }
+
+    .repair_flow {
+      position: relative;
+      width: 410px;
+      margin-left: -85px;
+    }
+
+    .repaircheckout {
+      margin-left: 5px
+    }
+
+    .tblt_cart {
+      max-width: 540px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      margin-right: 0px;
+      width: 362px;
+      margin-top: -19px;
+    }
+
+    .borderleft {
+      border-left: none;
+      border-top: 2px solid #eee;
+      width:auto;
+    }
+
+    textarea.form-control {
+      height: auto;
+      width: 96%;
+    }
+
+    .checkout {
+      border: 1px solid #cfb65e;
+      background-color: #cfb65e;
+      margin-left: 4px;
+      margin-top: 25px;
+      color: black;
+      font-weight: bold;
+      width: 96%;
+    }
+
+    .delivery_Avail {
+      float: right;
+      margin-top: 20px;
+    }
+
+    .border {
+      border-bottom: 1px solid gray;
+      width: 80%;
+    }
+
+    .finalcost {
+      margin-top: -8px;
+      width: 100px;
+      height: 26px;
+      margin-right: 68px;
+    }
+    .width {
+      width: 300px;
+      font-size: 14px;
+      margin-left: -22px;
+    }
+    .Bkoimg2 {
+      margin-left: -9px;
+    }
+  }
+
+  @media screen and (min-width: 768px)and (max-width:1023px) {
+    .tblt_cart {
+      max-width: 100%;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      margin-right: 0px;
+      width: 100%;
+      margin-top: -19px;
+    }
+
+    .border {
+      border-bottom: 1px solid gray;
+      width: 100%;
+    }
+    .borderleft {
+      border-top: 2px solid #eee;
+      border-left:none;
+    }
+    textarea.form-control {
+      height: auto;
+      width: 100%;
+    }
+
+    .checkout {
+      border: 1px solid #cfb65e;
+      background-color: #cfb65e;
+      margin-left: 4px;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .Mobfixmobile {
+      color: #cfb65e;
+      font-weight: bold;
+      text-align: center;
+      font-size: 16px;
+      margin-right: 48px;
+      margin-top: 40px;
+    }
+    .Bkoimg1 {
+      height: 120px;
+      padding-top: 20px;
+      text-align: center;
+      margin-left: 58px;
+     }
+}
+
+  @media screen and (min-width: 1024px)and (max-width:1039px) {
+    .tblt_cart {
+      max-width: 540px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      margin-right: -70px;
+      width: 313px;
+      margin-top: -19px;
+    }
+
+    .checkout {
+      border: 1px solid #cfb65e;
+      background-color: #cfb65e;
+      margin-left: 4px;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    textarea.form-control {
+      height: auto;
+      width: 100%;
+    }
+
+    .border {
+      border-bottom: 1px solid gray;
+      width: 100%;
+    }
+
+    .repaircheckout {
+      margin-left: -44px;
+    }
+
+    .padding-rightnone1 {
+      font-size: 15px;
+      margin-top: -22px;
+    }
+ }
+  /*FAQ Page*/
+  .accordion {
+    background-color: white;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    margin-left: -1px;
+    width: 405px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: 0.4s;
+    margin-top: -9px;
+    font-family: none;
+  }
+
+  .active2, .accordion:hover {
+    background-color: white;
+  }
+
+  .accordion:after {
+    content: '\002B';
+    color: #cfb65e;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    font-size: 25px;
+    margin-top: -9px;
+    left: 15px;
+  }
+
+  .active2:after {
+    content: "\2212";
+    left: 15px;
+  }
+
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .thead {
+    border-bottom: 2px solid #cfb65e;
+    background-color: #cfb65e;
+    font-weight: 400;
+    padding: 10px 10px 10px 45px;
+    margin-left: -15px;
+    width: 421px;
+    margin-top: 0px;
+  }
+
+  .table {
+    width: 45%;
+    margin: 20px 0;
+    border: 1px solid #cfb65e;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+
+  .table1 {
+    width: 45%;
+    margin: 20px 0;
+    border: 1px solid #cfb65e;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    margin-left: 40px;
+  }
+
+  .accordionul {
+    margin-left: -19px;
+  }
+
+  .accordionli {
+    color: black;
+  }
+
+  .accordionol {
+    margin-left: -38px;
+  }
+
+  .faq {
+    margin-top: 10px;
+  }
+
+  .faqhello {
+    margin-bottom: 20px;
+  }
+
+  .Oksh3 {
+    color: Black;
+    font-weight: bold;
+    text-align: left;
+    font-size: 16px;
+  }
+
+  .carousel-inner1 {
+    margin-left: -40px;
+  }
+
+
+
+  .modalNserver {
+    text-align: left;
+    font-size: 16px;
+  }
+
+  .whyMobfixp2 {
+    color: black;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .hr2 {
+    border: 1px solid #cfb65e;
+    width: 1022px;
+    margin-left: -38px;
+  }
+
+  .whyMobfixp3 {
+    color: black;
+    text-align: right;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  @media screen and (min-width: 1300px)and (max-width:2020px) {
+    .accordion {
+      background-color: white;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      margin-left: -3px;
+      width: 499px;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 16px;
+      transition: 0.4s;
+      margin-top: -9px;
+      font-family: none;
+    }
+
+
+    .thead {
+      border-bottom: 2px solid #cfb65e;
+      background-color: #cfb65e;
+      font-weight: 400;
+      padding: 10px 10px 10px 45px;
+      margin-left: -15px;
+      width: 511px;
+      margin-top: 0px;
+    }
+
+    .carousel-inner1 {
+      margin-left: -50px;
+    }
+
+    .blockquote {
+      border: 2px solid #cfb65e;
+      height: 195px;
+      margin-left: 6px;
+      width: 375px;
+    }
+
+    .modalNserver {
+      text-align: left;
+      font-size: 16px;
+    }
+
+    .hr2 {
+      border: 1px solid #cfb65e;
+      width: 1231px;
+      margin-left: -76px;
+    }
+  }
+
+  @media screen and (min-width: 768px)and (max-width:1023px) {
+    .accordion {
+      background-color: white;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      margin-left: -4px;
+      width: 324px;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 16px;
+      transition: 0.4s;
+      margin-top: -9px;
+      font-family: none;
+    }
+
+    .thead {
+      border-bottom: 2px solid #cfb65e;
+      background-color: #cfb65e;
+      font-weight: 400;
+      padding: 10px 10px 10px 45px;
+      margin-left: -15px;
+      width: 337px;
+      margin-top: 0px;
+    }
+
+    .table {
+      width: 47%;
+      margin: 20px 0;
+      border: 1px solid #cfb65e;
+      border-top-right-radius: 4px;
+      border-top-left-radius: 4px;
+    }
+
+    .table1 {
+      width: 47%;
+      margin: 20px 0;
+      border: 1px solid #cfb65e;
+      border-top-right-radius: 4px;
+      border-top-left-radius: 4px;
+      margin-left: 40px;
+    }
+  }
+
+  @media screen and (min-width: 300px)and (max-width:767px) {
+    .accordion {
+      background-color: white;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      margin-left: -5px;
+      width: 277px;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 16px;
+      transition: 0.4s;
+      margin-top: -9px;
+      font-family: none;
+    }
+
+    .thead {
+      border-bottom: 2px solid #cfb65e;
+      background-color: #cfb65e;
+      font-weight: 400;
+      padding: 10px 10px 10px 45px;
+      margin-left: -15px;
+      width: 288px;
+      margin-top: 0px;
+    }
+
+    .table {
+      width: 100%;
+      margin: 20px 0;
+      border: 1px solid #cfb65e;
+      border-top-right-radius: 4px;
+      border-top-left-radius: 4px;
+    }
+
+    .table1 {
+      width: 100%;
+      margin: 20px 0;
+      border: 1px solid #cfb65e;
+      border-top-right-radius: 4px;
+      border-top-left-radius: 4px;
+    }
+
+    .hr2 {
+      border: 1px solid #cfb65e;
+      width: 293px;
+      margin-left: 0px;
+    }
+
+    .faq {
+      margin-top: 25px;
+    }
+  }
+
+  @media screen and (min-width: 768px)and (max-width:1023px) {
+    .whyblacyimg1 {
+      margin-left: 55px;
+    }
+
+    .subcribe {
+      border: 1px solid white;
+      width: 210px;
+    }
+
+    .subscribebutton {
+      float: none;
+      background-color: #cfb65e;
+      color: black;
+      margin-left: 0px;
+      font-size: 16px;
+      font-weight: bold;
+      width: 84px;
+      margin-top: -1px;
+    }
+  }
+.couponSuccess{
+  color:green;
+
+}
+.couponFailure{
+  color:red;
+}
+.m-r-10{
+  margin-right:30px;
+}
+.couponApply{
+  color:blue;
+}
+.coupon{
+  cursor:pointer;
 }
